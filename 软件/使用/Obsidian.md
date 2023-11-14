@@ -6,7 +6,8 @@
 
 ## Obsidian的语法
 语法主要来自markdown
-#查阅/语法 
+
+Obsidian的语法 #查阅/语法
 
 * **标题**：使用 `#` 号来设置标题，标题的级别由 `#` 号的数量决定。
 
@@ -117,8 +118,7 @@ if __name__ == "__main__":
 1. 可以复用内容，提高效率
 2. 使工作流顺畅，发现共性，总结规律，更有利于发散思维
 
-## todo
-#标题/todo
+## Obsidian的新尝试 #标题/TODO
 1. 使用白板进行创造
 2. 在插件生态中寻找有趣的插件
 3. 建立一个标签系统，使用标签的进阶用法
@@ -130,6 +130,6 @@ if __name__ == "__main__":
 
 参考资料来自：
 1. bilibili:
-   1. [ 00-Obsidian新手入门系列教程介绍](https://www.bilibili.com/video/BV1kP411k7Bq)
-   2. [ 也许是B站最好的Obsidian新手教程！爆肝30天，一站式入门双向链接笔记软件](https://www.bilibili.com/video/BV18a411r7mt)
+   1. [ Obsidian新手入门系列教程](https://www.bilibili.com/video/BV1kP411k7Bq)
+   2. [ Obsidian新手教程](https://www.bilibili.com/video/BV18a411r7mt)
 2. google：[bard](https://bard.google.com/)

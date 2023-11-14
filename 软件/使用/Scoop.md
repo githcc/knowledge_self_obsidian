@@ -1,14 +1,14 @@
 ## 软件安装方式对比
-|                        | 第三方 | 第三方（绿色） | 官网   | 应用商店 | Scoop |
-|------------------------|-----|---------|------|------|-------|
-| 软件选择                   | 丰富  | 丰富      | 一般   | 一般   | 较差    |
-| 软件来源                   | 不确定 | 不确定     | 安全   | 安全   | 安全    |
-| 软件的额外功能                | 是   | 是       | 否    | 否    | 否     |
-| 下载速度                   | 快   | 快       | 快    | 极快   | 一般    |
-| 安装方式                   | 手动  | 手动      | 手动   | 自动   | 自动    |
-| 是否捆绑软件                 | 大概率 | 否       | 较大概率 | 否    | 否     |
-| 是否有残留                  | 大概率 | 否       | 较大概率 | 否    | 较大概率  |
-| 对系统侵入（注册表，AppData等） | 是   | 极少      | 是    | 是    | 极少    |
+|                        | 第三方 | 官网   | 应用商店 | Scoop |
+|------------------------|-----|------|------|-------|
+| 软件选择                   | 丰富  | 一般   | 一般   | 较差    |
+| 软件来源                   | 不确定 | 安全   | 安全   | 安全    |
+| 软件的额外功能                | 是   | 否    | 否    | 否     |
+| 下载速度                   | 快   | 快    | 极快   | 一般    |
+| 安装方式                   | 手动  | 手动   | 自动   | 自动    |
+| 是否捆绑软件                 | 大概率 | 较大概率 | 否    | 否     |
+| 是否有残留                  | 大概率 | 较大概率 | 否    | 较大概率  |
+| 对系统侵入（注册表，AppData等） | 是   | 是    | 是    | 极少    |
 
 ## 软件安装方式选择变化
 第三方（无所谓）->官网（有了安全意识）->应用商店（统一管理）->官网+第三方（爱折腾）
@@ -97,8 +97,7 @@ irm get.Scoop.sh -outfile 'install.ps1'
 3. 安装失败可以尝试重新安装
 4. 不太喜欢弄主题
 
-## todo
-#标题/todo
+## Scoop的新尝试 #标题/TODO
 1. 同一个软件需要多个版本，之前nodejs遇到过，jdk有着多个版本，然而`app`就不一样，后面有遇到再利用Scoop进行补充
 2. 整个虚拟机重新安装一遍Scoop
 3. 自己弄一个bucket（将破解或旧版本的软件进行一个汇总）
@@ -143,8 +142,8 @@ winapps-share   https://Scoop.201704.xyz/https://github.com/WinApps-share/WinApp
 ````
 
 参考资料来自：
-1. wiki：[csdiy](https://csdiy.wiki/%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/Scoop/ ) [[离线/网站/csdiy/README| 离线]]
-2. bilibili: [ Windows 一條命令安裝卸載軟件，Scoop 的安裝和基本使用](https://www.bilibili.com/video/BV1dY411G7cT)
+1. wiki：[csdiy](https://csdiy.wiki/%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/Scoop/ ) [[离线/网站/csdiy/README.md| 离线]]
+2. bilibili: [ Scoop 的安裝和基本使用](https://www.bilibili.com/video/BV1dY411G7cT)
 3. google：[bard](https://bard.google.com/)
-4. csdn: [ scoop提速：解决scoop软件下载慢的问题](https://blog.csdn.net/weixin_42250302/article/details/124733053)
-5. 博客园：[【好软推荐】Scoop - Windows快速软件安装指南](https://www.cnblogs.com/sleepyocean/p/17017084.html)
+4. csdn: [ scoop提速](https://blog.csdn.net/weixin_42250302/article/details/124733053) [[离线/网页/csdn/scoop提速/README| 离线]]
+5. 博客园：[ Scoop - Windows快速软件安装指南](https://www.cnblogs.com/sleepyocean/p/17017084.html)[[离线/网页/博客园/scoop安装指南/README| 离线]]
