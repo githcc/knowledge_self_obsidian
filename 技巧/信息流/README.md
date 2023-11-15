@@ -11,7 +11,7 @@
 1. 主要进行办公，学习，娱乐
 2. [[系统/安装/win.md#安装步骤|进行电脑的系统安装]]
 3. 使用edge浏览器进行同步书签，连接外界存储（[Alist](http://175.178.88.119:5244/)），连接影视系统([小雅](http://175.178.88.119:5344/))
-4. 经常使用并且支持iframe的网站可以更新到[主页](http://175.178.88.119/) [[离线/网站/net_self_navigation-main/README.md|离线]] [在线](https://github.com/githcc/net_self_navigation)
+4. 经常使用并且支持iframe的网站可以更新到[主页](http://175.178.88.119/) [[离线/网站/net_self_navigation-main/README|离线]] [在线](https://github.com/githcc/net_self_navigation)
 5. 当前项目无法直接用于工作时，工作结束后将内容合并入当前项目，一定要区分公司资料与知识，尽量进行转述
 6. 能使用网页的尽量使用网页，其次使用Scoop进行安装
 

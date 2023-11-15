@@ -1,5 +1,4 @@
-1. 这个就是当前项目
-2. 如果别人对我的内容有疑问，可以临时新建一个项目，提交issue到我这里，我标注一下，可以前往对方新建的项目进行讨论，一定时间后，我根据讨论结果对我的内容进行补充或者加一个链接到一个新的md，不会大篇幅的添加内容，这会脱离这个项目的本意，十分完善的内容可以在km项目进行整合，然后移除当前的标注，对方可以就提出的疑问进行总结，合并入自己的pkm，关闭提问的项目
+1. 这个就是当前项目 [knowledge_self](https://github.com/githcc/knowledge_self/blob/main/README.md) [[README.md|离线]]
 
 参考资料来自：
 1. bilibili:[想象笔记工具(PKM)的未来](https://www.bilibili.com/video/BV1hk4y1H7rR)

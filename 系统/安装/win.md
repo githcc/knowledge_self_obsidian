@@ -27,18 +27,22 @@
         1. Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
         2. iwr -useb gitee.com/glsnames/scoop-installer/raw/master/bin/install.ps1 | iex
         3. scoop bucket add extras
-        4. scoop bucket add ScoopInstaller https://github.com/ScoopInstaller/Extras
-        5. scoop bucket add sqliuchang https://github.com/sqliuchang/scoop-bucket
-        6. scoop bucket add hoilc https://github.com/hoilc/scoop-lemon
-        7. scoop bucket add kkzzhizhou https://github.com/kkzzhizhou/scoop-zapps
-        8. scoop bucket add AntonOks https://github.com/AntonOks/scoop-aoks
-        9. scoop bucket add codecopy https://github.com/codecopy/ScoopBucket
-        10. scoop bucket add akirco https://github.com/akirco/aki-apps
-        11. scoop install 7zip git wechat
-        12. scoop install nodejs Motrix finalshell
-        13. scoop install Obsidian
-        14. scoop install idea-ultimate
-        15. scoop install aliyundrive
+        4. scoop install 7zip git
+        5. scoop bucket add ScoopInstaller https://github.com/ScoopInstaller/Extras
+        6. scoop bucket add sqliuchang https://github.com/sqliuchang/scoop-bucket
+        7. scoop bucket add hoilc https://github.com/hoilc/scoop-lemon
+        8. scoop bucket add kkzzhizhou https://github.com/kkzzhizhou/scoop-zapps
+        9. scoop bucket add AntonOks https://github.com/AntonOks/scoop-aoks
+        10. scoop bucket add codecopy https://github.com/codecopy/ScoopBucket
+        11. scoop bucket add akirco https://github.com/akirco/aki-apps
+        12. scoop install aria2, WeChat
+        13. scoop install nodejs Motrix finalshell
+        14. scoop install Obsidian
+        15. scoop install idea-ultimate
+        16. scoop install aliyundrive
+        17. scoop install vlc
+            1. 这个对比potplayer优势在于不需要而外安装解码器，一步到位
+            2. 用了一段时间，没有potplayer烦人的升级提示
 3. 安装编码环境
     1. 安装idea
         1. 使用自带jdk
