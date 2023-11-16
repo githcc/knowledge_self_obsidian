@@ -490,7 +490,6 @@
 					"right": '10px',
 					"top": '0px',
 					"fontSize": '25px',
-					"color": '#FFF',
 					"display":"inline-block",
 					"cursor":"pointer"
 				})

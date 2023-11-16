@@ -4,23 +4,22 @@
 3. firefox 安装包，内存占用都很小，有支持电视端的版本，不过支持已终止，有点可惜
 
 ## 插件
-1. [AdGuard](https://microsoftedge.microsoft.com/addons/detail/pdffkfellgipmhklpdmokmckkkfcopbh) 去广告
-2. [IDM](https://microsoftedge.microsoft.com/addons/detail/idm-integration-module/llbjbkhnmlidjebalopleeepgdfgcpec) 下载
-3. [快识图OCR](https://microsoftedge.microsoft.com/addons/detail/hbmcleikdildhbafhemlfhajchgllgin) 之前的OCR都是使用微信自带，这个在浏览器的内容可以比微信方便些
-4. [沉浸式翻译](https://microsoftedge.microsoft.com/addons/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E5%8F%8C%E8%AF%AD%E5%AF%B9%E7%85%A7%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91-pdf%E6%96%87%E6%A1%A3%E7%BF%BB%E8%AF%91/amkbmndfnliijdhojkpoglbnaaahippg) 比edge的优势在于可以保留原文
-5. [篡改猴测试版](https://microsoftedge.microsoft.com/addons/detail/tampermonkey-beta/fcmfnpggmnlmfebfghbfnillijihnkoh) 部分脚本只能在测试版使用
+1. [IDM](https://microsoftedge.microsoft.com/addons/detail/idm-integration-module/llbjbkhnmlidjebalopleeepgdfgcpec) 下载
+2. [快识图OCR](https://microsoftedge.microsoft.com/addons/detail/hbmcleikdildhbafhemlfhajchgllgin) 之前的OCR都是使用微信自带，这个在浏览器的内容可以比微信方便些
+3. [沉浸式翻译](https://microsoftedge.microsoft.com/addons/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E5%8F%8C%E8%AF%AD%E5%AF%B9%E7%85%A7%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91-pdf%E6%96%87%E6%A1%A3%E7%BF%BB%E8%AF%91/amkbmndfnliijdhojkpoglbnaaahippg) 比edge的优势在于可以保留原文
+4. [篡改猴测试版](https://microsoftedge.microsoft.com/addons/detail/tampermonkey-beta/fcmfnpggmnlmfebfghbfnillijihnkoh) 部分脚本只能在测试版使用
 
 ## 篡改猴的脚本
 1. [[软件/脚本/浏览器/README|离线]]
 
 ## 同步
-1. 可以同步书签，插件
-2. 可以同步密码
+1. 可以同步书签，插件，密码
+2. 使用国内网咯，比较稳定
 
 ## 书签
 1. 工具 存放一些无法使用iframe的在线工具网站
 2. 搜索 存放一些无法使用iframe的搜索引擎，还有就是一些垂直领域的内容
-3. 技术 一大堆技术文章，人人都有松鼠病
+3. 技术 一大堆技术文章，根本清不完
 4. TODO 这里就是一些重要但不急的内容，还有就是当前时间干不了的内容
 
 ## 密码 这个密码也要好好整理一下，哪天edge挂了，难以想象后果 #标题/TODO

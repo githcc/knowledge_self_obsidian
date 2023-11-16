@@ -63,17 +63,12 @@ ChatGPT是由[OpenAI](https://openai.com/)训练的一款大型语言模型，�
 
 项目合作洽谈请联系微信 [点我](https://mp.weixin.qq.com/s/Ir7CadEXQnscxa1ZjDdOyw) （请注明来意，如有关于仓库问题需讨论请参考下文入群讨论）。
 
-| 直接加群                                                     | 如果前面的过期，加我拉你入群                                 | AI中文指南公众号                                             |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [![img](index.assets/241616061-7118fe56-b07f-4be4-a69c-c8b44ac10c43.jpg)](https://user-images.githubusercontent.com/15922823/241616061-7118fe56-b07f-4be4-a69c-c8b44ac10c43.jpg) | [![img](index.assets/230634011-289efbe1-f2b1-4b1e-bddb-f56f5ea6f5f6.jpg)](https://user-images.githubusercontent.com/15922823/230634011-289efbe1-f2b1-4b1e-bddb-f56f5ea6f5f6.jpg) | [![img](index.assets/218004565-bb632624-b376-4f01-8ce2-d7065107bf4a.png)](https://user-images.githubusercontent.com/15922823/218004565-bb632624-b376-4f01-8ce2-d7065107bf4a.png) |
-
-# [正经指南](https://github.com/PlexPt/awesome-chatgpt-prompts-zh#正经指南)
+# [正经指南](https://github.com/PlexPt/awesome-chatgpt-prompts-zh#正经指南) #查阅/指令
 
 直接复制粘贴使用
 
 如需编程请使用https://github.com/PlexPt/awesome-chatgpt-prompts-zh/blob/main/prompts-zh.json
 
-gpt的提示词 #查阅/指令
 
 ## [充当 Linux 终端](https://github.com/PlexPt/awesome-chatgpt-prompts-zh#充当-linux-终端)
 

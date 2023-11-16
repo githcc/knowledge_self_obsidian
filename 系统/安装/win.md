@@ -1,16 +1,15 @@
 ## 原则
-1. 软件的选择，尽量使用scoop
-2. 软件使用第三方时记得备份软件包
-3. 控制好软件安装的数量，尽量使用系统自带
-4. 文件的存放，按自带的库进行存储
+1. 软件的选择，尽量使用系统自带，使用Scoop
+2. 文件的存放，按自带的库进行存储
 
 ## 备份
-1. 备份软件，第三方软件的安装包，普通文件的名称
-2. 备份账号，软件账号，系统账号
-3. 备份资料，项目文件，笔记文件，库文件，桌面文件
+1. 备份软件 第三方软件的安装包，普通文件的名称
+2. 备份账号 软件账号，系统账号
+3. 备份资料 项目文件，笔记文件，库文件，桌面文件，配置文件，密钥
 
-## 安装系统
-使用软碟通进行系统盘制取，除非是系统版本发生大变化否则使用重置
+## 系统的选择
+1. 选择系统重置，无法重置或需要进行大版本升级进行步骤2
+2. [win10Down](https://www.microsoft.com/zh-cn/software-download/windows10)，[win11Down](https://www.microsoft.com/zh-cn/software-download/windows11)，然后安装，之前都是找[msdn](https://msdn.itellyou.cn/)，还没试过微软的
 
 ## 安装步骤
 1. 在安装系统设置
@@ -26,26 +25,27 @@
     2. 安装scoop
         1. Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
         2. iwr -useb gitee.com/glsnames/scoop-installer/raw/master/bin/install.ps1 | iex
-        3. scoop bucket add extras
-        4. scoop install 7zip git
-        5. scoop bucket add ScoopInstaller https://github.com/ScoopInstaller/Extras
-        6. scoop bucket add sqliuchang https://github.com/sqliuchang/scoop-bucket
-        7. scoop bucket add hoilc https://github.com/hoilc/scoop-lemon
-        8. scoop bucket add kkzzhizhou https://github.com/kkzzhizhou/scoop-zapps
-        9. scoop bucket add AntonOks https://github.com/AntonOks/scoop-aoks
-        10. scoop bucket add codecopy https://github.com/codecopy/ScoopBucket
-        11. scoop bucket add akirco https://github.com/akirco/aki-apps
-        12. scoop install aria2, WeChat
-        13. scoop install nodejs Motrix finalshell
-        14. scoop install Obsidian
-        15. scoop install idea-ultimate
-        16. scoop install aliyundrive
-        17. scoop install vlc
+    3. 通过scoop安装软件
+        1. scoop bucket add extras
+        2. scoop install 7zip git
+        3. scoop bucket add ScoopInstaller https://github.com/ScoopInstaller/Extras
+        4. scoop bucket add sqliuchang https://github.com/sqliuchang/scoop-bucket
+        5. scoop bucket add hoilc https://github.com/hoilc/scoop-lemon
+        6. scoop bucket add kkzzhizhou https://github.com/kkzzhizhou/scoop-zapps
+        7. scoop bucket add AntonOks https://github.com/AntonOks/scoop-aoks
+        8. scoop bucket add codecopy https://github.com/codecopy/ScoopBucket
+        9. scoop bucket add akirco https://github.com/akirco/aki-apps
+        10. scoop install aria2, WeChat
+        11. scoop install nodejs Motrix finalshell
+        12. scoop install Obsidian
+        13. scoop install idea-ultimate
+        14. scoop install aliyundrive
+        15. scoop install vlc
             1. 这个对比potplayer优势在于不需要而外安装解码器，一步到位
             2. 用了一段时间，没有potplayer烦人的升级提示
 3. 安装编码环境
     1. 安装idea
-        1. 使用自带jdk
+        1. 安装idea库的jdk，万年不变jdk8
         2. 使用自带maven
             1. 设置mirror
                 1. 仓库地址 https://developer.aliyun.com/mvn/guide

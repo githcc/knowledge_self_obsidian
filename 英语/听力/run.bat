@@ -1,5 +1,5 @@
 @echo off
-echo  Successfully generated test.md (minimum 1.mp3, maximum 10.mp3, quantity 4, some duplicates exist), preview mode to view test.md
+echo  Successfully generated test.md
 
 rem 定义变量
 set min=1

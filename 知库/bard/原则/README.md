@@ -15,6 +15,6 @@
 5. 信息的整理和管理
 6. 最终解决问题
 
-参考资料来自：
+## 参考资料
 1. bilibili:
     1. [12堂超级搜索术-系统思维](https://www.bilibili.com/video/BV1VJ41197sy?p=12)

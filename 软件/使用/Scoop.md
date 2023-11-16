@@ -10,18 +10,18 @@
 | 是否有残留                  | 大概率 | 较大概率 | 否    | 较大概率  |
 | 对系统侵入（注册表，AppData等） | 是   | 是    | 是    | 极少    |
 
-## 软件安装方式选择变化
+## 软件安装方式的变化
 第三方（无所谓）->官网（有了安全意识）->应用商店（统一管理）->官网+第三方（爱折腾）
-当前：
+### 现在的情况
 1. 旧版本，破解来自第三方，如Navicat，IDM，Typroa
 2. 一般的软件来自Scoop，如微信，FinalShell，IDEA Ultimate
-3. Scoop安装失败的就找官方，如vmware，报错提示hash校验失败，重试过一次还是不行，不折腾了
+3. Scoop安装失败的就找官方，如VMware，报错提示hash校验失败，重试过一次还是不行，不折腾了
 
 ## Scoop优点
 1. 软件的绝大多数内容都存放于scoop目录下，控制面板都不知道软件的存在
 2. 准备好脚本，可以快速的进行安装软件，特别是刚安装好系统的时候
 3. 大多数情况可以进行一键安装，卸载，对系统侵入较少
-4. 对软件的内容进行了区分，如默认放用户目录，安装包，软件内容，用户数据，软链接
+4. 对软件的内容进行了分层，然后统一管理，如安装包，软件内容，用户数据，软链接，默认放用户目录
 5. 较为方便进行版本切换
 
 ## Scoop缺点
@@ -30,13 +30,13 @@
 3. 一些开机自启动作需要自己来设置
 4. 下载可能较慢，dddd
 
-## 以前的烦恼，Scoop可以解决一部分
+## Scoop可以解决下列问题
 1. 桌面的鼠标右键菜单被随意修改，很多都是自己用不到的
 2. 随意修改此电脑中的网络位置，主要是改得格格不入
-3. 软件在左下角进行弹窗，各种烦人的时间，天气，广告等
-4. 软件安装时遗漏点击取消捆绑软件，有些无法解除捆绑
-5. 卸载软件时，各种留人操作
-6. 小部分软件因为删除不干净无法重装，比如mysql，mysql的安装是有些烦
+3. 软件安装时遗漏点击取消捆绑软件，有些无法解除捆绑
+4. 卸载软件时，各种留人操作
+5. 小部分软件因为删除不干净无法重装，比如mysql，mysql的安装是有些烦
+6. 软件在左下角进行弹窗，各种烦人的时间，天气，广告等，具体看软件具体版本，如果scoop中的版存在这个问题，官网版本的也跑不掉
 
 ## Scoop安装
 ````
@@ -53,16 +53,11 @@ irm get.Scoop.sh -outfile 'install.ps1'
 2.  [scoop官网](https://Scoop.sh/)
 
 ## 常见的bucket
-1. main - Default bucket for the most common (mostly CLI) apps
-2. extras - Apps that don’t fit the main bucket’s criteria
-3. games - Open source/freeware games and game-related tools
-4. nerd-fonts - Nerd Fonts
-5. nirsoft - A subset of the 250 Nirsoft apps
-6. java - Installers for Oracle Java, OpenJDK, Zulu, ojdkbuild, AdoptOpenJDK, 7. Amazon Corretto, BellSoft Liberica & SapMachine
-7. jetbrains - Installers for all JetBrains utilities and IDEs
-8. nonportable - Non-portable apps (may require UAC)
-9. php - Installers for most versions of PHP
-10. versions - Alternative versions of apps found in other buckets
+1. main - 最常见（主要是 CLI）应用程序的默认存储桶
+2. extras - 不符合主存储桶标准的应用程序
+3. games - 开源/免费软件游戏和游戏相关工具
+4. jetbrains - 所有 JetBrains 实用程序和 IDE 的安装程序
+5. versions - 在其他存储桶中找到的应用程序的替代版本
 
 ## Scoop常用命令
 * **install**：安装软件包。
@@ -95,7 +90,6 @@ irm get.Scoop.sh -outfile 'install.ps1'
 1. 可以对persist目录中已卸载的软件进行手动删除
 2. 卡顿时点击控制台，任意输入字符，windows自带控制台的通病
 3. 安装失败可以尝试重新安装
-4. 不太喜欢弄主题
 
 ## Scoop的新尝试 #标题/TODO
 1. 同一个软件需要多个版本，之前nodejs遇到过，jdk有着多个版本，然而`app`就不一样，后面有遇到再利用Scoop进行补充
@@ -141,7 +135,7 @@ ScoopInstaller2 https://Scoop.201704.xyz/https://github.com/ScoopInstaller/Versi
 winapps-share   https://Scoop.201704.xyz/https://github.com/WinApps-share/WinApps-bucket 2023/11/11 20:51:02        82
 ````
 
-参考资料来自：
+## 参考资料
 1. wiki：[csdiy](https://csdiy.wiki/%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/Scoop/ ) [[离线/网站/csdiy/README| 离线]]
 2. bilibili: [ Scoop 的安裝和基本使用](https://www.bilibili.com/video/BV1dY411G7cT)
 3. google：[bard](https://bard.google.com/)
