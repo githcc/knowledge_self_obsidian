@@ -43,6 +43,8 @@
         15. scoop install vlc
             1. 这个对比potplayer优势在于不需要而外安装解码器，一步到位
             2. 用了一段时间，没有potplayer烦人的升级提示
+        16. scoop install vcredist2022
+            1. 这个只需安装64版本的即可,用于RaiDrive
 3. 安装编码环境
     1. 安装idea
         1. 安装idea库的jdk，万年不变jdk8

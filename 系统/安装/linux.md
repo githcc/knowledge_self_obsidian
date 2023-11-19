@@ -9,7 +9,8 @@
 
 ## 安装步骤
 1. 系统选择
-    1. centos的docker版本(腾讯云)，不使用docker版要自己安装一个docker
+   1. centos的docker版本
+   2. 腾讯云的有docker版，阿里云没找到，12月腾讯云到期，就不续费了，主要是续费比阿里云的贵太多了
 2. 安装Alist
    ```
     docker run -d --restart=always -v /etc/Alist:/opt/Alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="Alist" xhofe/Alist:latest
@@ -45,6 +46,7 @@
     ````
     sudo bash -c "$(curl -fsSL https://d.har01d.cn/update_xiaoya.sh)"
     ````
+   访客账号：guest guest_Api789
 6. 安装第三方软件包 [[软件/包/linux/README|离线]]
 
 

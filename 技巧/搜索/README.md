@@ -21,8 +21,10 @@
 6. [scoop](https://rasa.github.io/scoop-directory/search)
 7. [网盘](https://yiso.eu.org/)
 8. [慢慢买](http://manmanbuy.com/)
-9. 应用市场 移动互联网时代的核心输出
-10. [[知库/垂直/网站|其它]]
+9. [similarsites](https://cn.similarsites.com/) 找相似网站
+10. [canva](https://www.canva.com/) 设计
+11. 应用市场 移动互联网时代的核心输出
+12. [[知库/垂直/网站|其它]]
 
 ## 搜索妙用 #标题/TODO
 1. 公司年会活动、开新闻发布会、旅游攻略、美食攻略、社群线下活动等等，只要是有其他人已经做过，或者已经经历过的事情
@@ -30,6 +32,9 @@
 2. 遇到写报告不要怕，可以上网搜索对应的模板，大厂的具体报告
    1. 搜索权威的官网，后面整一份地图，多一些概念
    2. 淘宝专人汇总
+   3. 搜索一些行业报告现在pdf格式
+   4. 找xx行业/岗位的必逛网站
+   5. xx online
 
 ## 人脉搜索-准备工作
 1. 我有哪几个待解决的问题？
@@ -46,9 +51,16 @@
 * `filetype:` 搜索指定文件类型的页面
 * `-` 排除指定关键词
 * `AND` 与
+* `imagesize:` 图片大小
 * `*` 通配符 `OR` 我平时就没用过 #标题/TODO
 * 可以手动设置一下时间，时间的搜索指令好多不生效
 
+## 提高搜索能力
+1. 记录名词并搞懂
+2. 了解知识存储的渠道
+3. 了解知识的目的的是为什么（know learn create）
+
 ## 参考资料
 1. bilibili:
-    1. [12堂超级搜索术](https://www.bilibili.com/video/BV1VJ41197sy)
+   1. [12堂超级搜索术](https://www.bilibili.com/video/BV1VJ41197sy)
+   2. [超级搜索技术，普通人变强的唯一外挂](https://www.bilibili.com/video/BV1yw411F7J1)
