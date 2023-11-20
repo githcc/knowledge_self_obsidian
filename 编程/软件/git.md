@@ -39,10 +39,10 @@ git reset --hard HEAD^
 ```
     git config --global http.proxy http://127.0.0.1:7890
 ```
+### 含历史记录也要推送到新仓库
+1. 不能直接用拷贝的方式
+2. git push --mirror <远程仓库名>
 
-## git错误记录
-github上传单文件大于100M
-网络连接超时
 
 ## 参考资料
 1. google：[bard](https://bard.google.com/)

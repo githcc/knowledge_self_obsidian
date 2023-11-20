@@ -1,11 +1,9 @@
 ## jdk变化
-
 1. jdk8 Lambda优化了编码
 2. jdk9 模块化
 3. jdk10 类型推导
 
 ## jdk8接口中新增的方法
-
 弥补定义方法后实现类必须实现，Map的forEach
 
 1. 默认方法
@@ -15,10 +13,10 @@
 
 ### 使用的话放置于方法的定义那就可以了
 
-[[编程/代码/jdk8/supplier| supplier]] get 无参，有返回值
-[[编程/代码/jdk8/consumer| consumer]] accept 有参，无返回值
-[[编程/代码/jdk8/consumer| consumer]] apply 有参，有返回值
-[[编程/代码/jdk8/predicate| predicate]] test 有参，返回值为boolean
+[[supplier|supplier]] get 无参，有返回值
+[[consumer|consumer]] accept 有参，无返回值
+[[consumer|consumer]] apply 有参，有返回值
+[[predicate|predicate]] test 有参，返回值为boolean
 
 BiFunction 3个参数 入参，返回类型
 
@@ -45,12 +43,10 @@ negate 取反
 2. 集合 list.stream();
 
 ### 并行stream
-
 1. 集合 list.parallelStream();
 2. 转化 stream.parallel();
 
-## 具体方法
-
+## stream常用方法
 1. forEach
 2. filter
 3. map
@@ -59,12 +55,12 @@ negate 取反
 6. skip
 7. concat
 8. distinct
-9. reduce [[编程/代码/jdk8/reduce| 归纳]]
+9. reduce [[reduce| 归纳]]
 10. collect #标题/todo
-    1. [[编程/代码/jdk8/collect/转化| 转化]]
-    2. [[编程/代码/jdk8/collect/分组| 分组]]
-    3. [[编程/代码/jdk8/collect/分区| 分区]]
-    4. [[编程/代码/jdk8/collect/拼接| 拼接]]
+    1. [[转化|转化]]
+    2. [[分组|分组]]
+    3. [[分区|分区]]
+    4. [[拼接|拼接]]
 
 ## 并行的使用
 
@@ -72,8 +68,7 @@ negate 取反
 2. 需要控制线程数，避免系统崩溃
 3. 并行可能会引发一些安全问题
     1. 加同步锁
-    2.
-    选择安全的容器（初始化或进行转化[[编程/代码/jdk8/集合转化| Collections方式]] [[编程/代码/jdk8/collect/转化| collect方式]]）
+    选择安全的容器（初始化或进行转化[[集合转化| Collections方式]] [[转化| collect方式]]）
 
 ## Fork/join
 
@@ -93,14 +88,16 @@ Optional类
 1. of方法不支持null
 2. ofNullable 支持null
 3. empty 获取一个空对象
+4. ifPresent 可以类比 if
+5. ifPresentOrElse 可以类比 if ... else
 
-### 常用方法
+### Optional常用方法
 
 1. [[编程/代码/jdk8/optional/ge| get]] 获取值
-2. [[编程/代码/jdk8/optional/isPresent| isPresent]] 判断是否存在
+2. [[isPresent|isPresent]] 判断是否存在
 3. orElse 设置默认值
 4. orElseGet(Supplier sup) 设置默认值
-5. [[编程/代码/jdk8/optional/ifPresent| ifPresent]] 如果不为空执行
+5. [[ifPresent|ifPresent]] 如果不为空执行
 
 ## 时间与日期
 
@@ -141,9 +138,6 @@ Optional类
 2. 元注解新增
 	1. TYPE_PARAMETER 用于泛型
 	2. TYPE_USE 任何类型
-## 疑问
-
-1. ifPresent 如果不成立也有逻辑应该怎么写
 
 ## 参考资料
 
