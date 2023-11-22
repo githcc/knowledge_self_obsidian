@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.generator.mapper.CompanyMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.demo.generator.domain.Company">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="companyName" column="name" jdbcType="VARCHAR"/>
+            <result property="uId" column="u_id" jdbcType="INTEGER"/>
+            <result property="address" column="address" jdbcType="VARCHAR"/>
+            <result property="deleteFlag" column="delete_flag" jdbcType="INTEGER"/>
+            <result property="insertTime" column="insert_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,u_id,
+        address,delete_flag,insert_time,
+        update_time
+    </sql>
+</mapper>

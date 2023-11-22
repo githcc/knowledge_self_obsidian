@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.generator.mapper.userandcompany.VO21Mapper">
+
+    <resultMap id="BaseResultMap" type="com.example.demo.generator.vo.userandcompany.VO21">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="userName" column="name" jdbcType="VARCHAR"/>
+        <result property="age" column="age" jdbcType="INTEGER"/>
+        <result property="deleteFlag" column="delete_flag" jdbcType="INTEGER"/>
+        <result property="insertTime" column="insert_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <collection property="company" ofType="com.example.demo.generator.domain.Company">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="companyName" column="name" jdbcType="VARCHAR"/>
+            <result property="uId" column="u_id" jdbcType="INTEGER"/>
+            <result property="address" column="address" jdbcType="VARCHAR"/>
+            <result property="deleteFlag" column="delete_flag" jdbcType="INTEGER"/>
+            <result property="insertTime" column="insert_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        </collection>
+    </resultMap>
+
+    <select id="listUserAndCompany" resultMap="BaseResultMap">
+        SELECT * from user u LEFT JOIN company c on u.id = c.u_id
+    </select>
+
+</mapper>

@@ -32,7 +32,7 @@
 5. 有序集合（sorted set）：Redis 的有序集合类型可以存储多个元素，元素必须是唯一的，并且每个元素都关联一个分数。
 
 ## 项目中使用redis 
-[redis](https://github.com/githcc/springboot_self_demo/blob/main/src/main/java/com/example/boot/redis/README.md)
+[[编程/代码/工程/demo_redis/README.md|redis]]
 
 ## redis持久化
 1. RDB持久化 速度快，恢复到某一时刻 save xx xx 

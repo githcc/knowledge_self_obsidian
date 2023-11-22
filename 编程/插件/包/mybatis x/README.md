@@ -1,0 +1,1 @@
+## [mybatisx](https://plugins.jetbrains.com/plugin/10119-mybatisx/versions)

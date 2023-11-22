@@ -44,7 +44,7 @@
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 # 下载安装脚本
 irm get.Scoop.sh -outfile 'install.ps1'
-# 执行安装, --ScoopDir 参数指定 Scoop 安装路径
+# 执行安装, --ScoopDir 参数指定 Scoop 安装路径 主要是考虑到假如默认路径含中文
 .\install.ps1 -ScoopDir 'C:\Scoop'
 ````
 
@@ -117,22 +117,19 @@ Motrix        1.8.19               extras   2023-11-10 06:35:43
 nodejs        21.1.0               main     2023-11-10 06:33:56
 Obsidian      1.4.16               extras   2023-11-10 06:35:48
 python        3.12.0               main     2023-11-10 06:35:04
-vcredist2015  14.0.24215.1         akirco   2023-11-10 07:13:55
+redis         7.0.14               main     2023-11-19 03:30:37
 vlc           3.0.20               extras   2023-11-11 10:53:52
 wechat        3.9.7.29             extras   2023-11-10 06:31:25
-xmind         23.09.11172          akirco   2023-11-10 07:55:11
+xmind         23.05.1740           extras   2023-11-15 11:06:39
 
 C:\Users\wyswy>Scoop bucket list
 
-Name            Source                                                                   Updated             Manifests
-----            ------                                                                   -------             ---------
-akirco          https://Scoop.201704.xyz/https://github.com/akirco/aki-apps              2023/11/11 17:12:59       321
-extras          https://proxy.201704.xyz/https://github.com/ScoopInstaller/Extras        2023/11/11 20:29:12      1888
-hoilc           https://proxy.201704.xyz/https://github.com/hoilc/Scoop-lemon            2023/11/11 20:26:24       889
-main            https://proxy.201704.xyz/https://github.com/ScoopInstaller/Main          2023/11/11 16:24:49      1262
-ScoopInstaller  https://proxy.201704.xyz/https://github.com/ScoopInstaller/Extras        2023/11/11 20:29:12      1888
-ScoopInstaller2 https://Scoop.201704.xyz/https://github.com/ScoopInstaller/Versions      2023/11/11 20:42:16       429
-winapps-share   https://Scoop.201704.xyz/https://github.com/WinApps-share/WinApps-bucket 2023/11/11 20:51:02        82
+Name     Source                                                            Updated            Manifests
+----     ------                                                            -------            ---------
+codecopy https://scoop.201704.xyz/https://github.com/codecopy/ScoopBucket  2023/10/9 18:00:09        10
+extras   https://scoop.201704.xyz/https://github.com/ScoopInstaller/Extras 2023/11/19 0:26:19      1888
+main     https://scoop.201704.xyz/https://github.com/ScoopInstaller/Main   2023/11/19 0:26:44      1262
+
 ````
 
 ## 参考资料

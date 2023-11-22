@@ -1,5 +1,7 @@
 ## gpt对比
-1. chatgpt 代码能力比bard强多了，还有丰富的插件，经常封ip，封账号，可以使用lencx的版本进行缓解封ip
+1. chatgpt 代码能力比bard强多了，还有丰富的插件，经常封ip，封账号
+   1. 可以使用[桌面版](https://github.com/lencx/ChatGPT)缓解封ip/账号
+   2. 可以使用[Pandora](https://chat1.zhile.io/)缓解封ip/账号
 2. 文心一言 门槛比较低，稳定，个人版本是免费的，但是回答质量一般
 3. bard 不用折腾，不用付费，知识库为实时，回答质量比文心一言高些，拷贝内容总是要过一会
 4. copilot 微软出品，自带联网，没有bard好用，听说有类似与gpts的功能 #标题/TODO 
