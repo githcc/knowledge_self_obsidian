@@ -1,5 +1,5 @@
 @echo off
-@REM À´×Ôapi.openai.com
+@REM Powered by OpenAI
 setlocal enabledelayedexpansion
 echo.
 for /d %%i in (*) do (
@@ -11,5 +11,15 @@ for /d %%i in (*) do (
     popd
     echo.
 )
+
+set count=0
+
+for /r %%F in (*) do (
+    if not "%%~aF"=="d" (
+        set /a count+=1
+    )
+)
+
+echo Total files in the current directory and its subdirectories: %count%
 endlocal
 pause

@@ -6,6 +6,7 @@
 6. git config --global --unset http.proxy 恢复
 7. ssh-keygen -t ed25519 -C "githcc@github.com" 设置密钥
 8. --disable-web-security --user-data-dir=C:\edgeDevData 允许跨域
-
+9. 如果cmd想使用管理员运行，在文件菜单也是可以进入管理员的
+10. 刷新dns缓存 ipconfig /flushdns
 
 

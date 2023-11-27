@@ -42,6 +42,7 @@
 1. redis为什么要使用Resource进行注入
 2. redis可以直接存对象吗
 3. windows设置开机自启
+4. 序列化与转json一样吗
 
 ## 参考资料
 1. google：[bard](https://bard.google.com/)
