@@ -8,5 +8,8 @@
 8. --disable-web-security --user-data-dir=C:\edgeDevData 允许跨域
 9. 如果cmd想使用管理员运行，在文件菜单也是可以进入管理员的
 10. 刷新dns缓存 ipconfig /flushdns
-
-
+11. 新增一个命令快捷方式ps.bat
+    ```
+    @echo off
+    powershell
+    ```
