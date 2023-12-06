@@ -21,7 +21,12 @@
           docker logs -f 容器id 
          ```
       2. 挂载阿里云盘
-4. 安装nginx
+4. 安装Alist-tvbox
+    ````
+    sudo bash -c "$(curl -fsSL https://d.har01d.cn/update_xiaoya.sh)"
+    ````
+   访客账号：guest guest_Api789
+5. 安装nginx
    ```
     //创建目录
        mkdir -p /home/nginx/conf
@@ -42,11 +47,6 @@
        -v /home/nginx/html:/usr/share/nginx/html \
        -d nginx:latest
    ```
-5. 安装Alist-tvbox
-    ````
-    sudo bash -c "$(curl -fsSL https://d.har01d.cn/update_xiaoya.sh)"
-    ````
-   访客账号：guest guest_Api789
 6. 安装第三方软件包 [[软件/包/linux/README|离线]]
 
 
