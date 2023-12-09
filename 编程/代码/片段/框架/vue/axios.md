@@ -12,6 +12,8 @@
         console.error('Error fetching data', error);
       });
 ```
+
+```
   axios.post('https://api.example.com/post-endpoint', this.postData)
       .then(response => {
         this.responseData = response.data;
@@ -24,7 +26,6 @@
 
 ```
 ## 使用代理处理跨域问题
-
 ```
   devServer: {
     proxy: {

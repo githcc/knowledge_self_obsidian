@@ -35,7 +35,3 @@ const router = createRouter({
 });
 
 ```
-
-
-```
-```

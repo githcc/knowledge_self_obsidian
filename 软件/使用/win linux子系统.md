@@ -21,3 +21,7 @@
     1. cat /etc/resolv.conf
     2. 可以设置进全局文件 /etc/profile
     3. export http_proxy="http://172.30.0.1:7890"
+
+## 弊端
+1. 无法使用docker
+2. 开启finalshell，重启后失效

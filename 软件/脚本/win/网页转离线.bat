@@ -1,6 +1,6 @@
-@REM Typoraçš„ç›¸å…³è®¾ç½®
-@REM 1. ä¿®æ”¹å›¾ç‰‡ä¿å­˜è¿›å…¥å½“å‰æ–‡ä»¶å¤¹
-@REM 2. è®¾ç½®è‡ªåŠ¨ä¿å­˜
+@REM TyporaµÄÏà¹ØÉèÖÃ
+@REM 1. ÐÞ¸ÄÍ¼Æ¬±£´æ½øÈëµ±Ç°ÎÄ¼þ¼Ð
+@REM 2. ÉèÖÃ×Ô¶¯±£´æ
 
 @echo off
 

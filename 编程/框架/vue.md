@@ -37,11 +37,11 @@
    1. 跨域问题
 2. [router](编程/代码/片段/框架/vue/router.md)
     1. 路由传参
-3. [vuex](编程/代码/片段/框架/vue/vuex/README.md)
-    1. state 读取共享数据 mapState
-    2. getters 共享数据预处理 mapGetters
-    3. mutations 同步方法共享 mapMutations
-    4. action 异步方法共享 mapAction
+3. vuex
+    1. [state](编程/代码/片段/框架/vue/vuex/state.md) 读取共享数据 mapState
+    2. [getters](编程/代码/片段/框架/vue/vuex/getters.md) 共享数据预处理 mapGetters
+    3. [mutations](编程/代码/片段/框架/vue/vuex/mutations.md) 同步方法共享 mapMutations
+    4. [action](编程/代码/片段/框架/vue/vuex/action.md) 异步方法共享 mapAction
 
 ## vue3新特性
 1. 性能强，无用的模块可以不打包
@@ -81,6 +81,12 @@ History 模式使用浏览器的 History API 来实现前端路由，它会使�
 1. 安装nodejs也会安装npm
 2. event对象，可以修改很多东西 如：event.target.innerHTML
 3. js的数据类型有哪些 String Number Boolean Array Object Function
+
+
+
+
+
+
 
 ## 参考资料
 1. bilibili：[2天学会Vue3](https://www.bilibili.com/video/BV1Cx4y1K7tk)
