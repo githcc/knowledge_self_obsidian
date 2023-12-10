@@ -96,6 +96,10 @@
 2. [Free ChatGPT Site List](https://cc.ai55.cc/)
 3. [bard](https://bard.google.com/)
 
+## 一些gpt网站，如果主流的无法使用，可以用来应急
+1. https://app.copilothub.ai/
+2. https://www.yucongming.com/
+
 ## 参考资料
 1. bilibili:
     1. [掌握ChatGPT解决复杂问题](https://www.bilibili.com/video/BV1Lg4y1c7fk)

@@ -1,0 +1,17 @@
+## 文生图对比
+1. mj 在线使用，需要在discord中使用，质量高，支持修改，免费的被停用了
+2. sd 支持离线与在线，支持修改图片，离线最好使用高配n卡，3090可以在两秒内出图
+3. meta_imagine 在线使用，质量一般，目前的主力
+4. newBing 在线使用，质量一般
+5. dall-e-3 在线使用，质量一般
+
+## 离线提示词
+1. [[提示词/mj.xlsx|mj提示词]]
+
+## 相关网站
+1. [Midjourney 知识库](https://tob-design.yuque.com/kxcufk/mj/)
+2. [c站](https://civitai.com/)
+3. [画廊](https://arthub.ai/)
+4. [图生文](https://replicate.com/methexis-inc/img2prompt)
+5. [文生图/视频](https://app.runwayml.com/video-tools/teams/wyswydx/ai-tools/gen-2)
+6. [文改图](https://clipdrop.co/stable-diffusion-reimagine)

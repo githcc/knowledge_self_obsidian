@@ -51,11 +51,13 @@
     //运行nginx
        docker run \
        -p 80:80 \
+       -p 443:443 \
        --name nginx \
        -v /home/nginx/conf/nginx.conf:/etc/nginx/nginx.conf \
        -v /home/nginx/conf/conf.d:/etc/nginx/conf.d \
        -v /home/nginx/log:/var/log/nginx \
        -v /home/nginx/html:/usr/share/nginx/html \
+       -v /home/nginx/cert:/home/nginx/cert \
        -d nginx:latest
    ```
 6. 安装第三方软件包 [[软件/包/linux/README|离线]]
