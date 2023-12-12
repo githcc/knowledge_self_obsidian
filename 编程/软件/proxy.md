@@ -30,7 +30,8 @@
 ## 其它
 1. 用国内cdn需要备案，可以用对象存储进行替换，不过价格就贵了许多
 
-## rule
+## proxies
+### 网站
 1. gate走漏网之鱼
    ```
      - DOMAIN-SUFFIX,gate.io, 🐟 漏网之鱼
@@ -45,6 +46,14 @@
      - DOMAIN-SUFFIX,jetbrains.com,🌍 国外媒体
      - DOMAIN-SUFFIX,intellij.net,🌍 国外媒体
    ```
+3. meta走国外媒体
+   ```
+     - DOMAIN-SUFFIX,meta.com,🌍 国外媒体
+   ```
+### rule
+1. 🐟 漏网之鱼 走新加坡
+2. 🌍 国外媒体 走美国
+
 
 ## 参考资料
 1. 知乎:
