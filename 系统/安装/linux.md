@@ -33,13 +33,13 @@
     ````
     sudo bash -c "$(curl -fsSL https://d.har01d.cn/update_xiaoya.sh)"
     ````
-   访客账号：guest guest_Api789
 5. 安装nginx
    ```
     //创建目录
        mkdir -p /home/nginx/conf
        mkdir -p /home/nginx/log
        mkdir -p /home/nginx/html
+       mkdir -p /home/nginx/cert
     //复制原本的文件
        docker run --name nginx -p 80:80 -d nginx
        docker cp nginx:/etc/nginx/nginx.conf /home/nginx/conf/nginx.conf
@@ -61,6 +61,31 @@
        -d nginx:latest
    ```
 6. 安装第三方软件包 [[软件/包/linux/README|离线]]
+
+## 其它
+1. 安装Alist-tvbox的时候，阿里云盘的资源库需要把xiaoya-tvbox-temp给清理了
+2. Alist-tvbox 中的小雅设置代理，不知道为啥管理页面就不能写成相对路径，不然可以把管理页面也代理了
+   ```
+   location /🈴我的阿里分享 {
+      proxy_pass http://<内网ip>:5344/🈴我的阿里分享;
+   }
+   location /assets {
+      proxy_pass http://<内网ip>:5344/assets;
+   }
+   location /api {
+      proxy_pass http://<内网ip>:5344/api;
+   }
+   location /static {
+      proxy_pass http://<内网ip>:5344/static;
+   }
+   location /images {
+      proxy_pass http://<内网ip>:5344/images;
+   }
+   location /d {
+      proxy_pass http://<内网ip>:5344/d;
+   }
+   ```
+3. Alist-tvbox默认访客账号：guest guest_Api789
 
 ## 参考资料
 1. Alist：[AList文档](https://alist.nn.ci/zh/)

@@ -32,28 +32,39 @@
 
 ## proxies
 ### 网站
-1. gate走漏网之鱼
+1. 清理别人的预设，留出漏网之鱼
+2. gate走电报信息
    ```
-     - DOMAIN-SUFFIX,gate.io, 🐟 漏网之鱼
-     - DOMAIN-SUFFIX,gatedata.org,🐟 漏网之鱼
-     - DOMAIN-SUFFIX,gateio.services,🐟 漏网之鱼
-     - DOMAIN-SUFFIX,gatetrace.com,🐟 漏网之鱼
-     - DOMAIN-SUFFIX,gateimg.com,🐟 漏网之鱼
-     - DOMAIN-SUFFIX,gateio.live,🐟 漏网之鱼
+     - DOMAIN-SUFFIX,gate.io, 📲 电报信息
+     - DOMAIN-SUFFIX,gatedata.org,📲 电报信息
+     - DOMAIN-SUFFIX,gateio.services,📲 电报信息
+     - DOMAIN-SUFFIX,gatetrace.com,📲 电报信息
+     - DOMAIN-SUFFIX,gateimg.com,📲 电报信息
+     - DOMAIN-SUFFIX,gateio.live,📲 电报信息
    ```
-2. intellij走国外媒体
+3. copilot走电报
+   ```
+     - DOMAIN-SUFFIX,githubcopilot.com, 📲 电报信息
+   ```
+3. intellij走国外媒体
    ```
      - DOMAIN-SUFFIX,jetbrains.com,🌍 国外媒体
      - DOMAIN-SUFFIX,intellij.net,🌍 国外媒体
    ```
-3. meta走国外媒体
+4. meta走国外媒体
    ```
      - DOMAIN-SUFFIX,meta.com,🌍 国外媒体
    ```
+5. openai走苹果服务
+   ```
+     - DOMAIN-SUFFIX,openai.com,🍎 苹果服务
+     - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,🍎 苹果服务
+     - DOMAIN-SUFFIX,azurefd.net,🍎 苹果服务
+   ```
 ### rule
-1. 🐟 漏网之鱼 走新加坡
-2. 🌍 国外媒体 走美国
-
+1. 📲 电报信息 走新加坡，速度快
+2. 🌍 国外媒体 走美国，地区要求高
+3. 🌍 国外媒体 走南非，地区要求极高
 
 ## 参考资料
 1. 知乎:
