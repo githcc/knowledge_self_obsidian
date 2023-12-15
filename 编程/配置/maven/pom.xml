@@ -18,19 +18,10 @@
     <version>1.0</version>
     <build>
         <plugins>
-            <!-- 有这个插件才能打包 -->
+            <!-- 有这个插件才能打包，这个插件存在类似的，注意区分 -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
-                    <archive>
-                        <!-- 主类 -->
-                        <manifest>
-                            <mainClass>com.cc.T</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

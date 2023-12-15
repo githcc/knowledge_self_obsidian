@@ -13,3 +13,10 @@
 1. tar 是打包文件的通用格式，可以打包任何类型的文件。Maven 中的 tar 打包格式可以打包项目的源代码、编译后的类文件、依赖项、配置文件等。
 2. jar 是 Java 的标准打包格式，可以打包 Java 程序的源代码、编译后的类文件、资源文件等。Maven 中的 jar 打包格式可以打包项目的编译后的类文件、依赖项等。
 3. pom 是 Maven 项目的配置文件，包含项目的元数据信息，如项目的名称、版本、依赖项等。Maven 中的 pom 打包格式仅包含 pom 文件。
+
+## 依赖包打不进去
+1. maven-plugin配置插件错误
+2. 其它情况参考下面csdn
+
+## 参考资料
+1. csdn：[解决SpringBoot打包没有将pom依赖包打进去](https://blog.csdn.net/MyronCham/article/details/105715760) [[离线/网页/csdn/maven/README| 离线]]
