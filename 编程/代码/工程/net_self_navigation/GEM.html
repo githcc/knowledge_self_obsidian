@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Video Wall- 邓紫棋</title>
+<style>
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+	background-color: black;
+  }
+  .video {
+    width: calc(33.33% - 20px); /* 计算每个视频容器的宽度 */
+    margin: 10px;
+    box-sizing: border-box;
+    cursor: pointer; /* 鼠标指针样式为手型 */
+  }
+  .video video {
+    width: 100%; /* 视频占满容器的宽度 */
+    height: auto; /* 高度自适应，保持原始比例 */
+    display: block; /* 解决视频底部留白问题 */
+  }
+</style>
+</head>
+<body>
+  <div id="videosContainer"></div>
+  <script src="https://119.91.23.137/cdn/data.js"></script>
+  <script>
+
+    // 渲染视频列表
+    const videosContainer = document.getElementById('videosContainer');
+
+    const videosInRow = 3; // 每行视频数量
+    for (let i = 0; i < videoPaths.length; i += videosInRow) {
+      const rowDiv = document.createElement('div');
+      rowDiv.style.display = 'flex';
+      rowDiv.style.width = '100%';
+      rowDiv.style.marginBottom = '20px';
+
+      for (let j = i; j < i + videosInRow && j < videoPaths.length; j++) {
+        const videoDiv = document.createElement('div');
+        videoDiv.classList.add('video');
+        videoDiv.setAttribute('onclick', `playOrPause('video${j + 1}')`);
+        videoDiv.setAttribute('ondblclick', `toggleFullScreen('video${j + 1}')`);
+
+        const video = document.createElement('video');
+        video.setAttribute('id', `video${j + 1}`);
+        video.setAttribute('preload', 'metadata'); // 提前加载元数据，方便全屏时获取视频尺寸
+        preload="none"
+        const source = document.createElement('source');
+        source.setAttribute('src', videoPaths[j]);
+        source.setAttribute('type', 'video/mp4');
+
+        video.appendChild(source);
+        videoDiv.appendChild(video);
+        rowDiv.appendChild(videoDiv);
+      }
+
+      videosContainer.appendChild(rowDiv);
+    }
+
+    function playOrPause(videoId) {
+      var video = document.getElementById(videoId);
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    }
+
+    function toggleFullScreen(videoId) {
+      var video = document.getElementById(videoId);
+      if (!document.fullscreenElement) {
+        if (video.requestFullscreen) {
+          video.requestFullscreen();
+        } else if (video.mozRequestFullScreen) {
+          video.mozRequestFullScreen();
+        } else if (video.webkitRequestFullscreen) {
+          video.webkitRequestFullscreen();
+        } else if (video.msRequestFullscreen) {
+          video.msRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
+      }
+    }
+  </script>
+</body>
+</html>

@@ -27,16 +27,6 @@
 2. 用java解析出内容 <html>...<html>
    1. 可以使用jsoup解析html
 
-## 需要实现功能
-1. 总结内容： 用中文总结，简明扼要
-2. 解题：找出问题/代办事项，逐步分析它们，并提供完整的解决方案
-3. 翻译：分成直译与意译
-   
-
-## 其它
-1. 把提示词积累足够后，自己整一个插件，接口调用gpt就可以了
-   1. 编写idea插件的例子 [Samples](https://github.com/Wujiaxuan007/intellij-sdk-code-samples)
-
 ## 参考资料
 1. bilibili:
    1. [CodeWhisperer与Copilot](https://www.bilibili.com/video/BV11N411z75Y/)

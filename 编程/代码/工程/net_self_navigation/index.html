@@ -52,12 +52,12 @@
                        title="在当前页打开 https://119.91.23.137/ccgpt.html">CC Room</a>
                 </div>
                 <div class="col-xs-4">
-                    <a class="link-list-a" href="#"
-                       title="在当前页打开 https://yuyuanweb.feishu.cn/wiki/SePYwTc9tipQiCktw7Uc7kujnCd">鱼皮</a>
+                    <a class="link-list-a" href="https://119.91.23.137/GEM.html" download
+                       title="点击下载文件 GEM.html">GEM</a>
                 </div>
                 <div class="col-xs-4">
                     <a class="link-list-a" href="#"
-                       title="在当前页打开 https://javazhiyin.blog.csdn.net/article/details/106513008">Java中高级面试</a>
+                       title="在当前页打开 https://yuyuanweb.feishu.cn/wiki/SePYwTc9tipQiCktw7Uc7kujnCd">鱼皮</a>
                 </div>
                 <div class="col-xs-4">
                     <a class="link-list-a" href="#"
@@ -146,7 +146,7 @@
         </div>
     </div>
 </div>
-<iframe src="" style="width:100%;border: none"></iframe>
+<iframe src="https://119.91.23.137/ccgpt.html" style="width:100%;border: none"></iframe>
 
 <script>
     const NAV1_SELECTOR = ".nav1";
@@ -171,8 +171,10 @@
     for (const link of links) {
         link.addEventListener("click", () => {
             let title = link.querySelector("a").getAttribute("title");
-            if (title) {
+            if (title.startsWith("在当前页打开")) {
                 iframe.src = title.replace("在当前页打开", "");
+            }else{
+                iframe.src = 'https://119.91.23.137/cdn/download.html'
             }
         });
     }

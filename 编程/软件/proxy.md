@@ -69,6 +69,8 @@
    ```
      - DOMAIN-SUFFIX,parsevideo.com,📲 电报信息
      - DOMAIN-SUFFIX,arthub.ai,📲 电报信息
+     - DOMAIN-SUFFIX,aliyundrive.net,📲 电报信息
+     - DOMAIN-SUFFIX,github.io,📲 电报信息
    ```
 
 ### rule
