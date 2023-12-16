@@ -23,9 +23,13 @@
 3. 通过jsDelivr引用资源，https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径
 4. github有时被墙，这就体现了jsDelivr的优势，但jsDelivr有时也会被墙
 
-## OpenAI API 代理
+## OpenAI API 免代理
 1. [OpenAI API 代理](https://www.openai-proxy.com/)
-2. 之前请求报文被限制为1M，音频转文字接口可能会调用失败，其它场景还是不错的
+   1. 之前请求报文被限制为1M，音频转文字接口可能会调用失败，其它场景还是不错的
+2. 中转host
+   转发Host1: https://api.chatanywhere.tech (国内中转，延时更低，host1和host2二选一)
+   转发Host2: https://api.chatanywhere.com.cn (国内中转，延时更低，host1和host2二选一)
+   转发Host3: https://api.chatanywhere.cn (国外使用,国内需要全局代理)
 
 ## 其它
 1. 用国内cdn需要备案，可以用对象存储进行替换，不过价格就贵了许多
@@ -46,26 +50,34 @@
    ```
      - DOMAIN-SUFFIX,githubcopilot.com, 📲 电报信息
    ```
-3. intellij走国外媒体
+4. intellij走国外媒体
    ```
      - DOMAIN-SUFFIX,jetbrains.com,🌍 国外媒体
      - DOMAIN-SUFFIX,intellij.net,🌍 国外媒体
    ```
-4. meta走国外媒体
+5. meta走国外媒体
    ```
      - DOMAIN-SUFFIX,meta.com,🌍 国外媒体
    ```
-5. openai走苹果服务
+6. openai走苹果服务
    ```
      - DOMAIN-SUFFIX,openai.com,🍎 苹果服务
      - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,🍎 苹果服务
      - DOMAIN-SUFFIX,azurefd.net,🍎 苹果服务
    ```
+7. 其它走电报信息，小众专用
+   ```
+     - DOMAIN-SUFFIX,parsevideo.com,📲 电报信息
+     - DOMAIN-SUFFIX,arthub.ai,📲 电报信息
+   ```
+
 ### rule
 1. 📲 电报信息 走新加坡，速度快
 2. 🌍 国外媒体 走美国，地区要求高
-3. 🌍 国外媒体 走南非，地区要求极高
+3. 🍎 苹果服务 走南非，地区要求极高
 
 ## 参考资料
 1. 知乎:
     1. [jsDelivr+Github 实现免费CDN加速](https://zhuanlan.zhihu.com/p/346643522)
+2. github:
+   1. [GPT_API_free](https://github.com/chatanywhere/GPT_API_free)

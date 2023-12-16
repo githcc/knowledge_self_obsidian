@@ -73,5 +73,19 @@ server {
 }
 ```
 
+## 允许跨域
+```
+location / {  
+    add_header Access-Control-Allow-Origin *;
+    add_header Access-Control-Allow-Methods 'GET, POST, OPTIONS';
+    add_header Access-Control-Allow-Headers 'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization';
+
+    if ($request_method = 'OPTIONS') {
+        return 204;
+    }
+} 
+```
+
 ## 参考资料
 1. openai：[chatgpt](https://chat.openai.com/)
+2. csdn：[Nginx配置跨域请求](https://blog.csdn.net/agonie201218/article/details/112562252) [[离线/网页/csdn/nginx允许跨域/README| 离线]]

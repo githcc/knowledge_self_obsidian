@@ -95,6 +95,8 @@
 1. [MUZRI | 设计知识总结](https://www.yuque.com/muzri/design/pgbz8g4lgpgg3glu)
 2. [Free ChatGPT Site List](https://cc.ai55.cc/)
 3. [bard](https://bard.google.com/)
+4. [gpt4free](https://github.com/xtekky/gpt4free?tab=readme-ov-file) 需要部署
+4. [PandoraNext](https://chat.oaifree.com/) 需要账号
 
 ## 一些gpt网站，如果主流的无法使用，可以用来应急
 1. https://app.copilothub.ai/
