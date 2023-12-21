@@ -1,100 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Video Wall- 邓紫棋</title>
-<style>
-  body {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-	background-color: black;
-  }
-  .video {
-    width: calc(33.33% - 20px); /* 计算每个视频容器的宽度 */
-    margin: 10px;
-    box-sizing: border-box;
-    cursor: pointer; /* 鼠标指针样式为手型 */
-  }
-  .video video {
-    width: 100%; /* 视频占满容器的宽度 */
-    height: auto; /* 高度自适应，保持原始比例 */
-    display: block; /* 解决视频底部留白问题 */
-  }
-</style>
+  <meta charset="UTF-8">
+  <title>Video Wall - GEM</title>
+  <link href="https://119.91.23.137/cdn/http_cdn.bootcdn.net_ajax_libs_zui_1.9.1_css_zui.css" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px;
+      background-color: #111;
+    }
+
+    .video {
+      cursor: pointer; /* 鼠标指针样式为手型 */
+      margin: 0 auto;
+    }
+
+    .video video {
+      height: 300px;
+      background-color: #000000;
+    }
+  </style>
 </head>
 <body>
-  <div id="videosContainer"></div>
-  <script src="https://119.91.23.137/cdn/data.js"></script>
-  <script>
+<div id="videosContainer"></div>
+<script src="https://119.91.23.137/cdn/data.js"></script>
+<script>
+  // 渲染视频列表
+  const videosContainer = document.getElementById('videosContainer');
+  videosContainer.classList.add('row');
+  videoPaths = shuffleArray(videoPaths);
+  createVideosWithDelay();
 
-    // 渲染视频列表
-    const videosContainer = document.getElementById('videosContainer');
+  // 打乱视频
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
 
-    const videosInRow = 3; // 每行视频数量
-    for (let i = 0; i < videoPaths.length; i += videosInRow) {
-      const rowDiv = document.createElement('div');
-      rowDiv.style.display = 'flex';
-      rowDiv.style.width = '100%';
-      rowDiv.style.marginBottom = '20px';
+  async function createVideosWithDelay() {
+    for (let i = 0; i < 24; i++) {
+      await createVideoWithDelay(i);
+    }
+  }
 
-      for (let j = i; j < i + videosInRow && j < videoPaths.length; j++) {
+  async function createVideoWithDelay(i) {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        const rowDiv = document.createElement('div');
+        rowDiv.style.display = 'flex';
+        rowDiv.style.marginBottom = '20px';
+        rowDiv.classList.add('col-lg-3');
+        rowDiv.classList.add('col-md-4');
+        rowDiv.classList.add('col-sm-6');
+
         const videoDiv = document.createElement('div');
         videoDiv.classList.add('video');
-        videoDiv.setAttribute('onclick', `playOrPause('video${j + 1}')`);
-        videoDiv.setAttribute('ondblclick', `toggleFullScreen('video${j + 1}')`);
+        videoDiv.setAttribute('onclick', `playOrPause('video${i + 1}')`);
+        videoDiv.setAttribute('ondblclick', `toggleFullScreen('video${i + 1}')`);
 
         const video = document.createElement('video');
-        video.setAttribute('id', `video${j + 1}`);
-        video.setAttribute('preload', 'metadata'); // 提前加载元数据，方便全屏时获取视频尺寸
-        preload="none"
+        video.setAttribute('id', `video${i + 1}`);
+
         const source = document.createElement('source');
-        source.setAttribute('src', videoPaths[j]);
+        // 处理视频数量小于24
+        source.setAttribute('src', videoPaths[i % videoPaths.length]);
         source.setAttribute('type', 'video/mp4');
 
         video.appendChild(source);
         videoDiv.appendChild(video);
         rowDiv.appendChild(videoDiv);
-      }
+        videosContainer.appendChild(rowDiv);
 
-      videosContainer.appendChild(rowDiv);
-    }
+        resolve();
+      }, i * 150); // 间隔150ms
+    });
+  }
 
-    function playOrPause(videoId) {
-      var video = document.getElementById(videoId);
-      if (video.paused) {
-        video.play();
-      } else {
-        video.pause();
+  // 播放/暂停
+  function playOrPause(videoId) {
+    let video = document.getElementById(videoId);
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  }
+  // 全屏
+  function toggleFullScreen(videoId) {
+    let video = document.getElementById(videoId);
+    if (!document.fullscreenElement) {
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.mozRequestFullScreen) {
+        video.mozRequestFullScreen();
+      } else if (video.webkitRequestFullscreen) {
+        video.webkitRequestFullscreen();
+      } else if (video.msRequestFullscreen) {
+        video.msRequestFullscreen();
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
       }
     }
-
-    function toggleFullScreen(videoId) {
-      var video = document.getElementById(videoId);
-      if (!document.fullscreenElement) {
-        if (video.requestFullscreen) {
-          video.requestFullscreen();
-        } else if (video.mozRequestFullScreen) {
-          video.mozRequestFullScreen();
-        } else if (video.webkitRequestFullscreen) {
-          video.webkitRequestFullscreen();
-        } else if (video.msRequestFullscreen) {
-          video.msRequestFullscreen();
-        }
-      } else {
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-        } else if (document.mozCancelFullScreen) {
-          document.mozCancelFullScreen();
-        } else if (document.webkitExitFullscreen) {
-          document.webkitExitFullscreen();
-        } else if (document.msExitFullscreen) {
-          document.msExitFullscreen();
-        }
-      }
-    }
-  </script>
+  }
+</script>
 </body>
 </html>

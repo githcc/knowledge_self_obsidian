@@ -31,6 +31,9 @@
    转发Host2: https://api.chatanywhere.com.cn (国内中转，延时更低，host1和host2二选一)
    转发Host3: https://api.chatanywhere.cn (国外使用,国内需要全局代理)
 
+## gemini 代理
+1. proxy-googleapis.vercel.app
+
 ## 其它
 1. 用国内cdn需要备案，可以用对象存储进行替换，不过价格就贵了许多
 
@@ -65,12 +68,12 @@
      - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,🍎 苹果服务
      - DOMAIN-SUFFIX,azurefd.net,🍎 苹果服务
    ```
-7. 其它走电报信息，小众专用
+7. 小众专用
    ```
      - DOMAIN-SUFFIX,parsevideo.com,📲 电报信息
      - DOMAIN-SUFFIX,arthub.ai,📲 电报信息
-     - DOMAIN-SUFFIX,aliyundrive.net,📲 电报信息
      - DOMAIN-SUFFIX,github.io,📲 电报信息
+     - DOMAIN-SUFFIX,cloudflare.com,📲 电报信息
    ```
 
 ### rule
@@ -83,3 +86,6 @@
     1. [jsDelivr+Github 实现免费CDN加速](https://zhuanlan.zhihu.com/p/346643522)
 2. github:
    1. [GPT_API_free](https://github.com/chatanywhere/GPT_API_free)
+   2. [proxy-googleapis](https://github.com/githcc/proxy-googleapis)
+3. 博客：
+   1. [Vercel反向代理Google PaLM](https://simonmy.com/posts/%E4%BD%BF%E7%94%A8vercel%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86google-palm-api.html)

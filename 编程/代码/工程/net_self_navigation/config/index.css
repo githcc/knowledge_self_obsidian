@@ -60,20 +60,48 @@ a[onclick] {
 }
 button{
     font-family: LXGW WenKai;
+    border: none;
     font-weight: bold;
     width: 80px;
     height: 40px;
     margin: 5px;
+    font-size: 15px;
+}
+button:hover {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
+    background: #6b7184;
+    text-decoration: none;
 }
 select{
     font-family: LXGW WenKai;
+    border: none;
     font-weight: bold;
     width: 80px;
     height: 40px;
     margin: 5px;
+    font-size: 15px;
+    text-decoration: none;
 }
 .desktop-only {
     display: none;
+}
+.head_nav1 {
+    display: none;
+}
+.head_nav2 {
+    display: none;
+}
+@media screen and (min-width: 800px) {
+    .head_nav2 {
+        display: block;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .head_nav1 {
+        display: block;
+    }
 }
 @media screen and (min-width: 1800px) {
     .desktop-only {

@@ -13,7 +13,7 @@
 6. 还无法解决就找专人进行一对一咨询
 
 ## 部分垂直网站
-1. [主页](http://175.178.88.119/)
+1. [主页](http://119.91.23.137/)
 2. [健身](https://musclewiki.cn/#)
 3. [tv box](https://www.lige.fit/tvbox)
 4. [maven](https://mvnrepository.com/)
@@ -21,10 +21,9 @@
 6. [scoop](https://rasa.github.io/scoop-directory/search)
 7. [网盘](https://yiso.eu.org/)
 8. [慢慢买](http://manmanbuy.com/)
-9. [similarsites](https://cn.similarsites.com/) 找相似网站
-10. [canva](https://www.canva.com/) 设计
-11. 应用市场 移动互联网时代的核心输出
-12. [[知库/垂直/网站|其它]]
+9. [canva](https://www.canva.com/) 设计
+10. 应用市场 移动互联网时代的核心输出
+11. [[知库/垂直/网站|其它]]
 
 ## 搜索妙用 #标题/TODO
 1. 公司年会活动、开新闻发布会、旅游攻略、美食攻略、社群线下活动等等，只要是有其他人已经做过，或者已经经历过的事情
