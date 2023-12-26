@@ -114,5 +114,10 @@ Spring Boot 1.x 版本的自动配置类是 `RedisAutoConfiguration`，该类中
 
 因此，如果您的 Spring Boot 项目中添加了 `spring-boot-starter-redis` 依赖项，并且配置文件中没有指定 Redis 客户端，那么该项目将默认使用 Jedis 客户端。如果您的 Spring Boot 项目中添加了 `spring-boot-starter-data-redis` 依赖项，那么该项目将默认使用 Lettuce 客户端。
 
+## 语法
+进入容器
+redis-cli
+get value
+
 ## 参考资料
 1. google：[bard](https://bard.google.com/)

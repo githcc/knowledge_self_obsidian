@@ -1,0 +1,37 @@
+FROM centos:7
+
+#RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
+
+# 给基础镜像centos安装必备的环境
+# 加上“rpm --rebuilddb &&”是为了防止数据库损坏而影响yum安装。
+# 注意，比较保险的做法是有多少个yum命令，就加多少个“rpm --rebuilddb &&”在yum前面。
+RUN rpm --rebuilddb && yum install -y autoconf automake make wget proc-devel net-tools zlib zlib-devel make gcc  g++ openssl-devel pcre pcre-devel tar
+
+# 在线安装nginx（也可以在本地先下载压缩包，再用ADD命令将包加入到基础镜像/usr/src目录中）
+RUN wget http://nginx.org/download/nginx-1.17.1.tar.gz
+
+# 解压到当前目录
+RUN tar -zxvf nginx-1.17.1.tar.gz
+
+
+# 配置nginx
+RUN cd nginx-1.17.1 && ./configure --prefix=/usr/local/nginx && make && make install
+
+# 在线安装jdk1.8
+RUN cd ~ && yum install -y java-1.8.0-openjdk-devel.x86_64
+
+# 安装MySQL（仓库地址：http://repo.mysql.com/）
+RUN wget http://repo.mysql.com/mysql80-community-release-el7.rpm
+RUN yum install -y mysql80-community-release-el7.rpm
+RUN yum install -y mysql-server mysql-devel
+
+# 设置工作目录
+WORKDIR /usr/local/nginx/sbin
+
+# 将nginx添加到环境变量
+ENV PATH $PATH:/usr/local/nginx/sbin
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+
+

@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
     <style>
         .chat-room {
-            height: calc(100vh - 30px);
-            margin: 15px;
+            height: calc(100vh - 10px);
+            padding: 5px 2px;
+            margin: 5px 2px;
             display: flex;
             flex-direction: column;
             border: 2px solid #666;
-            padding: 15px;
             box-sizing: border-box;
         }
 
@@ -113,6 +113,7 @@
             sendMessagesBakForGemini: {contents: []},
             content: {},
             newMessage: '单击输入问题，回车发送问题，帮助请输入/h ',
+            newMessageBak: '',
             model: 'gpt-3.5-turbo-1106', // 模型
             api: 'https://api.openai-proxy.com', // 代理接口有条件使用 https://api.openai.com
             netApi: 'https://119.91.23.137/searchengine/search/yandex?query=',
@@ -122,17 +123,19 @@
             Authorization: decodeURIComponent(escape(window.atob('QmVhcmVyIHNrLUV+Gc3ZiKmRibVpRcn+BYblc2KktzbWZUM0J+sYmtGSmMqM3ZHSHZqT3hFOXRIQzg3UHlPWQ=='.replaceAll('+', '')))),
             user: 'You: ', // 用户标识
             bot: 'CC: ', // gpt标识
+            bot_G: 'CC-G: ', // gemini标识
             search: '联网搜索：',// 联网标识
             engine: '搜索引擎：',// 搜索引擎标识
             draw: '绘画：',// 画图标识
             help: '1. 单击输入问题，回车发送问题，双击新建会话 \n\n'
                 + '1. 输入/n前缀(net)进行联网，目前使用的是yandex搜索引擎，ctrl+点击数字进行访问 \n\n'
-                + '1. 输入/i前缀(img)进行绘画 \n\n'
+                + '1. 输入/i前缀(img)进行绘画，目前使用的是dall-e-3模型 \n\n'
                 + '1. 输入/g前缀(gemini)进行使用gemini \n\n',
             pre: ''
         },
         created() {
             this.sendMessages = this.sendMessagesBak;
+            this.newMessageBak = this.newMessage;
             this.sendMessagesForGemini = this.sendMessagesBakForGemini;
             this.content = {
                 model: this.model,
@@ -146,7 +149,7 @@
         },
         methods: {
             inputFocus() {
-                this.newMessage = '';
+                this.newMessage = this.newMessage.replace(this.newMessageBak,'');
             },
             inputDblclick() {
                 if (document.querySelector('input').disabled) {
@@ -351,7 +354,7 @@
                         let content = data.data.candidates[0].content;
                         this.sendMessagesForGemini.contents.push(content);
                         this.messages.push(
-                            {text: this.bot, sender: 'assistant'},
+                            {text: this.bot_G, sender: 'assistant'},
                             {text: content.parts[0].text, sender: 'assistant'}
                         );
                     }catch (e){

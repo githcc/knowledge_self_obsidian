@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Video Wall - GEM</title>
+  <meta http-equiv="content-type" content="Cache-Control: no-cache, no-store, must-revalidate">
   <link href="https://119.91.23.137/cdn/http_cdn.bootcdn.net_ajax_libs_zui_1.9.1_css_zui.css" rel="stylesheet">
   <style>
     body {
@@ -69,6 +70,24 @@
         video.setAttribute('id', `video${i + 1}`);
 
         const source = document.createElement('source');
+        // 修改请求头需要完整请求
+        // fetch(videoPaths[i % videoPaths.length], {
+        //   headers: {
+        //     'Host': 'cn-beijing-data.aliyundrive.net'
+        //   }
+        // }).then(response => {
+        //   if (response.ok) {
+        //     return response.blob();
+        //   }
+        //   throw new Error('Network response was not ok.');
+        // }).then(blob => {
+        //   const url = URL.createObjectURL(blob);
+        //   source.setAttribute('src', url);
+        // })
+        // .catch(error => {
+        //   console.error('There has been a problem with your fetch operation:', error);
+        // });
+
         // 处理视频数量小于24
         source.setAttribute('src', videoPaths[i % videoPaths.length]);
         source.setAttribute('type', 'video/mp4');
