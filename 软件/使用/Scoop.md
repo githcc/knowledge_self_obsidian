@@ -80,6 +80,8 @@ irm get.Scoop.sh -outfile 'install.ps1'
     * `show`：列出软件包缓存。语法：`Scoop cache show`
     * `clear`：清除软件包缓存。语法：`Scoop cache clear`
     * `rm`：删除软件包缓存。语法：`Scoop cache rm <app>`，其中 `<app>` 是软件包名称。
+* **cleanup**：清除软件旧版本
+    * `cleanup *`：清除所有软件旧版本
 
 ## 建议Scoop安装的软件包
 1. 7zip 用于解压

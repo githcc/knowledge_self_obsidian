@@ -1,3 +1,8 @@
+## 概念
+1. Linux是一款类Unix
+2. linux开源
+3. 发行版有：centos，Debian (及其衍生版本 Ubuntu)
+
 ## linux目录结构
 1. **`/bin`（二进制）：** 存放系统中最基本的命令（可执行文件），如ls、cp、mv等。
 
@@ -169,6 +174,59 @@ Linux的Shell是一个命令行解释器，它解释并执行用户输入的命�
 1. 包管理
    1. centos用yum
    2. ubuntu用apt
+
+## 系统管理命令
+1. who: 显示当前登录到系统上的用户信息，包括用户名、登录时间和终端。
+2. hostname: 显示计算机的主机名。
+3. uname: 显示当前系统的信息，如内核名称、版本号、系统架构等。
+4. du: 显示目录或文件所占用的磁盘空间大小。常用选项包括 -h（人类可读格式）和 -s（总结信息）。
+5. df: 显示文件系统的磁盘空间使用情况，包括磁盘大小、已用空间、剩余空间和文件系统类型。常用选项包括 -h（人类可读格式）和 -T（显示文件系统类型）。
+6. free: 显示系统内存使用情况，包括物理内存和交换空间。常用选项包括 -h（人类可读格式）和 -m（以兆字节显示）。
+
+## 配置
+1. 设置允许远程登录
+   1. /etc/ssh/sshd_config
+   2. PermitRootLogin yes
+2. 配置文件修改后立刻生效
+   1. source filename
+
+## 要扩展 Linux 上的逻辑卷
+### 1. 检查空闲空间
+使用 `lvdisplay` 命令检查逻辑卷的空闲空间。你可以输入以下命令查看可用空间：
+
+```bash
+sudo lvdisplay
+```
+
+### 2. 扩展逻辑卷
+假设你要将 `/dev/VolGroup00/LogVol00` 扩展为更大的空间。首先，你需要扩展文件系统。如果你使用的是 ext 文件系统，可以使用 `resize2fs` 命令：
+
+```bash
+# 扩展逻辑卷（假设有空闲空间）
+sudo lvextend -l +100%FREE /dev/VolGroup00/LogVol00
+
+# 扩展文件系统
+sudo resize2fs /dev/VolGroup00/LogVol00
+```
+
+### 3. 验证
+最后，使用 `df -h` 命令验证文件系统是否已成功扩展。
+
+```bash
+df -h
+```
+
+这些步骤会扩展你的逻辑卷并在 CentOS 上使用新的空间。记得在进行这些操作之前备份重要数据，以防万一出现意外情况。
+
+## 部署java应用
+1. 直接使用dockerCompose
+2. 其它
+   1. 修改环境变量
+      1. vim /etc/environment 修改系统环境变量
+      2. vim /etc/profile 修改用户环境变量
+   2. 修改mysql配置
+      1. vim /etc/mysql/mysql.conf.d/mysqld.cnf
+      2. bind-address = 127.0.0.1 注释掉
 
 ## 参考资料
 1. openai：[chatgpt](https://chat.openai.com/)

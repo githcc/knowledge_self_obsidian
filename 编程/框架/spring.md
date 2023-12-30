@@ -138,6 +138,42 @@
 5. 织入（Weaving）
 织入是将切面与目标对象或程序其他部分连接起来的过程。这可以在编译时、加载时或运行时完成，将切面逻辑应用到目标对象的过程中。
 
+spring 1
+ioc aop
+ioc <bean class = "User"> xx.xml
+1. 定义一个applicationContext
+2. 读取applicationContext.xml
+3. 成为一个bean工厂
+
+spring 2
+1. 定义一个applicationContext
+2. 读取applicationContext.xml
+3. 开启扫描 component-scan
+4. 对应的类需要使用注解
+@RequestMapping @Controller @Service @Repository
+
+spring 3
+@Configuration 取代xml配置方式
+@ImportResource
+@ComponentScan
+@Import
+1. 定义一个上下文对象
+2. 读取配置类
+3. 配置类
+方案一：@Bean
+方案二：@ComponentScan
+4. annotation-driven 注解驱动，识别自定义注解
+原理：实现了BeanPostProcessor，当spring加载的时候会调用一个Before方法
+
+spring 4
+@Conditional(放入一个Conditional的实现类) 条件装配
+
+spring 5
+1. 响应式编程支持
+   1. 客户端实时感知 异步非阻塞
+2. WebFlux [[框架/spring/WebFlux.md|WebFlux]]
+   1. 接口需要使用 produces = MediaType.TEXT_EVENT_STREAM_VALUE
+   2. 可以实现回调的效果
 
 ## 疑问
 1. spring 使用TypeFilter，ImportSelector

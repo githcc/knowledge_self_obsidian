@@ -6,4 +6,5 @@
 1. Run xx with Coverage
 
 ## 设置自动导包
-1. Ctrl+Alt+O 优化导入的类和包
+1. 在setting搜索auto import
+   1. 项目人员需要统一才行，然后包导入变来变去，很头痛

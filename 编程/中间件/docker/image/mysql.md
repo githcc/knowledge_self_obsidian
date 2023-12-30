@@ -1,12 +1,12 @@
 ```
 //创建目录
-   mkdir -p /docker_volumes/mysql/
-   mkdir -p /docker_volumes/mysql/conf.d/
+   mkdir -p /docker_volumes/mysql/mysql
+   mkdir -p /docker_volumes/mysql/log
    
 //复制原本的文件
    docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -d  -p 3306:3306 mysql:latest
-   docker cp mysql:/var/lib/mysql /docker_volumes/mysql/mysql
-   docker cp mysql:/etc/mysql/conf.d /docker_volumes/mysql/conf.d
+   docker cp mysql:/etc/mysql/mysql /docker_volumes/mysql
+   docker cp mysql:/var/log /docker_volumes/mysql
    
 //删除容器
    docker stop mysql
@@ -16,8 +16,9 @@
    docker run \
    -p 3306:3306 \
    --name mysql \
+   --restart=always \
    -e MYSQL_ROOT_PASSWORD=root \
-   -v /docker_volumes/mysql/mysql:/var/lib/mysql \
-   -v /docker_volumes/mysql/conf.d/:/etc/mysql/conf.d \
+   -v /docker_volumes/mysql/mysql:/etc/mysql/mysql \
+   -v /docker_volumes/mysql/log:/var/log \
    -d mysql:latest
 ```

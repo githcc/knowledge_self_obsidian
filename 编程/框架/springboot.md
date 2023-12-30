@@ -13,4 +13,22 @@
 6. 如何设置多个环境
 
 ## 使用事务（@Transaction）
-1. 
+
+## web容器对比
+1. tomcat
+2. Jetty
+
+## 核心注解
+1. SpringBootApplication
+   1. EnableAutoConfiguration
+      1. AutoConfigurationImportSelector 回去扫描META-INF/spring.factories 然后进行装配
+   2. ComponentScan
+      1. 只知道会扫描主入口的Application同级下的包
+   3. SpringBootConfiguration
+      1. Configuration 配置类
+
+## 常用的starter
+1. web 引入springmvc，默认tomcat容器
+2. test 引入测试框架，单元测试
+3. jdbc 引入数据库
+4. redis 引入redis

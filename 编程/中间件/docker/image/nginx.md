@@ -20,6 +20,7 @@
    -p 80:80 \
    -p 443:443 \
    --name nginx \
+   --restart=always \
    -v /home/nginx/conf/nginx.conf:/etc/nginx/nginx.conf \
    -v /home/nginx/conf/conf.d:/etc/nginx/conf.d \
    -v /home/nginx/log:/var/log/nginx \

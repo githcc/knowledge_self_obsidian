@@ -1,3 +1,6 @@
+## 概念
+1. 一种容器化技术
+
 ## 作用
 1. 可以用于打包，分发，部署的工具
    打包：dockerfile, 把项目与环境进行打包
@@ -80,6 +83,12 @@ docker export 1e560fca3906 > ubuntu.tar
 cat docker/ubuntu.tar | docker import - test/ubuntu:v1
 将容器内部使用的网络端口随机映射到我们使用的主机上
 -P
+每次docker启动都会启动容器
+--restart=always
+删除所有镜像
+docker rmi $(docker images -q)
+删除所有容器
+docker rmi -r $(docker images -q)
 
 ## 参考资料
 1. 博客园

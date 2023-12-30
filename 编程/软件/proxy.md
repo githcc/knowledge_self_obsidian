@@ -17,6 +17,28 @@
 4. 一般情况不需要开会员，开会员在请求量可以增加，但速度相差不大，每日10w请求一般够用
 5. 可以在worker内添加加密逻辑，未尝试
 
+## 使用PAC
+   ```
+   function FindProxyForURL(url, host) {
+     // 直连本地网络
+     if (isPlainHostName(host) ||
+         shExpMatch(host, "*.local") ||
+         isInNet(dnsResolve(host), "10.0.0.0", "255.0.0.0") ||
+         isInNet(dnsResolve(host), "172.16.0.0", "255.240.0.0") ||
+         isInNet(dnsResolve(host), "192.168.0.0", "255.255.0.0")) {
+       return "DIRECT";
+     }
+   
+     // 使用代理服务器访问GitHub
+     if (dnsDomainIs(host, "github.com")) {
+       return "PROXY ip:port"; // 更换为你的代理地址和端口
+     }
+   
+     // 默认情况下直接连接
+     return "DIRECT";
+   }
+   ```
+
 ## 使用jsDelivr代理
 1. 将内容放到github
 2. 在github发布release
