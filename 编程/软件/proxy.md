@@ -97,11 +97,16 @@
      - DOMAIN-SUFFIX,github.io,📲 电报信息
      - DOMAIN-SUFFIX,cloudflare.com,📲 电报信息
    ```
-
+8. 禁止联网
+   ```
+   - DOMAIN-SUFFIX,wps.cn,🍃 应用净化
+   - DOMAIN-SUFFIX,kdocs.cn,🍃 应用净化
+   ```
 ### rule
 1. 📲 电报信息 走新加坡，速度快
 2. 🌍 国外媒体 走美国，地区要求高
 3. 🍎 苹果服务 走南非，地区要求极高
+4. 🍃 应用净化 REJECT
 
 ## 参考资料
 1. 知乎:

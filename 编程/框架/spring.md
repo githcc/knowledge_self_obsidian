@@ -175,6 +175,21 @@ spring 5
    1. 接口需要使用 produces = MediaType.TEXT_EVENT_STREAM_VALUE
    2. 可以实现回调的效果
 
+## 生命周期
+在Spring框架中，Bean的生命周期可以分为以下阶段：
+
+1. **实例化（Instantiation）：** 在容器启动时，Spring根据配置或注解创建Bean的实例。这可以通过构造函数实例化或者工厂方法实例化完成。
+
+2. **属性设置（Properties Set）：** 在实例化后，Spring将会注入Bean的属性，这可以通过XML配置或者自动装配实现。
+
+3. **初始化（Initialization）：** 在属性注入完成后，Spring提供了两种主要的初始化回调方法：`InitializingBean`接口的`afterPropertiesSet()`方法和`@PostConstruct`注解标记的方法。这些方法允许开发人员在Bean初始化时执行一些自定义的逻辑操作。
+
+4. **使用（In Use）：** Bean被完全初始化后，它就可以被容器使用了。在这个阶段，Bean可以被其他Bean引用并执行相应的业务逻辑。
+
+5. **销毁（Destruction）：** 当应用程序关闭或者容器销毁时，Spring提供了两种主要的销毁回调方法：`DisposableBean`接口的`destroy()`方法和`@PreDestroy`注解标记的方法。这些方法允许开发人员在Bean被销毁之前执行一些自定义的清理操作。
+
+通过这些生命周期阶段，开发人员可以在Bean的不同阶段插入自定义的逻辑，以满足特定的需求，比如资源管理、初始化配置、清理资源等。
+
 ## 疑问
 1. spring 使用TypeFilter，ImportSelector
 2. 自己用springboot仿一个日志aop

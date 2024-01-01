@@ -62,7 +62,7 @@ public class RedisExpandController {
     public User getUser(@PathVariable("id") long id) {
         User user = (User) redisTemplate.opsForValue().get(PRE + id);
         if (user != null) {
-            // 对缓存时间进行延期，若存在双写不一致，会加重问题
+            // 对缓存时间进行延期
             redisTemplate.opsForValue().set(PRE + id, user, getTimeout(), TimeUnit.SECONDS);
             return user;
         }
@@ -73,18 +73,17 @@ public class RedisExpandController {
         try {
             user = (User) redisTemplate.opsForValue().get(PRE + id);
             if (user != null) {
-                // 对缓存时间进行延期
-                redisTemplate.opsForValue().set(PRE + id, user, getTimeout(), TimeUnit.SECONDS);
                 return user;
             }
 
-            // Redis中没有用户信息，从数据库中获取
+            // 从数据库中获取
             // 情况一：可以获取到数据
             user = User.builder()
                     .id(id)
                     .name("cc")
                     .age(27)
                     .build();
+
             // 将用户信息缓存到Redis中
             redisTemplate.opsForValue().set(PRE + id, user, getTimeout(), TimeUnit.SECONDS);
 

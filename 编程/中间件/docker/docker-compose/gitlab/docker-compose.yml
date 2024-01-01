@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  gitlab:
+    hostname: ''
+    image: 'gitlab/gitlab-ce'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://192.168.50.102:9080'
+        gitlab_rails['gitlab_shell_ssh_port'] = 9022
+        gitlab_rails['time_zone'] = 'Asia/Shanghai'
+    ports:
+      - '9080:9080'
+      - '9022:22'
+    volumes:
+      - 'gitlab-config:/etc/gitlab'
+      - 'gitlab-logs:/var/log/gitlab'
+      - 'gitlab-data:/var/opt/gitlab'
+
+volumes:
+  gitlab-config:
+  gitlab-logs:
+  gitlab-data:

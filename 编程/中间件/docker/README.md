@@ -89,6 +89,8 @@ cat docker/ubuntu.tar | docker import - test/ubuntu:v1
 docker rmi $(docker images -q)
 删除所有容器
 docker rmi -r $(docker images -q)
+显示Docker系统资源的使用情况摘要
+docker system df
 
 ## 参考资料
 1. 博客园

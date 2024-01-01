@@ -35,3 +35,10 @@ const router = createRouter({
 });
 
 ```
+
+## 跳转分类
+1. 刷新
+2. 前进
+3. 后退
+4. hash(带# 符号)
+5. history(不带# 符号)

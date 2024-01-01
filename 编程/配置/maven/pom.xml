@@ -31,24 +31,5 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
     </properties>
-<!--    这一段还没用过-->
-    <profiles>
-        <profile>
-            <id>dev</id>
-            <!-- 默认激活开发配制，使用config-local.properties来替换设置过虑的资源文件中的${key} -->
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <build>
-            </build>
-        </profile>
-        <profile>
-            <id>pro</id>
-            <build>
-
-            </build>
-        </profile>
-    </profiles>
-<!--    这一段还没用过-->
 </project>
 <!-- 来源：https://www.runoob.com/maven/maven-pom.html -->

@@ -3,7 +3,7 @@ MAINTAINER 作者
 
 ## 打包镜像
 docker build -t test:v1 .
-1. -t 指定镜像名称及版本号
+-t 指定镜像名称及版本号
 
 ## 疑问
 1. RUN 与 CMD区别

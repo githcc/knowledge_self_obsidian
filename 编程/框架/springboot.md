@@ -27,6 +27,71 @@
    3. SpringBootConfiguration
       1. Configuration 配置类
 
+## 定时调度
+```
+@Scheduled(fixedRate = 1000)
+@EnableScheduling
+```
+
+## 拦截器
+当你使用 Spring Boot 时，编写拦截器（Interceptor）可以帮助你在请求处理过程中进行预处理和后处理。以下是编写一个简单拦截器的步骤：
+
+### 步骤一：创建拦截器类
+
+创建一个类并实现 `HandlerInterceptor` 接口。该接口有三个方法可以重写：
+
+- `preHandle`：在请求处理之前执行，返回 `true` 表示继续处理，返回 `false` 表示中断处理流程。
+- `postHandle`：在请求处理之后，在视图渲染之前执行。
+- `afterCompletion`：在整个请求完成后执行，在视图渲染之后。
+
+```java
+import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.HandlerInterceptor;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@Component
+public class CustomInterceptor implements HandlerInterceptor {
+
+    @Override
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        // 在请求处理之前执行的逻辑
+        System.out.println("Pre-handle logic");
+        return true; // 继续请求处理
+    }
+
+    // 可选：postHandle 和 afterCompletion 方法的重写
+}
+```
+
+### 步骤二：注册拦截器
+
+在 Spring Boot 应用程序的配置类中注册拦截器。
+
+```java
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class WebConfig implements WebMvcConfigurer {
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new CustomInterceptor())
+                .addPathPatterns("/*"); // 可以设置拦截路径，此处拦截所有路径
+    }
+}
+```
+
+### 注意事项：
+- `CustomInterceptor` 类可以根据需求添加各种逻辑，比如身份验证、日志记录等。
+- `addPathPatterns` 方法可以指定拦截的路径模式，你可以根据需要自定义需要拦截的路径。
+- 如果你有多个拦截器，可以通过 `addInterceptor` 方法注册它们，并使用 `addPathPatterns` 指定路径。
+
+这样，当请求进入指定路径时，拦截器会执行 `preHandle` 方法中的逻辑。根据 `preHandle` 方法的返回值，你可以决定是否继续请求的处理流程。
+
 ## 常用的starter
 1. web 引入springmvc，默认tomcat容器
 2. test 引入测试框架，单元测试

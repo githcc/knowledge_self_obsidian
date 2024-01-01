@@ -228,5 +228,10 @@ df -h
       1. vim /etc/mysql/mysql.conf.d/mysqld.cnf
       2. bind-address = 127.0.0.1 注释掉
 
+## 编写定时脚本
+   ```
+   0 9 * * * /path/to/myscript.sh
+   ```
+
 ## 参考资料
 1. openai：[chatgpt](https://chat.openai.com/)
