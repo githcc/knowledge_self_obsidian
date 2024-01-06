@@ -7,7 +7,7 @@
 1. 进入zerossl官网申请证书
 2. 校验网站
 3. 下载证书
-4. 合并证书后
+4. 合并证书 ca_bundle.crt->certificate.crt
 5. 安装证书
     ```
     return  301 https://$server_name$request_uri;
@@ -36,10 +36,16 @@
         }
     }
     ```
+6. nginx
+   ```
+   nginx -t
+   systemctl restart nginx
+   ```
 
 ## 一些容易遗忘事项
 1. 服务器的端口，容器的端口
 2. 容器的虚拟目录设置
+3. 校验时不通过，可能是之前已经使用https，屏蔽了http
 
 ## 参考资料
 1. 知乎：[33种免费获取SSL证书](https://zhuanlan.zhihu.com/p/174755007) [[离线/网页/知乎/ssl/README| 离线]]

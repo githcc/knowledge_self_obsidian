@@ -1,14 +1,15 @@
-# 软件配置文件
+# 目录
+## 隐私目录
+隐私
+
+## 测试目录
+编程/代码/工程/net_self_search/test
+
+# 软件配置目录
 .idea
 .obsidian
 
-# 草稿文件
+
+# 文件
+## 草稿文件
 tmp.md
-
-# 隐私
-英语/单词/part.md
-知库/常识/part.md
-数据
-
-# 测试
-编程/代码/工程/net_self_search/test

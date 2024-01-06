@@ -52,11 +52,6 @@
    0.0.0.0:3306: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
     1. 似乎是端口被占用了，
 
-## 不同系统差异
-1. 续行
-    1. cmd ^
-    2. linux \
-
 ## 进入容器
    ```
    docker exec -it <容器id> /bin/bash

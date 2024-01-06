@@ -92,6 +92,9 @@ public class WebConfig implements WebMvcConfigurer {
 
 这样，当请求进入指定路径时，拦截器会执行 `preHandle` 方法中的逻辑。根据 `preHandle` 方法的返回值，你可以决定是否继续请求的处理流程。
 
+## 加密
+[对SpringBoot的Jar加密](https://www.bilibili.com/video/BV1KN41137Bm)
+
 ## 常用的starter
 1. web 引入springmvc，默认tomcat容器
 2. test 引入测试框架，单元测试

@@ -233,5 +233,13 @@ df -h
    0 9 * * * /path/to/myscript.sh
    ```
 
+## 不同系统差异
+1. 续行
+   1. cmd `^`
+   2. linux `\`
+2. 过滤
+   1. cmd `| find "str"`
+   2. linux `| grep str`
+
 ## 参考资料
 1. openai：[chatgpt](https://chat.openai.com/)

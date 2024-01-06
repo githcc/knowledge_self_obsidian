@@ -70,6 +70,7 @@
      - DOMAIN-SUFFIX,gatetrace.com,📲 电报信息
      - DOMAIN-SUFFIX,gateimg.com,📲 电报信息
      - DOMAIN-SUFFIX,gateio.live,📲 电报信息
+     - DOMAIN-SUFFIX,201704.xyz,📲 电报信息
    ```
 3. copilot走电报
    ```
