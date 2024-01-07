@@ -60,43 +60,49 @@
 1. 用国内cdn需要备案，可以用对象存储进行替换，不过价格就贵了许多
 
 ## proxies
+### 不走代理，特地加了微软的
+```
+localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.22.*;172.23.*;172.24.*;172.25.*;172.26.*;172.27.*;172.28.*;172.29.*;172.30.*;172.31.*;192.168.*;221.194.*
+```
+
 ### 网站
 1. 清理别人的预设，留出漏网之鱼
-2. gate走电报信息
-   ```
-     - DOMAIN-SUFFIX,gate.io, 📲 电报信息
-     - DOMAIN-SUFFIX,gatedata.org,📲 电报信息
-     - DOMAIN-SUFFIX,gateio.services,📲 电报信息
-     - DOMAIN-SUFFIX,gatetrace.com,📲 电报信息
-     - DOMAIN-SUFFIX,gateimg.com,📲 电报信息
-     - DOMAIN-SUFFIX,gateio.live,📲 电报信息
-     - DOMAIN-SUFFIX,201704.xyz,📲 电报信息
-   ```
-3. copilot走电报
-   ```
-     - DOMAIN-SUFFIX,githubcopilot.com, 📲 电报信息
-   ```
-4. intellij走国外媒体
-   ```
-     - DOMAIN-SUFFIX,jetbrains.com,🌍 国外媒体
-     - DOMAIN-SUFFIX,intellij.net,🌍 国外媒体
-   ```
-5. meta走国外媒体
-   ```
-     - DOMAIN-SUFFIX,meta.com,🌍 国外媒体
-   ```
-6. openai走苹果服务
-   ```
-     - DOMAIN-SUFFIX,openai.com,🍎 苹果服务
-     - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,🍎 苹果服务
-     - DOMAIN-SUFFIX,azurefd.net,🍎 苹果服务
-   ```
-7. 小众专用
+2. 小众专用
    ```
      - DOMAIN-SUFFIX,parsevideo.com,📲 电报信息
      - DOMAIN-SUFFIX,arthub.ai,📲 电报信息
      - DOMAIN-SUFFIX,github.io,📲 电报信息
      - DOMAIN-SUFFIX,cloudflare.com,📲 电报信息
+   ```
+3. gate走coin
+   ```
+     - DOMAIN-SUFFIX,gate.io, ฿ coin
+     - DOMAIN-SUFFIX,gatedata.org,฿ coin
+     - DOMAIN-SUFFIX,gateio.services,฿ coin
+     - DOMAIN-SUFFIX,gatetrace.com,฿ coin
+     - DOMAIN-SUFFIX,gateimg.com,฿ coin
+     - DOMAIN-SUFFIX,gateio.live,฿ coin
+     - DOMAIN-SUFFIX,201704.xyz,฿ coin
+   ```
+4. copilot走coin
+   ```
+     - DOMAIN-SUFFIX,githubcopilot.com, ฿ coin
+   ```
+5. intellij走国外媒体
+   ```
+     - DOMAIN-SUFFIX,jetbrains.com,🌍 国外媒体
+     - DOMAIN-SUFFIX,intellij.net,🌍 国外媒体
+     - DOMAIN-SUFFIX,bard.google.com,🌍 国外媒体
+   ```
+6. meta走国外媒体
+   ```
+     - DOMAIN-SUFFIX,meta.com,🌍 国外媒体
+   ```
+7. openai走gpt
+   ```
+     - DOMAIN-SUFFIX,openai.com,🤖 gpt
+     - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,🤖 gpt
+     - DOMAIN-SUFFIX,azurefd.net,🤖 gpt
    ```
 8. 禁止联网
    ```
@@ -104,10 +110,14 @@
    - DOMAIN-SUFFIX,kdocs.cn,🍃 应用净化
    ```
 ### rule
-1. 📲 电报信息 走新加坡，速度快
-2. 🌍 国外媒体 走美国，地区要求高
-3. 🍎 苹果服务 走南非，地区要求极高
-4. 🍃 应用净化 REJECT
+1. 📲 电报信息 走自动选择，速度快
+2.  ฿ coin 走新加坡，速度快，固定地区
+3. 🌍 国外媒体 走美国，固定地区
+4. 🤖 gpt 走南非，地区要求极高
+5. 🍃 应用净化 REJECT
+
+### 其它
+1. 不想使用wps的联网功能可以把wpscloudsvr.exe 删除
 
 ## 参考资料
 1. 知乎:

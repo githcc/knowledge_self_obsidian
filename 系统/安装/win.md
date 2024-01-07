@@ -26,15 +26,27 @@
       1. Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
       2. irm get.Scoop.sh -outfile 'install.ps1'
       3. .\install.ps1
-   3. 通过scoop安装软件
-      1. scoop install 7zip git
-      2. scoop bucket add githcc https://github.com/githcc/bucket_self_scoop
-      3. scoop install aria2
-      4. scoop idea-ultimate
-         1. 可能会安装失败
-      5. scoop install WeChat nodejs Motrix finalshell Obsidian aliyundrive
-      6. scoop install vcredist2022
-         1. 用于RaiDrive，需要重启
+   3. 通过scoop安装软件，不要移除main bucket
+    ```
+      scoop install 7zip git
+      scoop bucket add githcc https://github.com/githcc/bucket_scoop
+      scoop install aria2
+      scoop install idea-ultimate
+      scoop install vlc
+      scoop install finalshell
+      scoop install vcredist2022
+      scoop install notepadplusplus
+      scoop install wps
+      scoop install xmind
+      scoop install jianying
+      scoop install Motrix
+      scoop bucket rm githcc
+    ```
+   ### 下列版本更新较为频繁
+   scoop bucket add Extras https://github.com/ScoopInstaller/Extras
+   scoop install nodejs
+   scoop install wechat
+   scoop bucket rm Extras
 3. 安装编码环境
    1. 安装idea
       1. 安装idea库的jdk，万年不变jdk8
