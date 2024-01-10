@@ -14,9 +14,10 @@
 2. jar 是 Java 的标准打包格式，可以打包 Java 程序的源代码、编译后的类文件、资源文件等。Maven 中的 jar 打包格式可以打包项目的编译后的类文件、依赖项等。
 3. pom 是 Maven 项目的配置文件，包含项目的元数据信息，如项目的名称、版本、依赖项等。Maven 中的 pom 打包格式仅包含 pom 文件。
 
-## 依赖包打不进去
+## 依赖包打不进去 #标题/TODO
 1. maven-plugin配置插件错误
 2. 其它情况参考下面csdn
+3. 需要进行分类讨论，普通maven与springboot
 
 ## 配置优先级
 pom.xml> user settings > global settings

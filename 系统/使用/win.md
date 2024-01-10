@@ -14,3 +14,8 @@
     powershell
     ```
 12. win防火墙的出站，指访问电脑程序访问互联网，入站则反之。
+13. 鼠标无法选中窗口，听说是bug
+    ```
+    使用管理员powershell运行，也不知道是否有用，一篇爆红，一般都是注销一下就正常了
+    Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
+    ```

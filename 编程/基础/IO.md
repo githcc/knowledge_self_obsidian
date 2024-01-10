@@ -35,8 +35,24 @@
 
 ## BIO，NIO，AIO 三者间的区别
 bio：传统的Java I/O操作，同步且阻塞IO。
-nio：JDK1.4开始支持，同步阻塞或同步非阻塞IO。
-aio(nio.2)：JDK7开始支持，异步非阻塞IO。
+nio：JDK1.4开始支持，同步阻塞或同步非阻塞IO，tomcat7
+aio(nio.2)：JDK7开始支持，异步非阻塞IO，tomcat9
+
+## NIO
+1. 解决c10k，c10m问题
+2. 非阻塞是采用了多路复用机制，实现同步非阻塞
+3. 注册selector，监听其中的事件
+4. 当触发事件后，执行后操作
+5. 监听机制的实现依赖操作系统，具体的方法是epoll_create,epoll_wait,epoll_ctl
+   1. 不同系统下nio的实现是不一样的,包括Sunos linux 和windows
+6. 当并发数不高时与bio性能差异不大
+7. NIO并没有完全屏蔽平台差异
+8. 更高级的IO函数，Zero Copy
+
+## AIO
+与NIO不同，当进行读写操作时，只须直接调用API的read或write方法即可。这两种方法均为异步的，
+对于读操作而言，当有流可读取时，操作系统会将可读的流传入read方法的缓冲区，并通知应用程序；
+对于写操作而言，当操作系统将write方法传递的流写入完毕时，操作系统主动通知应用程序。
 
 ## 参考资料
 1. google：[bard](https://bard.google.com/)

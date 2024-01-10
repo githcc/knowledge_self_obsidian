@@ -7,10 +7,13 @@
 | 注解     | 方法                                     | 注意事项                                                    |
 | -------- | ---------------------------------------- | ----------------------------------------------------------- |
 | @Data    | set，get，equal，hashCode，toString      |                                                             |
-| @equals  |                                          | callSuper 是否调用父类的equals方法。默认为false，表示不调用 |
+| @EqualsAndHashCode  |                                          | callSuper 是否调用父类的equals方法。默认为false，表示不调用 |
 | @slf4j   | 生成一个log变量可以用于打印日志          | 无法单独使用，在springboot项目可以使用                      |
 |          | LoggerFactory.getLogger(this.getClass()) |                                                             |
 | @Builder | builder()                                |                                                             |
+
+## 其它
+1. 继承中，处理builder问题，用lombok的没有简便的实现方式
 
 ## 参考资料
 1. bilibili:[我为什么不喜欢lombok](https://www.bilibili.com/video/BV1nh4y1K7mf)
