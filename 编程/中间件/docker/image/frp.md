@@ -1,1 +1,1 @@
-docker run --restart=always --network host -d -v c://docker_volumes/frp:/etc/frp --name frpc snowdreamtech/frpc
+docker run --restart=always --network host -d -v frp:/etc/frp --name frpc snowdreamtech/frpc

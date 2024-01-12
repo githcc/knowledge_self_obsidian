@@ -27,9 +27,11 @@
 3. 安装Alist
    配置信息放微信收藏夹
    ```
-    docker run -d --restart=always -v /etc/Alist:/opt/Alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="alist" xhofe/alist:latest
+    docker run -d --restart=always -v alist:/opt/Alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="alist" xhofe/alist:latest
    ```
 4. 安装Alist-tvbox
+   1. 访问5344端口，admin/admin
+   2. 阿里云盘资源下面要放一个目录
     ````
     sudo bash -c "$(curl -fsSL https://d.har01d.cn/update_xiaoya.sh)"
     ````

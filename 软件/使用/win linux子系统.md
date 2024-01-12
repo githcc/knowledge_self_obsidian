@@ -20,8 +20,31 @@
 5. 使用代理，也可以使用clash的TUN mode
     1. cat /etc/resolv.conf
     2. 可以设置进全局文件 /etc/profile
-    3. export http_proxy="http://172.30.0.1:7890"
+    3. export http_proxy="http://ip:port"
+
+## 使用docker
+### wsl1
+1. 对docker进行设置
+   General/开启 Expose daemon on tcp://localhost:2375 without TLS
+2. 配置阿里云的gpg
+    ```
+    curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
+    ```
+3. 配置阿里云的镜像
+    ```
+    sudo add-apt-repository "deb [arch=amd64] https://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
+    ```
+4. 安装客户端
+    ```
+    apt install docker.io
+    ```
+5. 安装完成后配置docker_host连接向docker for windows
+    ```
+    export DOCKER_HOST=tcp://localhost:2375
+    ```
+### wsl2
+1. 对docker进行设置
+   Resources/WSL Integration/开启ubuntu
 
 ## 弊端
-1. 无法使用docker
-2. 开启finalshell，重启后失效
+1. 开启finalshell，重启后失效
