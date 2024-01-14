@@ -16,13 +16,7 @@
     2. 腾讯云的有docker版
 2. 安装docker(centos)
    ```
-   sudo yum update
-   sudo yum install -y yum-utils device-mapper-persistent-data lvm2
-   sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-   sudo yum install docker-ce
-   sudo systemctl start docker
-   sudo systemctl enable docker
-   sudo docker --version
+   curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
    ```
 3. 安装Alist
    配置信息放微信收藏夹
@@ -30,7 +24,7 @@
     docker run -d --restart=always -v alist:/opt/Alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="alist" xhofe/alist:latest
    ```
 4. 安装Alist-tvbox
-   1. 访问5344端口，admin/admin
+   1. 访问 4567 端口，admin/admin
    2. 阿里云盘资源下面要放一个目录
     ````
     sudo bash -c "$(curl -fsSL https://d.har01d.cn/update_xiaoya.sh)"
@@ -89,6 +83,22 @@
    ```
 3. Alist-tvbox默认访客账号：guest guest_Api789
 
+## 修改docker仓库
+```
+vim /etc/docker/daemon.json
+```
+
+## 开启虚拟内存
+```
+cd /
+sudo dd if=/dev/zero of=/swapfile bs=1k count=4096000
+mkswap /swapfile
+chmod +600 /swapfile
+swapon /swapfile
+```
+
 ## 参考资料
 1. Alist：[AList文档](https://alist.nn.ci/zh/)
 2. Alist-tvbox：[alist-tvbox](https://github.com/power721/alist-tvbox/blob/master/doc/README_zh.md)
+3. 菜鸟教程：[docker安装](https://www.runoob.com/docker/centos-docker-install.html)
+4. csdn：[虚拟内存](https://blog.csdn.net/qq_29856169/article/details/115430525)

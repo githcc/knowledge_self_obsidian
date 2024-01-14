@@ -241,5 +241,9 @@ df -h
    1. cmd `| find "str"`
    2. linux `| grep str`
 
+## 其它
+1. 当在下载的文件的时候，可以移动目录
+2. 下载结束后成功移动
+
 ## 参考资料
 1. openai：[chatgpt](https://chat.openai.com/)

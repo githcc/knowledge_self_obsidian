@@ -17,6 +17,7 @@
 ## 镜像加速源
 修改/etc/docker/daemon.json
 {"registry-mirrors":["https://reg-mirror.qiniu.com/"]}
+sudo systemctl restart docker
 
 | 镜像加速器          | 镜像加速器地址                       |
 | ------------------- | ------------------------------------ |
@@ -86,6 +87,10 @@ docker rmi $(docker images -q)
 docker rmi -r $(docker images -q)
 显示Docker系统资源的使用情况摘要
 docker system df
+查看容器ip
+docker inspect <容器id>
+重启守护进程
+sudo systemctl restart docker
 
 ## 参考资料
 1. 博客园

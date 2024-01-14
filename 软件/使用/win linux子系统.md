@@ -18,9 +18,7 @@
    sudo rm /etc/ssh/ssh_config                  ## 删配置文件，让ssh服务自己想办法链接
    sudo service ssh --full-restart
 5. 使用代理，也可以使用clash的TUN mode
-    1. cat /etc/resolv.conf
-    2. 可以设置进全局文件 /etc/profile
-    3. export http_proxy="http://ip:port"
+    1. 直接填192.168.x.x即可,注意检查防火墙
 
 ## 使用docker
 ### wsl1

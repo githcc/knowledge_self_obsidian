@@ -73,6 +73,7 @@ localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.2
      - DOMAIN-SUFFIX,arthub.ai,📲 电报信息
      - DOMAIN-SUFFIX,github.io,📲 电报信息
      - DOMAIN-SUFFIX,cloudflare.com,📲 电报信息
+     - DOMAIN-SUFFIX,githubusercontent.com,📲 电报信息
    ```
 3. gate走coin
    ```
@@ -88,23 +89,37 @@ localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.2
    ```
      - DOMAIN-SUFFIX,githubcopilot.com, ฿ coin
    ```
-5. intellij走国外媒体
+5. pikPak
+   ```
+     - IP-CIDR,43.134.111.34/8,฿ coin
+     - IP-CIDR,47.236.10.67/8,฿ coin
+     - DOMAIN-SUFFIX,jsd.nn.ci,฿ coin
+     - DOMAIN-SUFFIX,bugsnag.com,฿ coin
+     - DOMAIN-SUFFIX,unpkg.com,฿ coin
+     - DOMAIN-SUFFIX,ycyup.cn,฿ coin
+     - DOMAIN-SUFFIX,immersivetranslate.com,฿ coin
+     - DOMAIN-SUFFIX,bootstrapcdn.com,฿ coin
+     - DOMAIN-SUFFIX,ip.me,฿ coin
+     - DOMAIN-SUFFIX,mypikpak.com,฿ coin
+     - DOMAIN-SUFFIX,alicdn.com,฿ coin
+   ```
+6. intellij走国外媒体
    ```
      - DOMAIN-SUFFIX,jetbrains.com,🌍 国外媒体
      - DOMAIN-SUFFIX,intellij.net,🌍 国外媒体
      - DOMAIN-SUFFIX,google.com,🌍 国外媒体
    ```
-6. meta走国外媒体
+7. meta走国外媒体
    ```
      - DOMAIN-SUFFIX,meta.com,🌍 国外媒体
    ```
-7. openai走gpt
+8. openai走gpt
    ```
      - DOMAIN-SUFFIX,openai.com,🤖 gpt
      - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,🤖 gpt
      - DOMAIN-SUFFIX,azurefd.net,🤖 gpt
    ```
-8. 禁止联网
+9. 禁止联网
    ```
    - DOMAIN-SUFFIX,wps.cn,🍃 应用净化
    - DOMAIN-SUFFIX,kdocs.cn,🍃 应用净化

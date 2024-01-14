@@ -1,1 +1,0 @@
-docker run --restart=always --network host -d -v frp:/etc/frp --name frpc snowdreamtech/frpc

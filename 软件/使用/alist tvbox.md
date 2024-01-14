@@ -12,3 +12,8 @@
 4. 使用RaiDrive访问
    1. 挂载不会导致限流
    2. RaiDrive只会单线程访问/下载
+
+## 安装命令
+   ```
+   sudo bash -c "$(curl -fsSL https://d.har01d.cn/update_xiaoya.sh)"
+   ```
