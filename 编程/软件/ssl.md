@@ -10,7 +10,7 @@
 4. 合并证书 ca_bundle.crt->certificate.crt
 5. 安装证书
     ```
-    return  301 https://$server_name$request_uri;
+    return  301 https://$server_name/$request_uri;
    
     server {
         # >>>重点

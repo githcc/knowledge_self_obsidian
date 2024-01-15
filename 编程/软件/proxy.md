@@ -91,6 +91,11 @@ localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.2
    ```
 5. pikPak
    ```
+     - IP-CIDR,111.230.189.174/8,฿ coin
+     - IP-CIDR,202.118.1.130/8,฿ coin
+     - IP-CIDR,202.112.31.197/8,฿ coin
+     - IP-CIDR,157.148.61.140/8,฿ coin
+     - IP-CIDR,139.199.214.202/8,฿ coin
      - IP-CIDR,43.134.111.34/8,฿ coin
      - IP-CIDR,47.236.10.67/8,฿ coin
      - DOMAIN-SUFFIX,jsd.nn.ci,฿ coin
@@ -123,6 +128,8 @@ localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.2
    ```
    - DOMAIN-SUFFIX,wps.cn,🍃 应用净化
    - DOMAIN-SUFFIX,kdocs.cn,🍃 应用净化
+   - DOMAIN-SUFFIX,kakao.com,🍃 应用净化
+   - DOMAIN-SUFFIX,edge4k.com,🍃 应用净化
    ```
 ### rule
 1. 📲 电报信息 走自动选择，速度快

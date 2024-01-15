@@ -8,7 +8,7 @@
 1. 咱无法获取最新的数据
    1. 可以选择安装微力同步
 
-## 磁盘空间小于140G
+## 磁盘空间小于140G或元数据不足
 1. 安装小雅
    /etc/xiaoya 目录下创建三个文件 mytoken.txt myopentoken.txt temp_transfer_folder_id.txt
     ```
@@ -23,11 +23,9 @@
    ```
 3. 处理脚本
    ```
+   mkdir /home/emby
    wget http://docker.xiaoya.pro/emby_plus.unzip.sh
    wget https://hub.docker.com/v2/repositories/xiaoyaliu/glue/tags/latest
-   xiaoya改xiaoya-tv
-   ```
-   
    ```
 4. 安装emby
    ```
@@ -37,16 +35,27 @@
     ```
 5. 复制资源
    ```
-   
+   放入 all.mp4 config.mp4
    ```
 6. 批量修改字符串
     ```
+   ## 初始化
     find /media/xiaoya -type f -name '*.strm' -exec sed -i 's#DOCKER_ADDRESS#http://119.91.23.137:5344#g' {} +
-    find /media/xiaoya -type f -name '*.strm' -exec sed -i 's#http://127.0.0.1:5678#http://119.91.23.137:5344#g' {} +
-    find /media/xiaoya -type f -name '*.strm' -exec sed -i 's#http://119.91.23.137:5678#http://119.91.23.137:5344#g' {} +
+    find /media/xiaoya -type f -name '*.strm' -exec sed -i 's#http://xiaoya.host:5678#http://119.91.23.137:5344#g' {} +
+   
+   ## 利用别人的节点
+    find /media/xiaoya/电影 -type f -name '*.strm' -exec sed -i 's#http://xiaoya.host:5678#http://13.250.140.11:5678#g' {} +
+    find /media/xiaoya/电视剧 -type f -name '*.strm' -exec sed -i 's#http://xiaoya.host:5678#http://47.115.222.164:5678#g' {} +
+    find /media/xiaoya -type f -name '*.strm' -exec sed -i 's#http://xiaoya.host:5678#http://mydsm.jskj.eu.org:6789#g' {} +
+    find /media/xiaoya/PikPak -type f -name '*.strm' -exec sed -i 's#http://mydsm.jskj.eu.org:6789#http://119.91.23.137:5344#g' {} +
+   
+   ## 将节点还原成自己的
+    find /media/xiaoya/PikPak -type f -name '*.strm' -exec sed -i 's#http://mydsm.jskj.eu.org:6789#http://119.91.23.137:5344#g' {} +
+    find /media/xiaoya/PikPak -type f -name '*.strm' -exec sed -i 's#http://47.115.222.164:5678#http://119.91.23.137:5344#g' {} +
+    find /media/xiaoya/PikPak -type f -name '*.strm' -exec sed -i 's#http://13.250.140.11:5678#http://119.91.23.137:5344#g' {} +
     ```
 
-## 磁盘空间大于140G，安装emby与前面不一致
+## 磁盘空间大于140G且元数据充足
 1. 安装emby
    ```
    bash -c "$(curl http://docker.xiaoya.pro/emby_plus.sh)" -s 资源目录 配置目录
@@ -54,13 +63,28 @@
    ```
 
 ## 注意
-1. setting要使用小雅的，这是个大坑
+1. 要确保元数据正确
+2. 要确保每一分区磁盘空间充足
 
-## 删除旧版本
+## 更新元数据
 ```
+docker stop emby
+docker rm emby
 rm -rf /media/config
 rm -rf /etc/xiaoya
-cd /etc/xiaoya
+
+## 删除历史数据
+cd /media
+mv /media/xiaoya/PikPak ./
+rm -rf /media/xiaoya/*
+mv PikPak ./xiaoya/
+
+mkdir -p /etc/xiaoya
+放入4个配置文件
+cd /media/temp
+放入 all.mp4 config.mp4
+cd /home/emby
+sudo sh emby_plus.unzip.sh /media /etc/xiaoya
 ```
 
 ## 参考内容

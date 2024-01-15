@@ -91,6 +91,8 @@ docker system df
 docker inspect <容器id>
 重启守护进程
 sudo systemctl restart docker
+关闭docker开机自启
+docker update --restart=no <容器id>
 
 ## 参考资料
 1. 博客园

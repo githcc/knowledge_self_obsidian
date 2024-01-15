@@ -30,6 +30,41 @@ WantedBy=multi-user.target
 - 状态: `systemctl status alist`
 - 重启: `systemctl restart alist`
 
+## 虚拟机查看不到ip
+```
+cd /etc/sysconfig/network-scripts
+vi ifcfg-ens33
+将ONBOOT改为yes
+systemctl restart network
+```
+
+## 安装ifconfig
+```
+yum search ifconfig
+yum install net-tools.x86_64
+```
+
+## 3种虚拟机连接方式
+1. NAT 外面网络无法访问虚拟机，虚拟机与宿主机互通
+2. 桥接 虚拟机与宿主机同一网段，虚拟机无法访问宿主机，宿主机可以访问虚拟机
+3.
+
+## 调整磁盘空间
+```
+lvreduce -L -40G /dev/mapper/centos-home
+mkfs.xfs /dev/mapper/centos-home -f
+lvextend -L +40G /dev/mapper/centos-root
+xfs_growfs /dev/mapper/centos-root
+```
+
+## 
+```
+umount /home
+mkfs.xfs /dev/mapper/centos-home -f
+umount /home
+mkfs.xfs /dev/mapper/centos-home -f
+```
+
 ## 日常使用
 1. 自己的话，大多数都是用docker，用到的时候就查查docker的使用（[Docker 安装](https://blog.csdn.net/BThinker/article/details/123358697)），用了这么久对命令还不是很熟练，有点过度依赖finalshell的命令，平时都不太需要直接输入命令，以至于对目录结构都生疏了
 2. 公司的话，大多数还是软件直接安装，有专门的团队，根本没机会进行安装，也有些怕（异地人员，异地机房，专门的操作间）
@@ -37,3 +72,4 @@ WantedBy=multi-user.target
 ## 参考资料
 1. 知乎：[Docker 安装](https://blog.csdn.net/BThinker/article/details/123358697) [[离线/网页/csdn/Docker 安装/README| 离线]]
 2. Alist：[Alist手动安装#守护进程](https://alist.nn.ci/zh/guide/install/manual.html#%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B) 
+3. bilibili: [虚拟机的三种连接方式](https://www.bilibili.com/video/BV1NU4y1E7n3)

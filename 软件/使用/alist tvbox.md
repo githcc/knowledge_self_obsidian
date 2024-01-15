@@ -14,6 +14,11 @@
    2. RaiDrive只会单线程访问/下载
 
 ## 安装命令
-   ```
+   /etc/xiaoya 目录下创建三个文件 mytoken.txt myopentoken.txt temp_transfer_folder_id.txt
+   ``` linux
    sudo bash -c "$(curl -fsSL https://d.har01d.cn/update_xiaoya.sh)"
+   ```
+   ``` docker
+   docker pull haroldli/xiaoya-tvbox
+   docker run -d -p 4567:4567 -p 5444:80 -e ALIST_PORT=5344 --restart=always -v xiaoya-tvbox:/data --name=xiaoya-tvbox haroldli/xiaoya-tvbox
    ```

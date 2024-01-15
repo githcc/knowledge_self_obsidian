@@ -136,7 +136,7 @@ main   https://scoop.201704.xyz/https://github.com/ScoopInstaller/Main   2023/11
 ````
 
 ## 参考资料
-1. wiki：[csdiy](https://csdiy.wiki/%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/Scoop/ ) [[离线/网站/csdiy/README| 离线]]
+1. wiki：[csdiy](https://csdiy.wiki/%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/Scoop/ ) 
 2. bilibili: [ Scoop 的安裝和基本使用](https://www.bilibili.com/video/BV1dY411G7cT)
 3. google：[bard](https://bard.google.com/)
 4. csdn: [ scoop提速](https://blog.csdn.net/weixin_42250302/article/details/124733053) [[离线/网页/csdn/scoop提速/README| 离线]]

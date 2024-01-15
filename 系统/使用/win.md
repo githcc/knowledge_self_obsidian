@@ -19,3 +19,5 @@
     使用管理员powershell运行，也不知道是否有用，一篇爆红，一般都是注销一下就正常了
     Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
     ```
+14. Windows Search 搜索器 占用CPU
+    打开 控制面板，找到 索引选项，点击 修改(M)，将不需要建立索引的位置勾选掉即可
