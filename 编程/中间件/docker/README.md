@@ -93,6 +93,8 @@ docker inspect <容器id>
 sudo systemctl restart docker
 关闭docker开机自启
 docker update --restart=no <容器id>
+删除不可用的虚拟目录
+docker volume ls -qf dangling=true | xargs docker volume rm
 
 ## 参考资料
 1. 博客园

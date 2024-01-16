@@ -19,6 +19,9 @@
    sudo bash -c "$(curl -fsSL https://d.har01d.cn/update_xiaoya.sh)"
    ```
    ``` docker
-   docker pull haroldli/xiaoya-tvbox
-   docker run -d -p 4567:4567 -p 5444:80 -e ALIST_PORT=5344 --restart=always -v xiaoya-tvbox:/data --name=xiaoya-tvbox haroldli/xiaoya-tvbox
+   docker run -d -v /etc/xiaoya:/etc/xiaoya -p 4567:4567 -p 5344:80 -e ALIST_PORT=5344 --restart=always --name=xiaoya-tvbox \
+    -e  "HTTP_PROXY=http://x.x.x.x:7890" \
+    -e  "HTTPS_PROXY=http://x.x.x.x:7890" \
+    -e  "NO_PROXY=localhost,127.0.0.1,.example.com" \
+   haroldli/xiaoya-tvbox:latest
    ```

@@ -14,7 +14,7 @@
     ```
     bash -c "$(curl http://docker.xiaoya.pro/update_new.sh)"
     ```
-2. 下载小雅的元数据，将config.mp4放到资源目录下的temp目录
+2. 下载小雅的元数据放到资源目录下的temp目录
    配置目录放 docker_address.txt
    ```
    mkdir /media/temp
@@ -24,8 +24,11 @@
 3. 处理脚本
    ```
    mkdir /home/emby
+   cd /home/emby
    wget http://docker.xiaoya.pro/emby_plus.unzip.sh
    wget https://hub.docker.com/v2/repositories/xiaoyaliu/glue/tags/latest
+   ## 无法访问
+   将hub.docker.com替换为googleapis.freechatgpt.cc
    ```
 4. 安装emby
    ```
@@ -33,26 +36,15 @@
    cd /home/emby
    sudo sh emby_plus.unzip.sh /media /etc/xiaoya
     ```
-5. 复制资源
+5. 将host改为自己的ip
    ```
-   放入 all.mp4 config.mp4
+   sudo vi /etc/hosts
+   xiaoya.host 127.0.0.1
    ```
-6. 批量修改字符串
+
+## 批量修改字符串
     ```
-   ## 初始化
-    find /media/xiaoya -type f -name '*.strm' -exec sed -i 's#DOCKER_ADDRESS#http://119.91.23.137:5344#g' {} +
     find /media/xiaoya -type f -name '*.strm' -exec sed -i 's#http://xiaoya.host:5678#http://119.91.23.137:5344#g' {} +
-   
-   ## 利用别人的节点
-    find /media/xiaoya/电影 -type f -name '*.strm' -exec sed -i 's#http://xiaoya.host:5678#http://13.250.140.11:5678#g' {} +
-    find /media/xiaoya/电视剧 -type f -name '*.strm' -exec sed -i 's#http://xiaoya.host:5678#http://47.115.222.164:5678#g' {} +
-    find /media/xiaoya -type f -name '*.strm' -exec sed -i 's#http://xiaoya.host:5678#http://mydsm.jskj.eu.org:6789#g' {} +
-    find /media/xiaoya/PikPak -type f -name '*.strm' -exec sed -i 's#http://mydsm.jskj.eu.org:6789#http://119.91.23.137:5344#g' {} +
-   
-   ## 将节点还原成自己的
-    find /media/xiaoya/PikPak -type f -name '*.strm' -exec sed -i 's#http://mydsm.jskj.eu.org:6789#http://119.91.23.137:5344#g' {} +
-    find /media/xiaoya/PikPak -type f -name '*.strm' -exec sed -i 's#http://47.115.222.164:5678#http://119.91.23.137:5344#g' {} +
-    find /media/xiaoya/PikPak -type f -name '*.strm' -exec sed -i 's#http://13.250.140.11:5678#http://119.91.23.137:5344#g' {} +
     ```
 
 ## 磁盘空间大于140G且元数据充足
@@ -66,26 +58,34 @@
 1. 要确保元数据正确
 2. 要确保每一分区磁盘空间充足
 
-## 更新元数据
-```
-docker stop emby
-docker rm emby
-rm -rf /media/config
-rm -rf /etc/xiaoya
 
-## 删除历史数据
-cd /media
-mv /media/xiaoya/PikPak ./
-rm -rf /media/xiaoya/*
-mv PikPak ./xiaoya/
-
-mkdir -p /etc/xiaoya
-放入4个配置文件
-cd /media/temp
-放入 all.mp4 config.mp4
-cd /home/emby
-sudo sh emby_plus.unzip.sh /media /etc/xiaoya
-```
+## 使用小雅变化
+1. 本地使用alist
+   1. 能够挂载云盘，可以实现满速下载自己的网盘资源
+   2. 也可以将别人分享的资源保存到自己的云盘然后进行满速下载
+2. 云服务器部署alist，使用RaiDrive
+   1. 了解到alist可以直接别人分享的资源，简化了下载别人资源的流程
+   2. 使用raidrive，可以下载多个文件
+   3. 使用云服务器，拓展了使用地点
+3. 云服务器安装小雅
+   1. 能够使用小雅的海量资源，免去了搜索资源的烦恼
+   2. 缺点就是无法挂载资源
+4. 云服务器安装alist-tvbox
+   1. 解决了无法挂载资源的烦恼
+5. 云服务器安装emby-小雅
+   1. 添加了视频墙的功能，提高了浏览资源的感受
+   2. 受限与我的云服务器只有40G，无法完全加载所有影视资源
+6. 本地安装emby，使用frp对外暴漏端口
+   1. 解决了无法完整安装emby的问题
+   2. 又出现了一个问题就是，本地电脑不会长时间开着
+   3. PikPak目录挂载在本地安装比较方便，云服务器搞代理维护起来比较费劲，有人总喜欢
+7. 云服务器安装alist-tvbox，本地安装emby与alist-tvbox
+   1. emby的非PikPak目录代理到云服务器的alist-tvbox
+   2. PikPak目录代理到本地的alist-tvbox，只挂载PikPak分享盘，平时的不打开，启动太慢了
+8. 云服务器安装alist-tvbox，配置代理，本地安装一个windows版本的emby,收藏自己喜欢的
+   1. 直接搜索资源，含PikPak
+   2. 直接挂载资源，含PikPak
+   3. 本地启用emby
 
 ## 参考内容
 1. 知乎

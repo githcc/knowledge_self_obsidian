@@ -41,13 +41,22 @@ systemctl restart network
 ## 安装ifconfig
 ```
 yum search ifconfig
-yum install net-tools.x86_64
+yum -y install net-tools.x86_64
+```
+
+## 安装wget
+```
+yum -y install wget
+```
+
+## 安装7zip
+```
+yum -y install p7zip
 ```
 
 ## 3种虚拟机连接方式
 1. NAT 外面网络无法访问虚拟机，虚拟机与宿主机互通
 2. 桥接 虚拟机与宿主机同一网段，虚拟机无法访问宿主机，宿主机可以访问虚拟机
-3.
 
 ## 调整磁盘空间
 ```
@@ -57,12 +66,18 @@ lvextend -L +40G /dev/mapper/centos-root
 xfs_growfs /dev/mapper/centos-root
 ```
 
-## 
+## 卸载与挂载磁盘
 ```
 umount /home
 mkfs.xfs /dev/mapper/centos-home -f
-umount /home
+mount /home
 mkfs.xfs /dev/mapper/centos-home -f
+```
+
+## proxy
+```
+export http_proxy=http://x.x.x.x:7890
+export https_proxy=http://x.x.x.x:7890
 ```
 
 ## 日常使用
