@@ -6,7 +6,7 @@
 ## 使用命令
 1. 安装
     ```
-    sudo yum install aria2
+    sudo yum -y install aria2
     ```
 2. 下载，参数应该是4个线程
     ```

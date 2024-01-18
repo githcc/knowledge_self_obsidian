@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<movie>
+  <plot>身为黑衣组织一员的科学家宫野志保(代号雪莉)，开发出了神秘的毒药APTX4869。那就是让工藤新一变小的药！但是，黑衣组织杀了她的姊姊明美，因此雪莉决定背叛组织，自己也吞下了APTX4869。服药后身体缩小的她，化名为灰原哀，隐藏起真实身分。虽然只有一点点，但黑衣组织确实在她的心里蒙上了一层阴影。  糟糕的是，她再次与黑衣组织的干部‧琴酒打照面，面临性命危急的「与黑衣组织的再会」；在碰上巴士挟持事件的车上，感受到组织成员气息，有着赴死决心的「神秘乘客」；以及故事的最高潮，在豪华列车内，被逼到惊险绝境的「漆黑的神秘列车」。在与苦艾酒以及波本直接对决中败阵的灰原，按照组织所计划的，被卷入货车厢的爆炸中，被认为已丧命的她却……  以电视动画漆黑的神秘列车为主轴，将灰原哀过去的故事，以全新画面重新编辑而成的特别编辑版登场！</plot>
+  <lockdata>false</lockdata>
+  <dateadded>2023-11-09 08:46:00</dateadded>
+  <title>名侦探柯南：灰原哀物语～黑铁的神秘列车～</title>
+  <originaltitle>TVシリーズ特別編集版 名探偵コナン 灰原哀物語 黒鉄のミステリートレイン</originaltitle>
+  <director>Shunsuke Ishihara</director>
+  <writer>Gosho Aoyama</writer>
+  <writer>Junichi Miyashita</writer>
+  <credits>Gosho Aoyama</credits>
+  <credits>Junichi Miyashita</credits>
+  <rating>6.5</rating>
+  <year>2023</year>
+  <imdbid>tt25994796</imdbid>
+  <tmdbid>1058906</tmdbid>
+  <premiered>2023-01-06</premiered>
+  <releasedate>2023-01-06</releasedate>
+  <country>日本</country>
+  <genre>Animation</genre>
+  <studio>TMS Entertainment</studio>
+  <studio>Yomiuri Telecasting Corporation</studio>
+  <studio>Shogakukan</studio>
+  <studio>TOHO</studio>
+  <tag>edited from tv series</tag>
+  <doubanidid>36178405</doubanidid>
+  <metasharkidid>douban</metasharkidid>
+  <art>
+    <poster>Z:\未识别\2023\名侦探柯南：灰原哀物语～黑铁的神秘列车～ (2023)\folder.jpg</poster>
+    <fanart>Z:\未识别\2023\名侦探柯南：灰原哀物语～黑铁的神秘列车～ (2023)\backdrop2.jpg</fanart>
+  </art>
+  <actor>
+    <name>Minami Takayama</name>
+    <role>Conan Edogawa (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\M\Minami Takayama\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Megumi Hayashibara</name>
+    <role>Ai Haibara (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\M\Megumi Hayashibara\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Kenichi Ogata</name>
+    <role>Hiroshi Agasa (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\K\Kenichi Ogata\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Yukitoshi Hori</name>
+    <role>Gin (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\Y\Yukitoshi Hori\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Wakana Yamazaki</name>
+    <role>Ran Mouri (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\W\Wakana Yamazaki\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Rikiya Koyama</name>
+    <role>Kogoro Mouri (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\R\Rikiya Koyama\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Toru Furuya</name>
+    <role>Bourbon (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\T\Toru Furuya\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Fumihiko Tachiki</name>
+    <role>Vodka (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\F\Fumihiko Tachiki\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Mami Koyama</name>
+    <role>Vermouth (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\M\Mami Koyama\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Shuichi Ikeda</name>
+    <role>Shuichi Akai (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\S\Shuichi Ikeda\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Noriko Hidaka</name>
+    <role>Masumi Sera (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\N\Noriko Hidaka\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Ryotaro Okiayu</name>
+    <role>Subaru Okiya (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\R\Ryotaro Okiayu\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Yukiko Iwai</name>
+    <role>Ayumi Yoshida (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\Y\Yukiko Iwai\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Ikue Otani</name>
+    <role>Mitsuhiko Tsuburaya (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\I\Ikue Otani\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Wataru Takagi</name>
+    <role>Genta Kojima (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\W\Wataru Takagi\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Naoko Matsui</name>
+    <role>Sonoko Suzuki (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\N\Naoko Matsui\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Ichiro Nagai</name>
+    <role>Jirokichi Suzuki (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\I\Ichiro Nagai\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Kappei Yamaguchi</name>
+    <role>Kaito Kuroba (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\K\Kappei Yamaguchi\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Sumi Shimamoto</name>
+    <role>Yukiko Kudo (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\S\Sumi Shimamoto\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Sakiko Tamagawa</name>
+    <role>Akemi Miyano (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\S\Sakiko Tamagawa\folder.jpg</thumb>
+  </actor>
+  <actor>
+    <name>Yuko Kato</name>
+    <role>Sumiko Kobayashi (voice)</role>
+    <type>Actor</type>
+    <thumb>C:\ProgramData\Jellyfin\Server\metadata\People\Y\Yuko Kato\folder.jpg</thumb>
+  </actor>
+  <id>tt25994796</id>
+  <fileinfo>
+    <streamdetails />
+  </fileinfo>
+  <epbookmark />
+  <ratings>
+    <rating default="false" max="10" name="themoviedb">
+      <value>6.5</value>
+      <votes>6</votes>
+    </rating>
+  </ratings>
+  <top250>0</top250>
+  <thumb aspect="poster">https://image.tmdb.org/t/p/original/mqYvJXLdsLp3Qsmej0ekOqBrzow.jpg</thumb>
+  <fanart>
+    <thumb>https://image.tmdb.org/t/p/original/qulJ92NdIHt61fzxxv45SOYsSHf.jpg</thumb>
+  </fanart>
+  <certification />
+  <uniqueid default="false" type="tmdb">1058906</uniqueid>
+  <uniqueid default="true" type="imdb">tt25994796</uniqueid>
+  <status />
+  <code />
+  <languages>Japanese</languages>
+  <source>STREAM</source>
+  <edition>NONE</edition>
+  <original_filename>名侦探柯南灰原哀物语黑铁的神秘列车.名探偵コナン 灰原哀物語~黒鉄のミステリートイン~.2023.日本动画片.BD1080P.日语中字.豆瓣6.7.strm</original_filename>
+  <user_note />
+</movie>

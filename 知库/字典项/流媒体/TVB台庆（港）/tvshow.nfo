@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--created on 2023-10-31 16:50:11 - tinyMediaManager 4.0.6-->
+<tvshow>
+  <title>萬千星輝賀台慶</title>
+  <originaltitle/>
+  <showtitle>萬千星輝賀台慶</showtitle>
+  <sorttitle/>
+  <year>1968</year>
+  <rating>0.0</rating>
+  <userrating>0.0</userrating>
+  <votes>0</votes>
+  <outline/>
+  <plot/>
+  <tagline/>
+  <runtime>0</runtime>
+  <thumb aspect="poster">http://image.tmdb.org/t/p/original/bNhdZGRQuppO94f5Sz14IX3KR5E.jpg</thumb>
+  <namedseason number="1">万千星辉贺台庆</namedseason>
+  <namedseason number="2">万千星辉颁奖典礼</namedseason>
+  <fanart>
+    <thumb>http://image.tmdb.org/t/p/original/7TUDYwnooF04gfup8uadl6qRQaZ.jpg</thumb>
+  </fanart>
+  <mpaa/>
+  <certification/>
+  <episodeguide>
+    <url cache="auth.json" post="yes">https://api.thetvdb.com/login?{"apikey":"439DFEBA9D3059C6","id":275524}|Content-Type=application/json</url>
+  </episodeguide>
+  <id>275524</id>
+  <imdbid/>
+  <uniqueid default="true" type="tvdb">275524</uniqueid>
+  <premiered>1968-12-19</premiered>
+  <status>Ended</status>
+  <watched>false</watched>
+  <playcount/>
+  <genre>Game Show</genre>
+  <studio>TVB Jade</studio>
+  <trailer/>
+  <dateadded>2023-10-02 09:36:40</dateadded>
+  <!--tinyMediaManager meta data-->
+  <user_note/>
+</tvshow>

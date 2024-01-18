@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--created on 2023-10-02 09:45:30 - tinyMediaManager 3.1.18-->
+<episodedetails>
+  <title>1967 TVB成立</title>
+  <originaltitle/>
+  <showtitle>TVB万千星辉贺台庆</showtitle>
+  <season>1</season>
+  <episode>1</episode>
+  <displayseason>-1</displayseason>
+  <displayepisode>-1</displayepisode>
+  <id/>
+  <uniqueid default="true" type="tmdb">3420105</uniqueid>
+  <rating>0.0</rating>
+  <userrating>0.0</userrating>
+  <votes>0</votes>
+  <plot/>
+  <runtime>0</runtime>
+  <mpaa/>
+  <premiered>1967-11-19</premiered>
+  <aired>1967-11-19</aired>
+  <watched>false</watched>
+  <playcount/>
+  <studio>TVB</studio>
+  <actor>
+    <name>Lydia Shum Tin-Ha</name>
+    <role>主持人</role>
+    <thumb>http://image.tmdb.org/t/p/h632/kBBSrBpD9NcrQJ6AR8gxAqZIvk9.jpg</thumb>
+    <profile>https://www.themoviedb.org/person/116351</profile>
+  </actor>
+  <actor>
+    <name>Hoh Sau-San</name>
+    <role>主持人</role>
+    <thumb>http://image.tmdb.org/t/p/h632/joLD3myeZa27Lbi1iRRDfLmiqvI.jpg</thumb>
+    <profile>https://www.themoviedb.org/person/1574721</profile>
+  </actor>
+  <actor>
+    <name>Natalis Chan</name>
+    <role>主持人</role>
+    <thumb>http://image.tmdb.org/t/p/h632/vdFw383e0zS8MWriLT1eWI2v8Jv.jpg</thumb>
+    <profile>https://www.themoviedb.org/person/990443</profile>
+  </actor>
+  <trailer/>
+  <dateadded>2023-10-02 09:45:17</dateadded>
+  <epbookmark/>
+  <code/>
+  <fileinfo>
+    <streamdetails>
+      <video>
+        <codec/>
+        <aspect>0.0</aspect>
+        <width>0</width>
+        <height>0</height>
+        <durationinseconds>0</durationinseconds>
+        <stereomode/>
+      </video>
+    </streamdetails>
+  </fileinfo>
+  <!--tinyMediaManager meta data-->
+  <source>STREAM</source>
+  <original_filename>S01E01_1987年翡翠歌星贺台庆.strm</original_filename>
+  <user_note/>
+</episodedetails>

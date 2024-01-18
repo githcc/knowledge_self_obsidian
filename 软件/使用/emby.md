@@ -36,16 +36,18 @@
    cd /home/emby
    sudo sh emby_plus.unzip.sh /media /etc/xiaoya
     ```
-5. 将host改为自己的ip
-   ```
-   sudo vi /etc/hosts
-   xiaoya.host 127.0.0.1
-   ```
 
 ## 批量修改字符串
     ```
-    find /media/xiaoya -type f -name '*.strm' -exec sed -i 's#http://xiaoya.host:5678#http://119.91.23.137:5344#g' {} +
+    find /media/xiaoya -type f -name '*.strm' -exec sed -i 's#http://xiaoya.host:5678#https://119.91.23.137#g' {} +
+
+mv /media/xiaoya/PikPak /media
+find /media/xiaoya -type f -name '*.strm' -exec sed -i 's#http://119.91.23.137#https://xiaoya.eallion.com#g' {} +
+mv /media/PikPak /media/xiaoya
+find /media/xiaoya -type f -name '*.strm' -exec sed -i 's#https://xiaoya.eallion.com#http://119.91.23.137#g' {} +
+
     ```
+cp -r /etc/xiaoya_xiaohao/* /etc/xiaoya
 
 ## 磁盘空间大于140G且元数据充足
 1. 安装emby
@@ -86,6 +88,14 @@
    1. 直接搜索资源，含PikPak
    2. 直接挂载资源，含PikPak
    3. 本地启用emby
+9. 最高配置时期
+   1. 两个emby，一个本地windows（存放敏感数据，diy了点资源），一个本地虚拟机（小雅超集）
+   2. 服务器两个alist-tvbox，通过nginx进行反向代理，实现负载均衡
+10. 当前当前
+    1. 只使用一个alist-tvbox
+       1. 未使用emby的原因：emby无法实现让用户直接连接资源，服务器带宽成为瓶颈
+       2. 仅用一个alist-tvbox的原因：自己一个人正常使用不会触发限流，服务器可以装些其它的
+    2. 失去了图片墙的快乐，后续可以搞一下自定义nfo，整一个能直接访问资源的流媒体
 
 ## 参考内容
 1. 知乎
