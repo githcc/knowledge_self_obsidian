@@ -74,8 +74,6 @@ build_job:
    user.save!
    ```
 
-
-
 ## 参考资料
 1. bilibili:
    1. [GitLab的cicd自动发布](https://www.bilibili.com/video/BV18y4y1S7VC)

@@ -187,4 +187,4 @@ http {
 
 ## 参考资料
 1. openai：[chatgpt](https://chat.openai.com/)
-2. csdn：[Nginx配置跨域请求](https://blog.csdn.net/agonie201218/article/details/112562252) [[离线/网页/csdn/nginx允许跨域/README| 离线]]
+2. csdn：[Nginx配置跨域请求](https://blog.csdn.net/agonie201218/article/details/112562252) [[离线/csdn/nginx允许跨域/README| 离线]]

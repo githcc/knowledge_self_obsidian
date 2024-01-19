@@ -43,7 +43,7 @@
       1. 请推荐（书名、电视剧、电影、网站、博主、专家、学习资源)等等。请翻译..请总结.请润色
       2. 扮演某一类人，也可以进而扮演某几类人进行某一个场景的对话
       3. 让gpt帮忙命名目录，有时命名还是很难的
-      4. 补充可以参考提示词 [prompt](https://github.com/PlexPt/awesome-chatgpt-prompts-zh) [[离线/网页/提示词/README|离线]]
+      4. 补充可以参考提示词 [prompt](https://github.com/PlexPt/awesome-chatgpt-prompts-zh) [[离线/提示词/README|离线]]
    2. 处理细节（这个回答来自于你）
       1. 回答以xx人称，xx口吻，xx数量
       2. 回答以xx格式(json），什么语言格式（md），什么排序

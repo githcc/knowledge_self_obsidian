@@ -1,0 +1,13 @@
+version: '3'
+services:
+  xiaoya-tvbox:
+    image: haroldli/xiaoya-tvbox
+    container_name: xiaoya-tvbox
+    restart: always
+    ports:
+      - "4567:4567"
+      - "5344:80"
+    environment:
+      - ALIST_PORT=5344
+    volumes:
+      - /etc/xiaoya:/data

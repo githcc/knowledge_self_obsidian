@@ -1,25 +1,25 @@
 @echo off
-echo  Successfully generated test.md
+echo Successfully generated test.md
 
-rem 定义变量
+rem Define variables
 set min=1
 set max=10
 set /a i=1
 
-echo  If you are not satisfied with the result, you can run run.bat again. > test.md
+echo If you are not satisfied with the result, you can run run.bat again. > test.md
 
-rem 循环输出
+rem Loop output
 :loop
-rem 生成随机数
+rem Generate random number
 set /a num=%RANDOM% %% %max% + %min%
 
-rem 输出随机数
+rem Output random number
 echo ![](%num%.mp3) >> test.md
 
-rem 判断是否继续循环
+rem Check whether to continue the loop
 if %i% == 4 goto end
 
-rem 继续循环
+rem Continue the loop
 set /a i+=1
 goto loop
 

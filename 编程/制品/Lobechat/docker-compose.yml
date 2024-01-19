@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  lobe-chat:
+    image: lobehub/lobe-chat
+    container_name: lobe-chat
+    environment:
+      - OPENAI_API_KEY=sk-xxxx
+      - OPENAI_PROXY_URL=https://api.openai-proxy.com/v1
+      - ACCESS_CODE=cc
+    ports:
+      - "3210:3210"

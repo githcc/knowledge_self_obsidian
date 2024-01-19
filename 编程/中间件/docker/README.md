@@ -1,11 +1,11 @@
-## 概念
+安装docker(centos)## 概念
 1. 一种容器化技术
 
 ## 作用
 1. 可以用于打包，分发，部署的工具
    打包：dockerfile, 把项目与环境进行打包
    分发：dockerhub，其他人可以非常方便的获取和安装
-   部署：运行dockerfile
+   部署：运行docker-compose
 2. 统一了软件管理
 
 ## 优势
@@ -48,16 +48,6 @@ sudo systemctl restart docker
 4. 删除容器/镜像
 5. 指定目录，重新run镜像
 
-## 错误记录
-1. docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:3306 -> 0.0.0.0:0: listen tcp
-   0.0.0.0:3306: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
-    1. 似乎是端口被占用了，
-
-## 进入容器
-   ```
-   docker exec -it <容器id> /bin/bash
-   ```
-
 ## 语法
 创建网络
 docker network create test-net 
@@ -65,26 +55,16 @@ docker network create test-net
 -- network
 网络取别名
 --network-alias
-如果存在同名容器会进行删除
---rm
 挂载其它容器目录
 --volumes-from
-交互
--it
-查看日志
-logs
-导出容器 #标题/TODO
+导出容器
 docker export 1e560fca3906 > ubuntu.tar
-导入容器 #标题/TODO
+导入容器
 cat docker/ubuntu.tar | docker import - test/ubuntu:v1
 将容器内部使用的网络端口随机映射到我们使用的主机上
 -P
 每次docker启动都会启动容器
 --restart=always
-删除所有镜像
-docker rmi $(docker images -q)
-删除所有容器
-docker rmi -r $(docker images -q)
 显示Docker系统资源的使用情况摘要
 docker system df
 查看容器ip
@@ -93,11 +73,18 @@ docker inspect <容器id>
 sudo systemctl restart docker
 关闭docker开机自启
 docker update --restart=no <容器id>
-删除不可用的虚拟目录
-docker volume ls -qf dangling=true | xargs docker volume rm
+## 删除没用到容器，没用到镜像，没用到的虚拟目录
+```
+docker container prune
+docker image prune
+docker volume prune
+## 删除未使用的容器、镜像、卷和网络
+docker system prune
+```
 
 ## 参考资料
 1. 博客园
-    1. [win10使用Docker Desktop启动mysql报错](https://www.cnblogs.com/eternality/p/17567703.html) [[离线/网页/博客园/docker报端口占用/README | 离线]]
+    1. [win10使用Docker Desktop启动mysql报错](https://www.cnblogs.com/eternality/p/17567703.html) [[离线/博客园/docker报端口占用/README| 离线]]
 2. bilibili
     1. [Docker 1小时快速上手教程](https://www.bilibili.com/video/BV11L411g7U1)
+3. 菜鸟教程：[docker安装](https://www.runoob.com/docker/centos-docker-install.html)
