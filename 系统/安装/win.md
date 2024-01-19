@@ -23,30 +23,34 @@
       1. 键盘fn快捷键驱动,高保真音乐驱动(笔记本)
       2. 安装第三方软件包 [[软件/包/win/README|离线]]
    2. 安装scoop，不要使用管理员权限
-      1. Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-      2. irm get.Scoop.sh -outfile 'install.ps1'
-      3. .\install.ps1
+      ```
+      Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+      irm get.Scoop.sh -outfile 'install.ps1'
+      .\install.ps1
+      ```
    3. 通过scoop安装软件，不要移除main bucket
-    ```
+      ```
       scoop install 7zip git
       scoop bucket add githcc https://github.com/githcc/bucket_scoop
       scoop install aria2
-      scoop install idea-ultimate
-      scoop install vlc
       scoop install finalshell
       scoop install vcredist2022
       scoop install notepadplusplus
       scoop install wps
       scoop install xmind
       scoop install jianying
-      scoop install Motrix
       scoop bucket rm githcc
-    ```
-   ### 下列版本更新较为频繁
-   scoop bucket add Extras https://github.com/ScoopInstaller/Extras
-   scoop install nodejs
-   scoop install wechat
-   scoop bucket rm Extras
+      ```
+   4. 下列版本更新较为频繁
+      ```
+      scoop bucket add Extras https://github.com/ScoopInstaller/Extras
+      scoop install nodejs
+      scoop install wechat
+      scoop install potplayer
+      scoop install Motrix
+      scoop install Obsidian
+      scoop bucket rm Extras
+      ```
 3. 安装编码环境
    1. 安装idea
       1. 安装idea库的jdk，万年不变jdk8
@@ -62,3 +66,5 @@
          1. 设置代理，idea内部与idea外部都要设置
                git config --global http.proxy 'http://localhost:7890'
          2. 登录账号
+4. 设置代理
+5. wps的`wpscloudlaunch.exe`,`wpscloudsvr.exe`改为文本，并且改为只读

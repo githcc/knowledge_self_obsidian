@@ -69,77 +69,65 @@ localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.2
 1. 清理别人的预设，留出漏网之鱼
 2. 小众专用
    ```
-     - DOMAIN-SUFFIX,parsevideo.com,📲 电报信息
-     - DOMAIN-SUFFIX,arthub.ai,📲 电报信息
-     - DOMAIN-SUFFIX,github.io,📲 电报信息
-     - DOMAIN-SUFFIX,cloudflare.com,📲 电报信息
-     - DOMAIN-SUFFIX,githubusercontent.com,📲 电报信息
+     - 'DOMAIN-SUFFIX,parsevideo.com,OpenAI'
+     - 'DOMAIN-SUFFIX,arthub.ai,OpenAI'
+     - 'DOMAIN-SUFFIX,github.io,OpenAI'
+     - 'DOMAIN-SUFFIX,cloudflare.com,OpenAI'
+     - 'DOMAIN-SUFFIX,githubusercontent.com,OpenAI'
    ```
 3. gate走coin
    ```
-     - DOMAIN-SUFFIX,gate.io, ฿ coin
-     - DOMAIN-SUFFIX,gatedata.org,฿ coin
-     - DOMAIN-SUFFIX,gateio.services,฿ coin
-     - DOMAIN-SUFFIX,gatetrace.com,฿ coin
-     - DOMAIN-SUFFIX,gateimg.com,฿ coin
-     - DOMAIN-SUFFIX,gateio.live,฿ coin
-     - DOMAIN-SUFFIX,201704.xyz,฿ coin
+     - 'DOMAIN-SUFFIX,gate.io, OpenAI'
+     - 'DOMAIN-SUFFIX,gatedata.org,OpenAI'
+     - 'DOMAIN-SUFFIX,gateio.services,OpenAI'
+     - 'DOMAIN-SUFFIX,gatetrace.com,OpenAI'
+     - 'DOMAIN-SUFFIX,gateimg.com,OpenAI'
+     - 'DOMAIN-SUFFIX,gateio.live,OpenAI'
+     - 'DOMAIN-SUFFIX,201704.xyz,OpenAI'
    ```
 4. copilot走coin
    ```
-     - DOMAIN-SUFFIX,githubcopilot.com, ฿ coin
+     - 'DOMAIN-SUFFIX,githubcopilot.com, OpenAI'
    ```
 5. pikPak
    ```
-     - IP-CIDR,111.230.189.174/8,฿ coin
-     - IP-CIDR,202.118.1.130/8,฿ coin
-     - IP-CIDR,202.112.31.197/8,฿ coin
-     - IP-CIDR,157.148.61.140/8,฿ coin
-     - IP-CIDR,139.199.214.202/8,฿ coin
-     - IP-CIDR,43.134.111.34/8,฿ coin
-     - IP-CIDR,47.236.10.67/8,฿ coin
-     - DOMAIN-SUFFIX,jsd.nn.ci,฿ coin
-     - DOMAIN-SUFFIX,bugsnag.com,฿ coin
-     - DOMAIN-SUFFIX,unpkg.com,฿ coin
-     - DOMAIN-SUFFIX,ycyup.cn,฿ coin
-     - DOMAIN-SUFFIX,immersivetranslate.com,฿ coin
-     - DOMAIN-SUFFIX,bootstrapcdn.com,฿ coin
-     - DOMAIN-SUFFIX,ip.me,฿ coin
-     - DOMAIN-SUFFIX,mypikpak.com,฿ coin
-     - DOMAIN-SUFFIX,alicdn.com,฿ coin
+     - 'IP-CIDR,111.230.189.174/8,OpenAI'
+     - 'IP-CIDR,202.118.1.130/8,OpenAI'
+     - 'IP-CIDR,202.112.31.197/8,OpenAI'
+     - 'IP-CIDR,157.148.61.140/8,OpenAI'
+     - 'IP-CIDR,139.199.214.202/8,OpenAI'
+     - 'IP-CIDR,43.134.111.34/8,OpenAI'
+     - 'IP-CIDR,47.236.10.67/8,OpenAI'
+     - 'DOMAIN-SUFFIX,jsd.nn.ci,OpenAI'
+     - 'DOMAIN-SUFFIX,bugsnag.com,OpenAI'
+     - 'DOMAIN-SUFFIX,unpkg.com,OpenAI'
+     - 'DOMAIN-SUFFIX,ycyup.cn,OpenAI'
+     - 'DOMAIN-SUFFIX,immersivetranslate.com,OpenAI'
+     - 'DOMAIN-SUFFIX,bootstrapcdn.com,OpenAI'
+     - 'DOMAIN-SUFFIX,ip.me,OpenAI'
+     - 'DOMAIN-SUFFIX,mypikpak.com,OpenAI'
+     - 'DOMAIN-SUFFIX,alicdn.com,OpenAI'
    ```
 6. intellij走国外媒体
    ```
-     - DOMAIN-SUFFIX,jetbrains.com,🌍 国外媒体
-     - DOMAIN-SUFFIX,intellij.net,🌍 国外媒体
-     - DOMAIN-SUFFIX,google.com,🌍 国外媒体
+     - 'DOMAIN-SUFFIX,jetbrains.com,OpenAI'
+     - 'DOMAIN-SUFFIX,intellij.net,OpenAI'
+     - 'DOMAIN-SUFFIX,google.com,OpenAI'
    ```
 7. meta走国外媒体
    ```
-     - DOMAIN-SUFFIX,meta.com,🌍 国外媒体
+     - 'DOMAIN-SUFFIX,meta.com,OpenAI'
    ```
-8. openai走gpt
+8. 禁止联网
    ```
-     - DOMAIN-SUFFIX,openai.com,🤖 gpt
-     - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,🤖 gpt
-     - DOMAIN-SUFFIX,azurefd.net,🤖 gpt
+    - 'DOMAIN-SUFFIX,wps.cn,REJECT'
+    - 'DOMAIN-SUFFIX,kdocs.cn,REJECT'
+    - 'DOMAIN-SUFFIX,kakao.com,REJECT'
+    - 'DOMAIN-SUFFIX,edge4k.com,REJECT'
    ```
-9. 禁止联网
-   ```
-   - DOMAIN-SUFFIX,wps.cn,🍃 应用净化
-   - DOMAIN-SUFFIX,kdocs.cn,🍃 应用净化
-   - DOMAIN-SUFFIX,kakao.com,🍃 应用净化
-   - DOMAIN-SUFFIX,edge4k.com,🍃 应用净化
-   ```
-### rule
-1. 📲 电报信息 走自动选择，速度快
-2.  ฿ coin 走新加坡，速度快，固定地区
-3. 🌍 国外媒体 走美国，固定地区
-4. 🤖 gpt 走南非，地区要求极高
-5. 🍃 应用净化 REJECT
 
-### 其它
-1. 不想使用wps的联网功能可以把wpscloudsvr.exe 删除
+### rule
+1. OpenAI 走新加坡，速度快，固定地区
 
 ## 参考资料
 1. 知乎:
