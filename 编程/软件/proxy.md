@@ -124,6 +124,9 @@ localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.2
     - 'DOMAIN-SUFFIX,kdocs.cn,REJECT'
     - 'DOMAIN-SUFFIX,kakao.com,REJECT'
     - 'DOMAIN-SUFFIX,edge4k.com,REJECT'
+    - 'DOMAIN-SUFFIX,pepsicola.cc,REJECT'
+    - 'DOMAIN-SUFFIX,xmind.cn,REJECT'
+    - 'DOMAIN-SUFFIX,xmind.net,REJECT'
    ```
 
 ### rule

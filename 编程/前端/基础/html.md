@@ -4,15 +4,6 @@
     ```
     Object.defineProperty(navigator, 'webdriver', { get: () => false });
     ```
-3. sse通讯
-   [[编程/代码/片段/基础/html/sse/html|html代码]]
-   [[php|php代码]]
-4. webSocket
-   [[编程/代码/片段/基础/html/webSocket/html|html代码]]
-   [[WebSocketApp|java代码 WebSocketApp]]
-   [[WebSocketServer|java代码 WebSocketServer]]
-
-
 ## h5的变化
 1. 用于绘画的 canvas
 2. 用于媒介回放的 video 和 audio

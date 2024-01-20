@@ -13,22 +13,21 @@
 
 ## 安装步骤
 1. 在安装系统设置
-   1. 选择国家时要选择新加坡，这样初始化的软件会不同
-   2. 进入页面后
-      1. 登录微软账号进行激活
-      2. 删除没用到的软件
-      3. 对系统进行补丁的更新
+   1. 登录微软账号进行激活
+   2. 删除没用到的软件
+   3. 对系统进行补丁的更新
 2. 最基础的软件
-   1. 进入阿里云获取一些基本软件或笔记本的驱动（访问云服务器的alist）
+   1. [访问github](github.ccgpt.tech)
+   2. 进入阿里云获取一些基本软件或笔记本的驱动（访问云服务器的alist）
       1. 键盘fn快捷键驱动,高保真音乐驱动(笔记本)
       2. 安装第三方软件包 [[软件/包/win/README|离线]]
-   2. 安装scoop，不要使用管理员权限
+   3. 安装scoop，不要使用管理员权限
       ```
       Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
       irm get.Scoop.sh -outfile 'install.ps1'
       .\install.ps1
       ```
-   3. 通过scoop安装软件，不要移除main bucket
+   4. 通过scoop安装软件，不要移除main bucket
       ```
       scoop install 7zip git
       scoop bucket add githcc https://github.com/githcc/bucket_scoop
@@ -39,14 +38,16 @@
       scoop install wps
       scoop install xmind
       scoop install jianying
+      ## RaiDrive无法使用aria2下载
+      scoop config aria2-enabled false
+      scoop install RaiDrive
       scoop bucket rm githcc
       ```
-   4. 下列版本更新较为频繁
+   5. 下列版本更新较为频繁
       ```
       scoop bucket add Extras https://github.com/ScoopInstaller/Extras
       scoop install nodejs
       scoop install wechat
-      scoop install potplayer
       scoop install Motrix
       scoop install Obsidian
       scoop bucket rm Extras
@@ -66,5 +67,13 @@
          1. 设置代理，idea内部与idea外部都要设置
                git config --global http.proxy 'http://localhost:7890'
          2. 登录账号
-4. 设置代理
-5. wps的`wpscloudlaunch.exe`,`wpscloudsvr.exe`改为文本，并且改为只读
+4. wps的去掉弹窗
+   `wpscloudlaunch.exe`,`wpscloudsvr.exe`改为文本，并且改为只读
+5. 破解版软件 [package-self-7z](https://github.freechatgpt.cc/githcc/package-self-7z)
+   1. IDM
+   2. Typora
+   3. navicat16
+6. 其他软件
+   1. [idea](https://www.jetbrains.com/zh-cn/idea/download/download-thanks.html?platform=windows)
+   2. [PotPlayer](https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe)
+   3. [ev录屏](https://www.ieway.cn/evcapture.html)

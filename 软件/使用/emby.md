@@ -28,7 +28,7 @@
    wget http://docker.xiaoya.pro/emby_plus.unzip.sh
    wget https://hub.docker.com/v2/repositories/xiaoyaliu/glue/tags/latest
    ## 无法访问
-   将hub.docker.com替换为googleapis.freechatgpt.cc
+   将hub.docker.com替换为hub.ccgpt.tech
    ```
 4. 安装emby
    ```

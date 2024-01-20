@@ -23,3 +23,9 @@
     bcdedit /set hypervisorlaunchtype off  
     ```
 12. 使用远程桌面时需要开启才能使用，搜索`远程桌面设置`
+13. 关闭系统更新
+    依次进入：“组策略”，“计算机配置”、“管理模板”、“Windows 组件”、最终找到“Windows 更新”选项。
+双击右侧的“配置自动更新”选项，设置为禁用
+14. 关闭windows defender
+    1. 修改注册表，HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SecurityHealthService，设置为3
+    2. 任务管理器设置为禁用
