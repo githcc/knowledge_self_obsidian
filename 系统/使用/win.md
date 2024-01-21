@@ -29,3 +29,4 @@
 14. 关闭windows defender
     1. 修改注册表，HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SecurityHealthService，设置为3
     2. 任务管理器设置为禁用
+15. 文件管理器 explorer

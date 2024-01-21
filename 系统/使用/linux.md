@@ -60,7 +60,7 @@ export https_proxy=http://ip:port
 cd /
 sudo dd if=/dev/zero of=/swapfile bs=1k count=4096000
 mkswap /swapfile
-chmod +600 /swapfile
+chmod +0600 /swapfile
 swapon /swapfile
 ```
 
