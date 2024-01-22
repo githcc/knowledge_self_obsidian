@@ -1,1 +1,0 @@
-## [ai-assistant](https://plugins.jetbrains.com/plugin/22282-ai-assistant)
