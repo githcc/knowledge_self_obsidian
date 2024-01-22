@@ -22,5 +22,16 @@
 ## 配置优先级
 pom.xml> user settings > global settings
 
+## 使用自己的jar
+    ```
+    <dependency>
+    <groupId>it.sauronsoftware</groupId>
+    <artifactId>jave</artifactId>
+    <version>1.0.2</version>
+    <scope>system</scope>
+    <systemPath>${basedir}/src/main/resources/lib/jave-1.0.2.jar</systemPath>
+    </dependency>
+    ```
+
 ## 参考资料
 1. csdn：[解决SpringBoot打包没有将pom依赖包打进去](https://blog.csdn.net/MyronCham/article/details/105715760) [[离线/csdn/maven/README| 离线]]
