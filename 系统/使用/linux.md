@@ -87,6 +87,121 @@ swapon /swapfile
     1. cmd `| find "str"`
     2. linux `| grep str`
 
+## sed命令
+`sed`（Stream Editor）是一个流编辑器，用于在文本流中进行文本替换和转换操作。以下是基本的`sed`命令语法：
+
+```
+sed [选项] '动作' 文件
+```
+
+- 选项：可选，用于指定`sed`的一些参数和标志。
+- 动作：`sed`要执行的操作，通常是一个命令或一系列命令，用单引号括起来。
+- 文件：要处理的文本文件的路径。
+
+以下是一些常见的`sed`命令和用法：
+
+1. **替换文本：**
+   ```
+   sed 's/old_text/new_text/g' filename
+   ```
+   这将替换文本文件中的所有匹配项。
+
+2. **删除行：**
+   ```
+   sed '/pattern/d' filename
+   ```
+   这将删除包含指定模式的行。
+
+3. **显示行：**
+   ```
+   sed -n 'p' filename
+   ```
+   这将只显示包含指定模式的行。
+
+4. **行号操作：**
+   ```
+   sed -n '5,10p' filename
+   ```
+   这将显示文件中的第5到第10行。
+
+5. **多个命令：**
+   ```
+   sed -e 'command1' -e 'command2' filename
+   ```
+   这允许您在一次`sed`调用中执行多个命令。
+
+6. **保存更改到原文件：**
+   ```
+   sed -i 's/old_text/new_text/g' filename
+   ```
+   这将直接在原文件中保存更改。
+
+7. **使用正则表达式：**
+   ```
+   sed 's/\(pattern\)/\1_replacement/' filename
+   ```
+   这允许在替换中引用匹配的内容。
+
+8. **将结果输出到新文件：**
+   ```
+   sed 's/old_text/new_text/g' input_file > output_file
+   ```
+   这将不更改原文件，而是将结果输出到新文件。
+
+这只是`sed`的基本用法，还有更多高级功能和选项。您可以使用`man sed`命令在终端中查看`sed`的手册页以获取详细信息。
+
+
+## 执行sql
+你可以使用以下方法在Linux上编写一个Shell脚本执行SQL语句：
+
+1. 创建一个新的Shell脚本文件，例如 `run_sql.sh`。
+
+   ```bash
+   touch run_sql.sh
+   ```
+
+2. 使用文本编辑器（如`vi`或`nano`）打开脚本文件。
+
+   ```bash
+   vi run_sql.sh
+   ```
+
+3. 在脚本文件中添加以下内容：
+
+   ```bash
+   #!/bin/bash
+
+   # MySQL连接信息
+   MYSQL_USER="your_username"
+   MYSQL_PASSWORD="your_password"
+   MYSQL_HOST="localhost"
+   MYSQL_DATABASE="your_database"
+
+   # SQL语句
+   SQL_STATEMENT="SELECT * FROM your_table;"
+
+   # 执行SQL语句
+   mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" -h"$MYSQL_HOST" -D"$MYSQL_DATABASE" -e"$SQL_STATEMENT"
+   ```
+
+   替换 `your_username`、`your_password`、`localhost`、`your_database` 和 `your_table` 为你的MySQL用户名、密码、主机、数据库和表名。也可以修改 `SQL_STATEMENT` 变量来包含你想要执行的SQL语句。
+
+4. 保存并退出文本编辑器。
+
+5. 授予脚本执行权限。
+
+   ```bash
+   chmod +x run_sql.sh
+   ```
+
+6. 运行脚本。
+
+   ```bash
+   ./run_sql.sh
+   ```
+
+请确保在脚本中使用安全的方式存储MySQL密码，以防止安全问题。此示例中，密码是明文存储在脚本中，这可能存在安全风险。
+
 ## 其它
 1. 当在下载的文件的时候，可以移动目录
 2. 下载结束后成功移动
