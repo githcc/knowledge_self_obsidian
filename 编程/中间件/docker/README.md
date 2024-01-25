@@ -73,6 +73,11 @@ docker inspect <容器id>
 sudo systemctl restart docker
 关闭docker开机自启
 docker update --restart=no <容器id>
+使用代理
+-e  "HTTP_PROXY=http://x.x.x.x:7890" 
+-e  "HTTPS_PROXY=http://x.x.x.x:7890" 
+-e  "NO_PROXY=localhost,127.0.0.1,.example.com" 
+
 ## 删除没用到容器，没用到镜像，没用到的虚拟目录
 ```
 docker container prune

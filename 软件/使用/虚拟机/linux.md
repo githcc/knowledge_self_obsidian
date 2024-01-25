@@ -1,3 +1,9 @@
+## 虚拟机对比
+1. vmare 性能较好，不建议与Hyper-v共存，目前用这个
+2. win 子系统
+   1. 在上面用docker很拉跨
+
+## 其它
 ## 安装步骤
 1. 控制面板开启部分软件
     1. Hyper-v
@@ -43,6 +49,3 @@
 ### wsl2
 1. 对docker进行设置
    Resources/WSL Integration/开启ubuntu
-
-## 弊端
-1. 开启finalshell，重启后失效
