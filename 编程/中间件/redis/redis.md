@@ -39,7 +39,7 @@
 [[编程/代码/工程/demo_redis/README.md|redis]]
 
 ## redis持久化
-1. RDB持久化 速度快，恢复到某一时刻 save xx xx 
+1. RDB持久化 默认选择,速度快，恢复到某一时刻 save xx xx 
 2. AOF持久化 速度慢，恢复任意时刻
 
 ## redis淘汰策略

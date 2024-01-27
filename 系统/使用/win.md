@@ -11,9 +11,9 @@
 6. 如果cmd想使用管理员运行，在文件菜单也是可以进入管理员的
 7. 刷新dns缓存 ipconfig /flushdns
 8. win防火墙的出站，指访问电脑程序访问互联网，入站则反之。
-9. 鼠标无法选中窗口，听说是bug
+9. 文件管理器异常，听说是bug
    ```
-   使用管理员powershell运行，也不知道是否有用，一篇爆红，一般都是注销一下就正常了
+   使用管理员powershell运行，也不知道是否有用，一篇爆红，一般都是重启explorer
    Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
    ```
 10. Windows Search 搜索器 占用CPU
@@ -30,14 +30,13 @@
 14. 关闭windows defender
     1. 修改注册表，HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SecurityHealthService，设置为3
     2. 任务管理器设置为禁用
-15. 文件管理器 explorer
-16. 映射网络驱动器，单文件无法显示进度条，不稳定，无法取代RaiDrive
+15. 映射网络驱动器，单文件无法显示进度条，不稳定，无法取代RaiDrive
     1. 注册表
        1. 计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters BasicAuthLevel 设置为2
        2. 计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters FileSizeLimitInBytes 设置为4294967295(十进制)
     2. 重启webClient服务
     3. 组策略 计算机配置—Windows设置—安全设置—本地策略—安全选项-用户账号控制:管理员批准模式运行所有管理员
     4. 添加网络位置
-17. 查看自己网络所经过的节点
+16. 查看自己网络所经过的节点
     tracert -d ip/域名
     pathping -n ip/域名

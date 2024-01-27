@@ -77,3 +77,6 @@
    1. [idea](https://www.jetbrains.com/zh-cn/idea/download/download-thanks.html?platform=windows)
    2. [PotPlayer](https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe)
    3. [ev录屏](https://www.ieway.cn/evcapture.html)
+   4. 商店
+      1. [Windows Terminal](https://apps.microsoft.com/detail/9N0DX20HK701?hl=zh-cn&gl=CN)
+7. [[使用/win.md|关闭更新，关闭windows defender]]
