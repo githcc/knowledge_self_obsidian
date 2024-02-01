@@ -54,5 +54,18 @@ aio(nio.2)：JDK7开始支持，异步非阻塞IO，tomcat9
 对于读操作而言，当有流可读取时，操作系统会将可读的流传入read方法的缓冲区，并通知应用程序；
 对于写操作而言，当操作系统将write方法传递的流写入完毕时，操作系统主动通知应用程序。
 
+## 这种写法自动关流
+```
+try (FileOutputStream fileOut = new FileOutputStream("src/main/resources/map.bin");
+    ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
+
+    objectOut.writeObject(map);
+    System.out.println("Map is successfully written to map.bin");
+
+} catch (IOException e) {
+    e.printStackTrace();
+}
+```
+
 ## 参考资料
 1. google：[bard](https://bard.google.com/)

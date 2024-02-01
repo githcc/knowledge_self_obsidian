@@ -1,0 +1,1 @@
+1. 在setting->Build->Build Tools->Gradle 使用idea进行构建，在单元测试可以过，允许也是不行的
