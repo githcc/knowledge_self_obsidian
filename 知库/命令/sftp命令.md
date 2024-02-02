@@ -3,7 +3,7 @@
 
 ## 连接
 ```
-sftp -P 22 port@ip
+sftp -P port user@ip
 ```
 
 ## 上传文件

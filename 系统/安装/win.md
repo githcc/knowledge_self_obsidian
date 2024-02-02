@@ -1,5 +1,5 @@
 ## 原则
-1. 软件的选择，系统自带>微软商店>Scoop>官网
+1. 软件的选择，系统自带>Scoop>官网>微软商店
 2. 文件的存放，按自带的库进行存储
 
 ## 备份
@@ -17,7 +17,7 @@
    2. 删除没用到的软件
    3. 对系统进行补丁的更新
 2. 最基础的软件
-   1. [访问github](github.ccgpt.tech)
+   1. [访问github](https://github.ccgpt.tech/githcc/knowledge_self_obsidian/blob/main/%E7%B3%BB%E7%BB%9F/%E5%AE%89%E8%A3%85/win.md)
    2. 进入阿里云获取一些基本软件或笔记本的驱动（访问云服务器的alist）
       1. 键盘fn快捷键驱动,高保真音乐驱动(笔记本)
       2. 安装第三方软件包 [[软件/包/win/README|离线]]
@@ -58,9 +58,6 @@
       2. 使用自带maven
          1. 设置mirror
             1. 仓库地址 https://developer.aliyun.com/mvn/guide
-            2. 镜像地址
-               1. https://maven.aliyun.com/repository/central
-               2. https://maven.aliyun.com/repository/public
          2. 设置本地优先
             1. 在设置中搜索 Runner ,在VM Option中设置参数-DarchetypeCatalog=internal
       3. 使用git(使用Scoop)

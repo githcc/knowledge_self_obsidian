@@ -56,16 +56,15 @@ aio(nio.2)：JDK7开始支持，异步非阻塞IO，tomcat9
 
 ## 这种写法自动关流
 ```
-try (FileOutputStream fileOut = new FileOutputStream("src/main/resources/map.bin");
+try (FileOutputStream fileOut = new FileOutputStream("map.bin");
     ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
-
     objectOut.writeObject(map);
-    System.out.println("Map is successfully written to map.bin");
-
 } catch (IOException e) {
-    e.printStackTrace();
 }
 ```
+
+## 文本的兼容性不好，比如双引号的输出就不是很一致
+1. 使用二进制进行写入
 
 ## 参考资料
 1. google：[bard](https://bard.google.com/)

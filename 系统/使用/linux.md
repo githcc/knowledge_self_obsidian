@@ -66,13 +66,12 @@ swapon /swapfile
 
 ## 部署java应用
 1. 直接使用dockerCompose
-2. 其它
-    1. 修改环境变量
-        1. vim /etc/environment 修改系统环境变量
-        2. vim /etc/profile 修改用户环境变量
-    2. 修改mysql配置
-        1. vim /etc/mysql/mysql.conf.d/mysqld.cnf
-        2. bind-address = 127.0.0.1 注释掉
+2. 修改环境变量
+    1. vim /etc/environment 修改系统环境变量
+    2. vim /etc/profile 修改用户环境变量
+3. 修改mysql配置
+    1. vim /etc/mysql/mysql.conf.d/mysqld.cnf
+    2. bind-address = 127.0.0.1 注释掉
 
 ## 编写定时脚本
    ```
