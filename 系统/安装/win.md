@@ -45,11 +45,12 @@
       ```
    5. 下列版本更新较为频繁
       ```
-      scoop bucket add Extras https://github.com/ScoopInstaller/Extras
+      scoop bucket add Extras
       scoop install nodejs
       scoop install wechat
       scoop install Motrix
       scoop install Obsidian
+      scoop install beyondcompare
       scoop bucket rm Extras
       ```
 3. 安装编码环境

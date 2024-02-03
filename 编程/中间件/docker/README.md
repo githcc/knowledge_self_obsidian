@@ -1,12 +1,10 @@
-安装docker(centos)## 概念
+## 概念
 1. 一种容器化技术
 
 ## 作用
-1. 可以用于打包，分发，部署的工具
-   打包：dockerfile, 把项目与环境进行打包
-   分发：dockerhub，其他人可以非常方便的获取和安装
-   部署：运行docker-compose
-2. 统一了软件管理
+1. 打包：dockerfile, 把项目与环境进行打包
+2. 分发：dockerhub，其他人可以非常方便的获取和安装
+3. 部署：运行docker-compose
 
 ## 优势
 1. 轻量级的虚拟机
@@ -15,9 +13,11 @@
    2. 性能好
 
 ## 镜像加速源
+```
 修改/etc/docker/daemon.json
 {"registry-mirrors":["https://reg-mirror.qiniu.com/"]}
 sudo systemctl restart docker
+```
 
 | 镜像加速器          | 镜像加速器地址                       |
 | ------------------- | ------------------------------------ |
@@ -32,7 +32,7 @@ sudo systemctl restart docker
 
 ## 安装
    ```
-   sudo yum update
+   sudo yum -y update
    sudo yum install -y yum-utils device-mapper-persistent-data lvm2
    sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
    sudo yum install -y docker-ce
@@ -45,46 +45,72 @@ sudo systemctl restart docker
 1. 创建目录
 2. run镜像
 3. docker cp 容器内的文件到指定目录
-4. 删除容器/镜像
+4. 删除容器
 5. 指定目录，重新run镜像
 
-## 语法
+## 网络
+```
 创建网络
 docker network create test-net 
+
 指定网络
 -- network
+
 网络取别名
 --network-alias
+```
+
+## 容器
+```
 挂载其它容器目录
 --volumes-from
+
 导出容器
 docker export 1e560fca3906 > ubuntu.tar
+
 导入容器
 cat docker/ubuntu.tar | docker import - test/ubuntu:v1
+
 将容器内部使用的网络端口随机映射到我们使用的主机上
 -P
+
 每次docker启动都会启动容器
---restart=always
-显示Docker系统资源的使用情况摘要
-docker system df
+--restart=
+
 查看容器ip
 docker inspect <容器id>
+```
+
+## 清理
+```
+删除没用到容器
+docker container prune
+
+没用到镜像
+docker image prune
+
+没用到的虚拟目录
+docker volume prune
+
+删除未使用的容器、镜像、卷和网络
+docker system prune
+```
+
+## 其它
+```
+显示Docker系统资源的使用情况摘要
+docker system df
+
 重启守护进程
 sudo systemctl restart docker
+
 关闭docker开机自启
 docker update --restart=no <容器id>
+
 使用代理
 -e  "HTTP_PROXY=http://x.x.x.x:7890" 
 -e  "HTTPS_PROXY=http://x.x.x.x:7890" 
 -e  "NO_PROXY=localhost,127.0.0.1,.example.com" 
-
-## 删除没用到容器，没用到镜像，没用到的虚拟目录
-```
-docker container prune
-docker image prune
-docker volume prune
-## 删除未使用的容器、镜像、卷和网络
-docker system prune
 ```
 
 ## 参考资料
