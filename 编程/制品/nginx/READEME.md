@@ -14,4 +14,20 @@
 //删除容器
    docker stop nginx
    docker rm nginx
+   
+//运行
+   docker run \
+   -p 80:80 \
+   -p 443:443 \
+   -p 8080:8080 \
+   -p 6060:6060 \
+   -p 5050:5050 \
+   --name nginx \
+   --restart=always \
+   -v /home/nginx/conf/nginx.conf:/etc/nginx/nginx.conf \
+   -v /home/nginx/conf/conf.d:/etc/nginx/conf.d \
+   -v /home/nginx/log:/var/log/nginx \
+   -v /home/nginx/html:/usr/share/nginx/html \
+   -v /home/nginx/cert:/home/nginx/cert \
+   -d nginx:latest
 ```

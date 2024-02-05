@@ -40,3 +40,7 @@
 16. 查看自己网络所经过的节点
     tracert -d ip/域名
     pathping -n ip/域名
+17. 删除大量碎文件
+    ```
+    rmdir /s /q 目录名
+    ```
