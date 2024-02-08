@@ -1,0 +1,18 @@
+import os
+import urllib.parse
+
+def decode_strm_files(directory):
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            if file.endswith(".strm"):
+                file_path = os.path.join(root, file)
+                with open(file_path, "rb") as f:
+                    content = f.read().decode("utf-8", errors="ignore")
+                decoded_content = urllib.parse.unquote(content)
+                with open(file_path, "w", encoding="utf-8") as f:
+                    f.write(decoded_content)
+                print(f"Decoded content of {file_path}")
+
+directory = r"C:\Users\wyswy\Desktop\fsdownload"  # 指定要处理的目录
+decode_strm_files(directory)
+print("Done.")

@@ -1,3 +1,8 @@
+## 一些准备工作
+1. docker 安装
+2. wget 安装
+3. 调整磁盘空间
+
 ## 小雅
 http://alist.xiaoya.pro/
 
@@ -21,7 +26,7 @@ docker run -d -p 4567:4567 -p 5344:80 -e ALIST_PORT=5344 -v /etc/xiaoya:/data --
 https://fuliapp.top/216.html
 
 基础小雅
-bash -c "$(curl http://docker.xiaoya.pro/update_new.sh)" -s host
+bash -c "$(curl http://docker.xiaoya.pro/update_new.sh)"
 
 自动清理
 bash -c "$(curl -s https://xiaoyahelper.zngle.cf/aliyun_clear.sh | tail -n +2)" -s 3
