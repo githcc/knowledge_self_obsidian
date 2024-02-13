@@ -1,0 +1,11 @@
+@startgantt
+[开发] requires 20 days
+[测试] requires 10 days
+
+Project starts 2024-02-01
+[开发] starts 2024-02-05
+[测试] starts 2024-02-20
+note bottom
+    测试备注
+end note
+@endgantt

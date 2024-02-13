@@ -1,0 +1,11 @@
+@startuml
+abstract class AbstractList
+abstract AbstractCollection
+interface List
+
+List <|-- "继承" AbstractList
+List *-- AbstractCollection
+
+List : +add()
+List : +remove()
+@enduml

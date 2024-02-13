@@ -178,7 +178,7 @@ async function embyPot() {
     let intent = mediaInfo.intent;
     // let poturl = `potplayer://${encodeURI(mediaInfo.streamUrl)} /sub=${encodeURI(mediaInfo.subUrl)} /current /title="${intent.title}" /seek=${getSeek(intent.position)}`;
     console.log(`potplayer://${encodeURI(mediaInfo.streamUrl)} /sub=${encodeURI(mediaInfo.subUrl)} /current /title="${intent.title}" /seek=${getSeek(intent.position)}`)
-    let poturl = `potplayer://${encodeURI(mediaInfo.streamUrl)}`;
+    let poturl = `potplayer://${mediaInfo.streamUrl}`;
     console.log(poturl);
     window.open(poturl, "_blank");
 }

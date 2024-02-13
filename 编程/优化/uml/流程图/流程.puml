@@ -1,0 +1,27 @@
+@startuml
+|泳道1|
+start
+:step 1;
+:step 2;
+if (判断?) is (yes) then
+  :条件成立;
+else (no)
+  :条件不成立;
+endif
+|泳道2|
+:step 3;
+while (循环判断?)
+  :循环内容;
+endwhile
+switch(测试条件)
+case(条件1)
+:内容1;
+case(条件2)
+:内容2;
+case(条件3)
+:内容3;
+case(条件4)
+:内容4;
+endswitch
+stop
+@enduml

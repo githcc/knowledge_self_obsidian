@@ -1,0 +1,18 @@
+@startmindmap
+* root
+**[#red] root1
+***:root4
+public static void main(String[] args) {
+    Stu stu = Stu.builder().age(12).name("张三").build()
+    Stu stu2 = stu.clone()
+    stu.setAge(18)
+    System.out.println(stu)
+    System.out.println(stu2)
+};
+** root2
+** root3
+left side
+** root5
+** root6
+** root7
+@endmindmap

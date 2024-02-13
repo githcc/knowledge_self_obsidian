@@ -66,8 +66,43 @@ localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.2
 ```
 
 ### 网站
-1. 清理别人的预设，留出漏网之鱼
-2. 小众专用
+1. 常见网站走OpenAI
+   ```
+     - 'DOMAIN-SUFFIX,google.com,OpenAI'
+     - 'DOMAIN-SUFFIX,google.dev,OpenAI'
+     - 'DOMAIN-SUFFIX,googleapis.com,OpenAI'
+     - 'DOMAIN-SUFFIX,googlevideo.com,OpenAI'
+     - 'DOMAIN-SUFFIX,withyoutube.com,OpenAI'
+     - 'DOMAIN-SUFFIX,youtu.be,OpenAI'
+     - 'DOMAIN-SUFFIX,youtube.com,OpenAI'
+     - 'DOMAIN-SUFFIX,youtubeeducation.com,OpenAI'
+     - 'DOMAIN-SUFFIX,youtubegaming.com,OpenAI'
+     - 'DOMAIN-SUFFIX,youtubekids.com,OpenAI'
+     - 'DOMAIN-SUFFIX,youtube-nocookie.com,OpenAI'
+     - 'DOMAIN-SUFFIX,yt.be,OpenAI'
+     - 'DOMAIN-SUFFIX,ytimg.com,OpenAI'
+     - 'DOMAIN,youtubei.googleapis.com,OpenAI'
+     - 'DOMAIN,yt3.ggpht.com,OpenAI'
+     - 'DOMAIN-SUFFIX,azureedge.net,OpenAI'
+     - 'DOMAIN-SUFFIX,microsoft.com,OpenAI'
+     - 'DOMAIN-SUFFIX,twitter.com,OpenAI'
+     - 'DOMAIN-SUFFIX,twimg.com,OpenAI'
+     - 'DOMAIN-SUFFIX,t.co,OpenAI'
+     - 'DOMAIN-SUFFIX,docker.com,OpenAI'
+     - 'DOMAIN-SUFFIX,jetbrains.com,OpenAI'
+     - 'DOMAIN-SUFFIX,intellij.net,OpenAI'
+     - 'DOMAIN-SUFFIX,githubcopilot.com, OpenAI'
+     - 'DOMAIN-SUFFIX,openai.com, OpenAI'
+     - 'DOMAIN-SUFFIX,oaistatic.com, OpenAI'
+     - 'DOMAIN-SUFFIX,statsigapi.net, OpenAI'
+     - 'DOMAIN-SUFFIX,gravatar.com, OpenAI'
+     - 'DOMAIN-SUFFIX,tweetdeck.com,OpenAI'
+     - 'DOMAIN-SUFFIX,twimg.co,OpenAI'
+     - 'DOMAIN-SUFFIX,twimg.com,OpenAI'
+     - 'DOMAIN-SUFFIX,twitpic.com,OpenAI'
+     - 'DOMAIN-SUFFIX,twitter.com,OpenAI'
+   ```
+2. 小众专用走OpenAI
    ```
      - 'DOMAIN-SUFFIX,auth0.com,OpenAI'
      - 'DOMAIN-SUFFIX,parsevideo.com,OpenAI'
@@ -76,7 +111,7 @@ localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.2
      - 'DOMAIN-SUFFIX,cloudflare.com,OpenAI'
      - 'DOMAIN-SUFFIX,githubusercontent.com,OpenAI'
    ```
-3. gate走coin
+3. gate走OpenAI
    ```
      - 'DOMAIN-SUFFIX,gate.io, OpenAI'
      - 'DOMAIN-SUFFIX,gatedata.org,OpenAI'
@@ -86,11 +121,7 @@ localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.2
      - 'DOMAIN-SUFFIX,gateio.live,OpenAI'
      - 'DOMAIN-SUFFIX,201704.xyz,OpenAI'
    ```
-4. copilot走coin
-   ```
-     - 'DOMAIN-SUFFIX,githubcopilot.com, OpenAI'
-   ```
-5. pikPak
+4. pikPak走OpenAI
    ```
      - 'IP-CIDR,111.230.189.174/8,OpenAI'
      - 'IP-CIDR,202.118.1.130/8,OpenAI'
@@ -107,19 +138,13 @@ localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.2
      - 'DOMAIN-SUFFIX,bootstrapcdn.com,OpenAI'
      - 'DOMAIN-SUFFIX,ip.me,OpenAI'
      - 'DOMAIN-SUFFIX,mypikpak.com,OpenAI'
-     - 'DOMAIN-SUFFIX,alicdn.com,OpenAI'
    ```
-6. intellij走国外媒体
+5. meta走Meta
    ```
-     - 'DOMAIN-SUFFIX,jetbrains.com,OpenAI'
-     - 'DOMAIN-SUFFIX,intellij.net,OpenAI'
-     - 'DOMAIN-SUFFIX,google.com,OpenAI'
+     - 'DOMAIN-SUFFIX,meta.com,Meta'
+     - 'DOMAIN-SUFFIX,alicdn.com,Meta'
    ```
-7. meta走国外媒体
-   ```
-     - 'DOMAIN-SUFFIX,meta.com,OpenAI'
-   ```
-8. 禁止联网
+6. 禁止联网
    ```
     - 'DOMAIN-SUFFIX,wps.cn,REJECT'
     - 'DOMAIN-SUFFIX,kdocs.cn,REJECT'
@@ -132,6 +157,7 @@ localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.2
 
 ### rule
 1. OpenAI 走新加坡，速度快，固定地区
+2. Apple 走美国，固定地区
 
 ## 参考资料
 1. 知乎:

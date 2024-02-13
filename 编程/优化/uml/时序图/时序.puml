@@ -1,0 +1,12 @@
+@startuml
+autonumber
+actor User as User
+database data as Database
+
+User -[#red]> Database: 认证请求
+Database --> User: 认证响应
+Database --> User: 认证响应
+note left:备注信息
+User -> Database: <font color=red>另一个身份验证请求</font>
+User <-- Database: 另一个认证响应
+@enduml
