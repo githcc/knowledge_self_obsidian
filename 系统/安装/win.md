@@ -51,7 +51,7 @@
       scoop install Motrix
       scoop install Obsidian
       scoop install beyondcompare
-      scoop bucket rm Extras
+      scoop install jmeter
       ```
 3. 安装编码环境
    1. 安装idea

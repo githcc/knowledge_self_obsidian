@@ -13,11 +13,3 @@ services:
       --lower_case_table_names=1
     ports:
       - 3306:3306
-    volumes:
-      - mysql-data:/var/lib/mysql
-
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080

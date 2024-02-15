@@ -70,6 +70,7 @@ localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.2
    ```
      - 'DOMAIN-SUFFIX,google.com,OpenAI'
      - 'DOMAIN-SUFFIX,google.dev,OpenAI'
+     - 'DOMAIN-SUFFIX,googleusercontent.com,OpenAI'
      - 'DOMAIN-SUFFIX,googleapis.com,OpenAI'
      - 'DOMAIN-SUFFIX,googlevideo.com,OpenAI'
      - 'DOMAIN-SUFFIX,withyoutube.com,OpenAI'
@@ -101,6 +102,7 @@ localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.2
      - 'DOMAIN-SUFFIX,twimg.com,OpenAI'
      - 'DOMAIN-SUFFIX,twitpic.com,OpenAI'
      - 'DOMAIN-SUFFIX,twitter.com,OpenAI'
+     - 'DOMAIN-SUFFIX,github.com,OpenAI'
    ```
 2. 小众专用走OpenAI
    ```

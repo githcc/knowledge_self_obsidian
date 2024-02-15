@@ -136,7 +136,7 @@ swapon /swapfile
 2. 公司的话，大多数还是软件直接安装，有专门的团队，根本没机会进行安装，也有些怕（异地人员，异地机房，专门的操作间）
 
 ## 参考资料
-1. 知乎：[Docker 安装](https://blog.csdn.net/BThinker/article/details/123358697) [[离线/csdn/Docker 安装/README| 离线]]
+1. 知乎：[Docker 安装](https://blog.csdn.net/BThinker/article/details/123358697) [离线](https://github.com/githcc/webpage-self-markdown/blob/main/csdn/Docker%20%E5%AE%89%E8%A3%85/README.md)
 2. Alist：[Alist手动安装#守护进程](https://alist.nn.ci/zh/guide/install/manual.html#%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B) 
 3. bilibili: [虚拟机的三种连接方式](https://www.bilibili.com/video/BV1NU4y1E7n3)
 4. csdn：[虚拟内存](https://blog.csdn.net/qq_29856169/article/details/115430525)
