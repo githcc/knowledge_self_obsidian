@@ -69,4 +69,4 @@ git reset --hard HEAD^
 这样，当分支被保护后，在没有通过合规方式（如 Pull Request 审核）的情况下，普通推送提交是不允许的。这可以有效地限制对指定分支的直接推送提交，强制使用更加审慎的 Pull Request 流程来管理变更。
 
 ## 参考资料
-1. google：[bard](https://bard.google.com/)
+1. google：[gemini](https://gemini.google.com/app)

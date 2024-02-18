@@ -8,3 +8,11 @@
 ## 设置自动导包
 1. 在setting搜索auto import
    1. 项目人员需要统一才行，然后包导入变来变去，很头痛
+
+## Services
+1. idea配置多个实例，使用多个configuration即可
+2. 使用vm参数，vm参数的优先级比yaml还高
+
+## 其它
+1. 数据库连接情况可以设置为全局
+2. 

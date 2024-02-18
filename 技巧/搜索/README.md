@@ -4,31 +4,6 @@
 3. google 之前最喜欢的，对google的东西有种天然的喜欢，广告少，不过我的voice被封，有点难过
 4. duckduckgo 之前gpt的联网接口就是用这个搜索引擎，没看到广告，但平时用得也少
 
-## 网盘搜索分类
-1. 皮卡搜
-2. 小云搜
-3. 易搜
-
-## gpt查询
-[[文字.md]]
-
-## 人脉搜索-准备工作
-1. 我有哪几个待解决的问题？
-2. 能解决的人掌握什么资源和能力？
-3. 这样的人供职于怎样的机构，有着怎样的职权？
-4. 他有哪些性格禀赋，兴趣爱好，过往成绩，等等？
-
-## 垂直类
-1. 影视资源->[[视频.md]]
-2. 音乐资源->[[音乐.md]]
-3. 动漫资源
-   1. [包子漫画](https://www.baozimh.com)
-   2. [开心漫画](https://www.yydscomic.com/)
-   3. [古风漫画](https://www.gufengmh.com/)
-   4. [仙漫网](https://www.gaonaojin.com/)
-4. 网盘资源
-   1. [资源链接](https://zscc2022.feishu.cn/docx/Rc9hdVUE4o4DcRxdYnhcwTzdnsU)
-
 ## 搜索步骤
 1. 目标要清晰，若对目标不了解，可以利用gpt进行扫盲,了解知识的目的的是为什么（know learn create）
 2. 先尝试gpt解决，gpt已经可以解决大多数你知道但部分遗忘的内容，搜索用于补充和鉴定
@@ -59,6 +34,12 @@
 * `imagesize:` 图片大小
 * `*` 通配符 `OR` 我平时就没用过 #标题/TODO
 * 可以手动设置一下时间，时间的搜索指令好多不生效
+
+## 网站seo
+```
+ <meta name="description" content="描述">
+ <meta name="keywords" content="关键词1 关键词2">
+```
 
 ## 参考资料
 1. bilibili:

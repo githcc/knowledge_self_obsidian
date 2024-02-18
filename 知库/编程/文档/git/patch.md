@@ -49,4 +49,4 @@ git apply README.md.patch
 Git 的 patch 是一个强大的工具，可以用于生成、应用和发送补丁。
 
 ## 参考资料
-1. google：[bard](https://bard.google.com/)
+1. google：[gemini](https://gemini.google.com/app)

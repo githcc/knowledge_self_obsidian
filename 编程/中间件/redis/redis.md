@@ -57,4 +57,4 @@ volatile-ttl: 回收在过期集合的键，并且优先回收存活时间（TTL
 4. 序列化与转json一样吗
 
 ## 参考资料
-1. google：[bard](https://bard.google.com/)
+1. google：[gemini](https://gemini.google.com/app)

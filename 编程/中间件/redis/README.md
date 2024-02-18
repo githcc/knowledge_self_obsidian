@@ -120,4 +120,4 @@ redis-cli
 get value
 
 ## 参考资料
-1. google：[bard](https://bard.google.com/)
+1. google：[gemini](https://gemini.google.com/app)

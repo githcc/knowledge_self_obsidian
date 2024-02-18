@@ -7,11 +7,14 @@
     git config --global --unset http.proxy 恢复
     ssh-keygen -t ed25519 -C "githcc@github.com" 设置密钥
     ```
-5. --disable-web-security --user-data-dir=C:\edgeDevData 允许跨域
+5. 允许跨域
+    ```
+    --disable-web-security --user-data-dir=C:\edgeDevData 
+    ```
 6. 如果cmd想使用管理员运行，在文件菜单也是可以进入管理员的
 7. 刷新dns缓存 ipconfig /flushdns
-8. win防火墙的出站，指访问电脑程序访问互联网，入站则反之。
-9. 文件管理器异常，听说是bug
+8. win防火墙的出站，指访问电脑程序访问互联网，入站则反之
+9. 文件管理器异常
    ```
    使用管理员powershell运行，也不知道是否有用，一篇爆红，一般都是重启explorer
    Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
@@ -44,3 +47,4 @@
     ```
     rmdir /s /q 目录名
     ```
+    

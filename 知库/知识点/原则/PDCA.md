@@ -46,4 +46,4 @@ PDCA 原则可以应用于任何工作或活动，它可以帮助我们有效地
 通过练习，你可以熟练掌握 PDCA 原则，在工作中有效地提高效率和改进工作。
 
 ## 参考资料
-1. google：[bard](https://bard.google.com/)
+1. google：[gemini](https://gemini.google.com/app)

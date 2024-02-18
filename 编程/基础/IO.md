@@ -67,4 +67,4 @@ try (FileOutputStream fileOut = new FileOutputStream("map.bin");
 1. 使用二进制进行写入
 
 ## 参考资料
-1. google：[bard](https://bard.google.com/)
+1. google：[gemini](https://gemini.google.com/app)

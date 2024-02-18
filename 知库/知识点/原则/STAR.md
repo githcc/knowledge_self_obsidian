@@ -35,4 +35,4 @@ STAR法则是面试中常用的一种回答问题的方法，它可以帮助你�
 通过练习，你可以熟练掌握STAR法则，在面试中有效地展示自己。
 
 ## 参考资料
-1. google：[bard](https://bard.google.com/)
+1. google：[gemini](https://gemini.google.com/app)

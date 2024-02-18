@@ -108,4 +108,4 @@ public class LambdaExpression {
 在选择优化方法时，需要根据具体的情况进行考虑。如果条件分支的数量较多，且条件逻辑比较复杂，则可以使用策略模式、枚举或表驱动法来优化。如果条件分支的数量较少，且条件逻辑比较简单，则可以使用Lambda表达式来优化。
 
 ## 参考资料
-1. google：[bard](https://bard.google.com/)
+1. google：[gemini](https://gemini.google.com/app)

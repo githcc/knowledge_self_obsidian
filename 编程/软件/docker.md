@@ -78,6 +78,12 @@ cat docker/ubuntu.tar | docker import - test/ubuntu:v1
 docker inspect <容器id>
 ```
 
+## 镜像
+```
+加载镜像
+docker load -i xx.tar
+```
+
 ## 清理
 ```
 删除没用到容器

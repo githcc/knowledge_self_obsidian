@@ -27,4 +27,4 @@ MECE原则可以应用于各种场景，例如：
 通过练习，你可以熟练掌握MECE原则，在工作中有效地提高效率和改进工作。
 
 ## 参考资料
-1. google：[bard](https://bard.google.com/)
+1. google：[gemini](https://gemini.google.com/app)

@@ -22,6 +22,11 @@ yum -y install net-tools.x86_64
 yum -y install wget
 ```
 
+## 安装git
+```
+yum -y install git
+```
+
 ## 安装7zip
 ```
 yum -y install epel-release
@@ -109,8 +114,18 @@ swapon /swapfile
    ```
    这将只显示包含指定模式的行。
 
+## 关机
+```
+shutdown -h now
+```
 
 ## 执行sql
+版本1
+   ```
+   mysql -h 119.91.23.137 -u root -p
+   ```
+
+版本2
    ```bash
    #!/bin/bash
    
@@ -125,6 +140,11 @@ swapon /swapfile
    
    # 执行SQL语句
    mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" -h"$MYSQL_HOST" -D"$MYSQL_DATABASE" -e"$SQL_STATEMENT"
+   ```
+
+## linux命令重命名
+   ```
+   alias ll='ls -l'
    ```
 
 ## 其它
