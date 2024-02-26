@@ -1,12 +1,21 @@
+## 使用
+1. 可以辅助mybatis plus 使用
+
 ## 功能
-1. 代码生成(使用mybatis x)
+1. 代码生成
 2. 单表baseMapper
 3. 单表baseService
 4. swagger
 5. 多数据源
 
-### mybatis x 逆向配置
-annotation None
+### Generate Options
+1. 编码
+2. 继承类
+3. 忽略字段前缀/后缀
+4. 忽略表前缀/后缀
+
+### mybatis x 目前使用配置
+annotation Mybatis-Plus 3
 options Comment/Lombok/JSR310: Date API/Model/Lombok
 template Mybatis-Plus 3
 使用@MapperScan
@@ -16,31 +25,43 @@ template Mybatis-Plus 3
    1. Mybatis-Plus 3 实体类字加入@TableName/@TableId/@Column
    2. JPA 实体类字加入@Table/@Id
 2. options
-   1. Actual Column 实体类字段名保留下划线
-   2. JSR310: Date API 实体类日期类型使用LocalDateTime
+   1. Comment 注释
+   2. Actual Column 实体类字段名保留下划线
+   3. JSR310: Date API 实体类日期类型使用LocalDateTime
 
 ## Wrapper
 1. 查询 queryWrapper
-   1. condition 条件
-   2. map 字段
-   3. where
-   4. and/or
-      1. 默认and
-      2. 可以嵌套
-   5. limit
-   6. 子查询
-   7. lambda
+   1. lambda
+   2. 条件
+      1. like notLike
+      2. eq ne
+      3. in
+      4. gt lt ge le
+      5. isNull isNotNull
+      6. and/or
+         1. 默认and
+         2. 可以嵌套
+   3. 限制字段
+      1. select
+   4. limit
+      1. last
+   5. 子查询
+      1. inSql
 2. 修改
    1. queryWrapper Object
    2. updateWrapper
-      1. where
-      2. set
-      3. lambda
+      1. 不建议，能使用使用一种即可
 3. 删除（不存在）
    1. 间接使用queryWrapper
 
+## BaseService
+1. count
+2. saveBatch
+3. saveOrUpdateBatch
+
 ## BaseMapper
-1. 新增  
+1. 新增
+   1. insert
 2. 删除
    1. 根据id
    2. 根据多个id
@@ -55,15 +76,10 @@ template Mybatis-Plus 3
 5. 判断
    1. 根据特定条件
 
-## BaseService
-1. count
-2. saveBatch
-3. SaveOrUpdateBatch
-
 ## 注解
 1. @TableName
 2. @TableId(value="field",type=IdType.AUTO)
-   1. ## 雪花算法
+   1. ## 雪花算法 IdType.ASSIGN_ID
       1. 组成
          1. 1位符号位
          2. 41位时间戳
@@ -71,10 +87,11 @@ template Mybatis-Plus 3
          4. 12位序列号
       2. 用于取代主键自增
 3. @TableField(value=""field")
-4. @TableLogic
+4. @TableLogic(value="0",delval="1")
    1. 逻辑删除，0：存在 1：删除
-5. @Version 版本号，用于乐观锁，是否需要配合其它插件？
-6. @EnumValue 
+5. @Version 版本号，用于乐观锁
+6. @EnumValue //不建议，直接使用getValue
+7. @TableField(fill = FieldFill.INSERT_UPDATE) //配合Interceptor使用
 
 ## maven
 ```
@@ -85,16 +102,33 @@ template Mybatis-Plus 3
 </dependency>
 ```
 
-## 代码示例
-编写一个的 [[controller|controller]]
+## Interceptor配置类
+```
+    @Bean
+    public MybatisPlusInterceptor mybatisPlusInterceptor() {
+        MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
+        interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));//分页
+        interceptor.addInnerInterceptor(new OptimisticLockerInnerInterceptor());//版本号
+        return interceptor;
+    }
+```
 
-## 分页
-1. 注入一个[[编程/代码/片段/插件/mybatis x/MyBatisPlusConfig|MyBatisPlusConfig Bean]]
-2. 编写一个单元测试[[UserControllerTest|UserControllerTest]]
-### 自定义分页
-编写mapper方法
-   1. 要求第一个参数为：page
-   2. 范围值为：page
+## 时间配置类(起始版本3.3.3)
+```
+@Component
+public class MyMetaObjectHandler implements MetaObjectHandler {
+    @Override
+    public void insertFill(MetaObject metaObject) {
+        this.strictInsertFill(metaObject, "insertTime", LocalDateTime::now, LocalDateTime.class);
+        this.strictUpdateFill(metaObject, "updateTime", LocalDateTime::now, LocalDateTime.class);
+    }
+
+    @Override
+    public void updateFill(MetaObject metaObject) {
+        this.strictUpdateFill(metaObject, "updateTime", LocalDateTime::now, LocalDateTime.class);
+    }
+}
+```
 
 ## yml
 ```
@@ -106,15 +140,12 @@ mybatis-plus:
    global-config:
       db-config:
          table-prefix: t_
-#主键策略
-         id-type: auto
 #枚举
    type-enums-package:
 ```
 
 ## 其它
-1. 数据发生变化，修改时间的相关注解
-2. 枚举自带final？
+1. 版本号适用于mapper.updateById函数，不适用于service.update函数
 
 ## 多数据源
 ### maven
@@ -157,5 +188,3 @@ spring:
 ## 参考资料
 1. bilibili
    1. [MyBatisPlus教程](https://www.bilibili.com/video/BV12R4y157Be)
-
-

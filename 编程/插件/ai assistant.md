@@ -14,6 +14,7 @@
    2. 不支持中文
    3. 使用上与ai-assistant对比还是有差距
 4. 通义灵码 阿里出品，与CodeFuse不是同一款，支持对话
+5. Ideaplug_self_gpt 自己开发的，可以自定义提示词，开源在 [github](https://github.com/githcc/ideaplug_self_gpt)
 
 ## 代码gpt的主要使用场景
 1. 编写示例代码

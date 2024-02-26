@@ -94,6 +94,7 @@
    ```
      - 'DOMAIN-SUFFIX,meta.com,Meta'
      - 'DOMAIN-SUFFIX,alicdn.com,Meta'
+     - 'DOMAIN-SUFFIX,xx.fbcdn.net,Meta'
      - 'DOMAIN-SUFFIX,wps.cn,REJECT'
      - 'DOMAIN-SUFFIX,kdocs.cn,REJECT'
      - 'DOMAIN-SUFFIX,kakao.com,REJECT'
@@ -101,6 +102,11 @@
      - 'DOMAIN-SUFFIX,pepsicola.cc,REJECT'
      - 'DOMAIN-SUFFIX,xmind.cn,REJECT'
      - 'DOMAIN-SUFFIX,xmind.net,REJECT'
+   ```
+6. 直链
+   ```
+     - 'IP-CIDR,119.91.23.0/8,DIRECT'
+     - 'DOMAIN-KEYWORD,localhost,DIRECT'
    ```
 
 ### rule
