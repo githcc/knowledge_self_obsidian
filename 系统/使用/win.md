@@ -47,4 +47,9 @@
     ```
     rmdir /s /q 目录名
     ```
-    
+18. 常见的系统变量
+    %AppData% - 当前用户的应用程序数据文件夹（例如，C:\Users\用户名\AppData\Roaming）。
+    %ProgramFiles% - 安装的应用程序的默认文件夹（例如，C:\Program Files）。
+    %SystemRoot% - Windows系统目录（例如，C:\Windows）。
+    %UserProfile% - 当前用户的用户文件夹（例如，C:\Users\用户名）。
+    %Temp% 或 %Tmp% - 临时文件夹（例如，C:\Users\用户名\AppData\Local\Temp）
