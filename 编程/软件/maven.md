@@ -34,4 +34,4 @@ pom.xml> user settings > global settings
     ```
 
 ## 参考资料
-1. csdn：[解决SpringBoot打包没有将pom依赖包打进去](https://blog.csdn.net/MyronCham/article/details/105715760) [离线](https://github.com/githcc/webpage-self-markdown/blob/main/csdn/maven/README.md)
+1. csdn：[解决SpringBoot打包没有将pom依赖包打进去](https://blog.csdn.net/MyronCham/article/details/105715760) [备份至github](https://github.com/githcc/webpage-self-markdown/blob/main/csdn/maven/README.md)
