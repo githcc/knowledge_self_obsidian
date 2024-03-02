@@ -8,5 +8,5 @@ java -jar sentinel-dashboard-1.8.7.jar --server.port=9090
 
 ## 参考资料
 1. [官方文档](https://sentinelguard.io/zh-cn/docs/quick-start.html)
-2. maven
-   1. [sentinel](https://mvnrepository.com/artifact/com.alibaba.csp/sentinel-core)
+2. github
+   1. [sentinel](https://github.com/alibaba/Sentinel/releases)
