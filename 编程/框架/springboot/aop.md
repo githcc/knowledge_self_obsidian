@@ -1,29 +1,29 @@
-## 依赖
-    ```
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-aop</artifactId>
-    </dependency>
-    ```
-## 代码
-    ```
-    @Aspect
-    @Component
-    public class MethodLoggingAspect {
     
-        @Before("execution(* com.example.demo_springboot.*.*.add*(..))")
-        public void logMethodStart(JoinPoint joinPoint) {
-            String methodName = joinPoint.getSignature().getName();
-            System.out.println("开始执行方法：" + methodName);
-        }
-    
-        @After("execution(* com.example.demo_springboot.*.*.add*(..))")
-        public void logMethodEnd(JoinPoint joinPoint) {
-            String methodName = joinPoint.getSignature().getName();
-            System.out.println("方法执行结束：" + methodName);
-        }
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-aop</artifactId>
+</dependency>
+```
+
+```java
+@Aspect
+@Component
+public class MethodLoggingAspect {
+
+    @Before("execution(* com.example.demo_springboot.*.*.add*(..))")
+    public void logMethodStart(JoinPoint joinPoint) {
+        String methodName = joinPoint.getSignature().getName();
+        System.out.println("开始执行方法：" + methodName);
     }
-    ```
+
+    @After("execution(* com.example.demo_springboot.*.*.add*(..))")
+    public void logMethodEnd(JoinPoint joinPoint) {
+        String methodName = joinPoint.getSignature().getName();
+        System.out.println("方法执行结束：" + methodName);
+    }
+}
+```
 
 ## 解释
 - `execution`: 这是用于定义切点（pointcut）的关键词，表示匹配方法执行的连接点。

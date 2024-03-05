@@ -55,6 +55,12 @@ docker network create test-net
 
 网络取别名
 --network-alias
+
+查看网络
+docker network inspect <network_name>
+
+将服务加入网络
+docker run --network=<network_name> <container_name>
 ```
 
 ## 容器

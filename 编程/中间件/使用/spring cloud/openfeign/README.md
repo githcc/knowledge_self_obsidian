@@ -56,9 +56,11 @@ feign:
     2. basic
     3. headers
     4. full
+3. 流控默认效果：快速失败提示429
 
 ## 拦截器
 1. 实现原理：WebMvcConfigurer
+2. 可能需要配置spring.factories让其被扫描
 ```
 @Bean
 public RequestInterceptor userInfoRequestInterceptor(){

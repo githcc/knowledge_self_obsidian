@@ -4,7 +4,7 @@
 3. 调整磁盘空间
 
 ## 小雅
-http://alist.xiaoya.pro/
+http://alist.xiaoya.pro/ [备份至github](https://github.com/githcc/webpage-self-markdown/blob/main/%E5%8D%9A%E4%B8%BB/%E5%B0%8F%E9%9B%85/README.md)
 
 一键安装和更新容器，标准模式，打开端口 5678
 bash -c "$(curl http://docker.xiaoya.pro/update_new.sh)"
