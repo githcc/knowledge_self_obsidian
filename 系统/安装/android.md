@@ -50,4 +50,4 @@
 5. 系统软件，还有一些不能隐藏，如手机管家（平时不使用），相机（通过锁屏进行使用）
 
 ## 参考资料
-1. 知乎：[小米手机 MIUI 国际版/EU 刷机教程](https://zhuanlan.zhihu.com/p/408114647) [备份至github](https://github.com/githcc/webpage-self-markdown/blob/main/%E7%9F%A5%E4%B9%8E/%E5%B0%8F%E7%B1%B3%E5%88%B7%E6%9C%BA/README.md)
+1. 知乎：[小米手机 MIUI 国际版/EU 刷机教程](https://zhuanlan.zhihu.com/p/408114647) [备份至github](https://github.com/githcc/webpage_self_markdown/blob/main/%E7%9F%A5%E4%B9%8E/%E5%B0%8F%E7%B1%B3%E5%88%B7%E6%9C%BA/README.md)

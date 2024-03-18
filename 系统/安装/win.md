@@ -52,6 +52,7 @@
       scoop install Obsidian
       scoop install beyondcompare
       scoop install jmeter
+      scoop install umi-ocr
       ```
 3. 安装编码环境
    1. 安装idea

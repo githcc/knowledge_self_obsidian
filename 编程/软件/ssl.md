@@ -48,5 +48,5 @@
 3. 校验时不通过，可能是之前已经使用https，屏蔽了http
 
 ## 参考资料
-1. 知乎：[33种免费获取SSL证书](https://zhuanlan.zhihu.com/p/174755007) [备份至github](https://github.com/githcc/webpage-self-markdown/blob/main/%E7%9F%A5%E4%B9%8E/ssl/README.md)
-2. 博客园：[支持IP绑定免费的SSL证书](https://www.cnblogs.com/aiyablog/articles/16703959.html) [备份至github](https://github.com/githcc/webpage-self-markdown/blob/main/%E5%8D%9A%E5%AE%A2%E5%9B%AD/ssl/README.md)
+1. 知乎：[33种免费获取SSL证书](https://zhuanlan.zhihu.com/p/174755007) [备份至github](https://github.com/githcc/webpage_self_markdown/blob/main/%E7%9F%A5%E4%B9%8E/ssl/README.md)
+2. 博客园：[支持IP绑定免费的SSL证书](https://www.cnblogs.com/aiyablog/articles/16703959.html) [备份至github](https://github.com/githcc/webpage_self_markdown/blob/main/%E5%8D%9A%E5%AE%A2%E5%9B%AD/ssl/README.md)

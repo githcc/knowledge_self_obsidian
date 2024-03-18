@@ -59,4 +59,4 @@ public class CartProperties {
 1. yaml文件也是可以使用变量，例如{hm.db.host}
 
 ## 参考资料
-1. bilibili：[SpringCloud微服务技术栈实战教程](https://www.bilibili.com/video/BV1kH4y1S7wz?p=14)  [备份至github](https://github.com/githcc/webpage-self-markdown/blob/main/%E9%A3%9E%E4%B9%A6/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6/day04-%E5%BE%AE%E6%9C%8D%E5%8A%A102/README.md)
+1. bilibili：[SpringCloud微服务技术栈实战教程](https://www.bilibili.com/video/BV1kH4y1S7wz?p=14)  [备份至github](https://github.com/githcc/webpage_self_markdown/blob/main/%E9%A3%9E%E4%B9%A6/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6/day04-%E5%BE%AE%E6%9C%8D%E5%8A%A102/README.md)
