@@ -62,6 +62,8 @@
             1. 仓库地址 https://developer.aliyun.com/mvn/guide
          2. 设置本地优先
             1. 在设置中搜索 Runner ,在VM Option中设置参数-DarchetypeCatalog=internal
+         3. 设置properties的编码
+            1. 在设置中搜索 Editor ,在File Encodings中设置UTF-8
       3. 使用git(使用Scoop)
          1. 设置代理，idea内部与idea外部都要设置
                git config --global http.proxy 'http://localhost:7890'
