@@ -51,6 +51,7 @@
       scoop install redis
       scoop install motrix
       scoop install umi-ocr
+      scoop install evcapture
       ```
 3. 安装编码环境
    1. 安装idea
@@ -68,12 +69,7 @@
          2. 登录账号
 4. wps的去掉弹窗
    `wpscloudlaunch.exe`,`wpscloudsvr.exe`改为文本，并且改为只读
-5. 破解版软件 [package-self-7z](https://github.freechatgpt.cc/githcc/package-self-7z)
+5. 破解版软件 [package-self-7z](https://github.com/githcc/package-self-7z)
    1. Typora
    2. navicat16
-6. 其他软件
-   1. [idea](https://www.jetbrains.com/zh-cn/idea/download/download-thanks.html?platform=windows)
-   2. [PotPlayer](https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe)
-   3. 商店
-      1. [Windows Terminal](https://apps.microsoft.com/detail/9N0DX20HK701?hl=zh-cn&gl=CN)
-7. [[使用/win.md|关闭更新，关闭windows defender]]
+6. [[使用/win.md|关闭更新，关闭windows defender]]
