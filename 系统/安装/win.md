@@ -32,7 +32,7 @@
       scoop install 7zip git
       scoop bucket add githcc https://github.com/githcc/bucket_scoop
       scoop bucket add scoop-proxy-cn https://github.com/lzwme/scoop-proxy-cn
-      scoop install aria2
+      scoop bucket add Extras
       scoop install finalshell
       scoop install vcredist2022
       scoop install notepadplusplus
@@ -41,20 +41,15 @@
       scoop install jianying
       scoop install Axure
       scoop install Snipaste
-      ## RaiDrive无法使用aria2下载
-      scoop config aria2-enabled false
       scoop install RaiDrive
-      scoop bucket rm githcc
-      ```
-   5. 下列版本更新较为频繁
-      ```
-      scoop bucket add Extras
       scoop install nodejs
       scoop install wechat
-      scoop install Motrix
       scoop install Obsidian
       scoop install beyondcompare
-      scoop install jmeter
+      scoop install jmeter-pm
+      scoop install alist
+      scoop install redis
+      scoop install motrix
       scoop install umi-ocr
       ```
 3. 安装编码环境
@@ -79,7 +74,6 @@
 6. 其他软件
    1. [idea](https://www.jetbrains.com/zh-cn/idea/download/download-thanks.html?platform=windows)
    2. [PotPlayer](https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe)
-   3. [ev录屏](https://www.ieway.cn/evcapture.html)
-   4. 商店
+   3. 商店
       1. [Windows Terminal](https://apps.microsoft.com/detail/9N0DX20HK701?hl=zh-cn&gl=CN)
 7. [[使用/win.md|关闭更新，关闭windows defender]]
