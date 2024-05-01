@@ -17,7 +17,7 @@
    2. 删除没用到的软件
    3. 对系统进行补丁的更新
 2. 最基础的软件
-   1. [访问github](https://github.ccgpt.tech/githcc/knowledge_self_obsidian/blob/main/%E7%B3%BB%E7%BB%9F/%E5%AE%89%E8%A3%85/win.md)
+   1. [访问github](https://github.com/githcc/knowledge_self_obsidian/blob/main/%E7%B3%BB%E7%BB%9F/%E5%AE%89%E8%A3%85/win.md)
    2. 进入阿里云获取一些基本软件或笔记本的驱动（访问云服务器的alist）
       1. 键盘fn快捷键驱动,高保真音乐驱动(笔记本)
       2. 安装第三方软件包 [[软件/包/win/README|离线]]
@@ -31,6 +31,7 @@
       ```
       scoop install 7zip git
       scoop bucket add githcc https://github.com/githcc/bucket_scoop
+      scoop bucket add scoop-proxy-cn https://github.com/lzwme/scoop-proxy-cn
       scoop install aria2
       scoop install finalshell
       scoop install vcredist2022
@@ -38,6 +39,8 @@
       scoop install wps
       scoop install xmind
       scoop install jianying
+      scoop install Axure
+      scoop install Snipaste
       ## RaiDrive无法使用aria2下载
       scoop config aria2-enabled false
       scoop install RaiDrive
@@ -71,9 +74,8 @@
 4. wps的去掉弹窗
    `wpscloudlaunch.exe`,`wpscloudsvr.exe`改为文本，并且改为只读
 5. 破解版软件 [package-self-7z](https://github.freechatgpt.cc/githcc/package-self-7z)
-   1. IDM
-   2. Typora
-   3. navicat16
+   1. Typora
+   2. navicat16
 6. 其他软件
    1. [idea](https://www.jetbrains.com/zh-cn/idea/download/download-thanks.html?platform=windows)
    2. [PotPlayer](https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe)
