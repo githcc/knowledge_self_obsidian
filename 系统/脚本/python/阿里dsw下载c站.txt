@@ -1,0 +1,22 @@
+import requests
+import os
+
+print(f"程序开始")
+
+model_url = ""
+
+file_name = ""
+save_dir = "stable-diffusion-webui/models/Stable-diffusion"
+
+# 创建保存目录
+if not os.path.exists(save_dir):
+    os.makedirs(save_dir)
+
+# 下载文件
+response = requests.get(model_url)
+with open(os.path.join(save_dir, file_name), "wb") as f:
+    f.write(response.content)
+
+print(f"文件 {file_name} 已下载并保存到 {save_dir} 目录。")
+
+
