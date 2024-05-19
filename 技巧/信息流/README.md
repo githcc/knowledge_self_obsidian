@@ -20,25 +20,30 @@
 C:\Users\wyswy>scoop list
 Installed apps:
 
-Name            Version      Source     Updated             Info
-----            -------      ------     -------             ----
-7zip            23.01        main       2024-01-19 20:03:07
-aria2           1.37.0-1     main       2024-01-19 20:03:16
-dark            3.11.2       main       2024-01-22 15:09:53
-finalshell      4.3.10       githcc     2024-01-19 20:18:05
-git             2.43.0       main       2024-01-19 20:04:13
-jianying        4.7.2.10739  githcc     2024-01-19 20:26:30
-Motrix          1.8.19       githcc     2024-01-19 20:29:58
-nodejs          21.6.0       main       2024-01-19 20:32:31
-notepadplusplus 8.6          githcc     2024-01-19 20:20:22
-Obsidian        1.5.3        Extras     2024-01-19 20:35:16
-pip             23.3.2       tmp        2024-01-22 15:10:39
-python          3.12.1       main       2024-01-22 15:10:07
-RaiDrive        2019.12.22   kkzzhizhou 2024-01-22 15:01:06
-sudo            0.2020.01.26 main       2024-01-19 20:04:16
-wechat          3.9.8.25     Extras     2024-01-19 20:32:56
-wps             12.1.0.15990 githcc     2024-01-19 20:23:26
-xmind           12.0.3       githcc     2024-01-19 20:25:27
+Name            Version                Source Updated             Info
+----            -------                ------ -------             ----
+7zip            23.01                  main   2024-05-01 14:03:02
+alist           3.33.0                 main   2024-05-01 14:36:26
+aria2           1.37.0-1               spc    2024-05-02 03:40:48
+dark            3.14                   main   2024-05-01 14:25:43
+evcapture       5.0.7                  spc    2024-05-02 03:30:18
+ffmpeg          7.0                    main   2024-05-05 04:02:13
+finalshell      4.3.10                 githcc 2024-05-01 14:08:05
+git             2.45.0                 main   2024-05-01 14:03:52
+idea-ultimate   2024.1.1-241.15989.150 spc    2024-05-02 15:57:09
+motrix          1.8.19                 spc    2024-05-01 15:58:56
+nodejs18        18.20.2                spc    2024-05-02 09:03:04
+notepadplusplus 8.6                    githcc 2024-05-01 14:08:24
+Obsidian        1.5.12                 spc    2024-05-01 14:35:02
+python311       3.11.9                 spc    2024-05-13 17:55:50
+RaiDrive        2019.12.22             githcc 2024-05-01 14:28:57
+redis           7.2.4                  main   2024-05-01 14:36:33
+scoop-search    1.4.1                  spc    2024-05-02 03:40:51
+Snipaste        1.16.2                 spc    2024-05-01 15:51:16
+umi-ocr         2.1.1                  spc    2024-05-01 14:37:12
+vcredist2022    14.38.33135.0          spc    2024-05-01 14:23:15
+wechat          3.9.10.19              spc    2024-05-01 14:34:36
+xmind           12.0.3                 githcc 2024-05-01 14:25:36
 ```
 
 ## 手机
@@ -51,13 +56,12 @@ xmind           12.0.3       githcc     2024-01-19 20:25:27
 2. 整一个网站 [主页](http://119.91.23.137/) 
 ```
 [root@VM-8-14-centos ~]# docker ps
-CONTAINER ID   IMAGE                    COMMAND                   CREATED       STATUS       PORTS                                                                                                                 NAMES
-df439425ea36   xiaoyaliu/alist:latest   "/entrypoint.sh /opt…"   7 days ago    Up 4 days    0.0.0.0:5679->80/tcp, :::5679->80/tcp                                                                                 xiaoya_xiaohao
-affc96fa823c   jdk8_u                   "java -jar demo.jar"      11 days ago   Up 11 days   0.0.0.0:7070->7070/tcp, :::7070->7070/tcp                                                                             jdk8_u
-a10008e0ac40   ea552a450591             "/entrypoint.sh /opt…"   11 days ago   Up 4 days    0.0.0.0:5678->80/tcp, :::5678->80/tcp                                                                                 xiaoya_dahao
-822137e74302   redis                    "docker-entrypoint.s…"   11 days ago   Up 11 days   0.0.0.0:6379->6379/tcp, :::6379->6379/tcp                                                                             redis
-1c18eaa92159   lobehub/lobe-chat        "docker-entrypoint.s…"   2 weeks ago   Up 2 weeks   0.0.0.0:3210->3210/tcp, :::3210->3210/tcp                                                                             lobe-chat
-b965bf27ef72   nginx:latest             "/docker-entrypoint.…"   2 weeks ago   Up 7 days    0.0.0.0:80->80/tcp, :::80->80/tcp, 0.0.0.0:443->443/tcp, :::443->443/tcp, 0.0.0.0:8080->8080/tcp, :::8080->8080/tcp   nginx
-945ac40694a8   mysql:5.7.22             "docker-entrypoint.s…"   2 weeks ago   Up 2 days    0.0.0.0:3306->3306/tcp, :::3306->3306/tcp                                                                             mysql
-76418fd6c6ce   snowdreamtech/frps       "/bin/sh -c '/usr/bi…"   2 weeks ago   Up 2 weeks  
+CONTAINER ID   IMAGE                    COMMAND                   CREATED        STATUS        PORTS                                                                                                                                                                                                                                                                                                                                        NAMES
+cd610e398bc3   snowdreamtech/frps       "/bin/sh -c '/usr/bi…"   2 hours ago    Up 2 hours                                                                                                                                                                                                                                                                                                                                                 frps
+12c92d22a5cf   nginx:latest             "/docker-entrypoint.…"   6 days ago     Up 34 hours   0.0.0.0:80->80/tcp, :::80->80/tcp, 0.0.0.0:443->443/tcp, :::443->443/tcp, 0.0.0.0:4040->4040/tcp, :::4040->4040/tcp, 0.0.0.0:5050->5050/tcp, :::5050->5050/tcp, 0.0.0.0:6060->6060/tcp, :::6060->6060/tcp, 0.0.0.0:7070->7070/tcp, :::7070->7070/tcp, 0.0.0.0:8080->8080/tcp, :::8080->8080/tcp, 0.0.0.0:9090->9090/tcp, :::9090->9090/tcp   nginx
+fd4e695567a2   jdk17_server             "/__cacert_entrypoin…"   6 days ago     Up 6 days     0.0.0.0:19090->8080/tcp, :::19090->8080/tcp                                                                                                                                                                                                                                                                                                  jdk17_server
+b81ff4dc6e55   lobehub/lobe-chat        "docker-entrypoint.s…"   3 weeks ago    Up 3 weeks    0.0.0.0:3210->3210/tcp, :::3210->3210/tcp                                                                                                                                                                                                                                                                                                    lobe-chat
+b87d2a973a39   xiaoyaliu/alist:latest   "/entrypoint.sh /opt…"   4 weeks ago    Up 4 weeks    0.0.0.0:5678->80/tcp, :::5678->80/tcp                                                                                                                                                                                                                                                                                                        xiaoya_dahao
+5e149fb938db   mysql                    "docker-entrypoint.s…"   2 months ago   Up 3 weeks    0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp                                                                                                                                                                                                                                                                                         mysql8-db-1
+822137e74302   redis                    "docker-entrypoint.s…"   3 months ago   Up 5 weeks    0.0.0.0:6379->6379/tcp, :::6379->6379/tcp                                                                                                                                                                                                                                                                                                    redis  
 ```
