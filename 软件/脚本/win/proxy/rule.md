@@ -47,7 +47,7 @@
      - 'DOMAIN-SUFFIX,spoti.fi,OpenAI'
      - 'DOMAIN-SUFFIX,sonatype.com,OpenAI'
      - 'DOMAIN-SUFFIX,bing.com,OpenAI'
-   
+     - 'DOMAIN-SUFFIX,poe.com,OpenAI'
      - 'DOMAIN-SUFFIX,scdn.co,OpenAI'
    ```
 2. 小众专用走OpenAI
