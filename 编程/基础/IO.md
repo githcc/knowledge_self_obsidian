@@ -1,58 +1,32 @@
 ## BIO
-| 类名 | 类型 | 操作基本单位 | 是否使用缓冲区 | 使用场景 |
-|---|---|---|---|---|
-| InputStream | 字节输入流 | 字节 | 否 | 读取任何格式的文件数据 |
-| FileInputStream | 文件字节输入流 | 字节 | 否 | 读取文件数据 |
-| BufferedInputStream | 缓冲字节输入流 | 字节 | 是 | 提高读取文件数据的效率 |
-| Reader | 字符输入流 | Unicode码元 | 是 | 读取文本文件数据 |
-| FileReader | 文件字符输入流 | Unicode码元 | 是 | 读取文本文件数据 |
-| BufferedReader | 缓冲字符输入流 | Unicode码元 | 是 | 提高读取文本文件数据的效率 |
-| OutputStream | 字节输出流 | 字节 | 否 | 写入任何格式的文件数据 |
-| FileOutputStream | 文件字节输出流 | 字节 | 否 | 写入文件数据 |
-| BufferedOutputStream | 缓冲字节输出流 | 字节 | 是 | 提高写入文件数据的效率 |
-| Writer | 字符输出流 | Unicode码元 | 是 | 写入文本文件数据 |
-| FileWriter | 文件字符输出流 | Unicode码元 | 是 | 写入文本文件数据 |
-| BufferedWriter | 缓冲字符输出流 | Unicode码元 | 是 | 提高写入文本文件数据的效率 |
-
-**说明**
-
-* 操作基本单位：字节流操作的基本单元为字节，字符流操作的基本单元为Unicode码元。
-* 是否使用缓冲区：字节流默认不使用缓冲区，字符流使用缓冲区。
-* 使用场景：字节流可以读取任何格式的文件数据，字符流可以读取文本文件数据。
-
-**补充说明**
-
-* 除了上述类之外，Java IO 类库还提供了一些其他的流类，例如：
-    * 序列化流：用于将对象序列化为字节流或从字节流中反序列化对象。
-    * 转换流：用于将一种格式的数据转换为另一种格式的数据。
-    * 网络流：用于进行网络通信。
-
-* 在实际使用中，可以根据具体的需求选择合适的流类。
+Stream File
+Buffered
+Reader Write
+input output
+转换流(InputStreamReader/OutputStreamWriter)
+print
+Object
 
 ## BIO的使用 #标题/TODO
 1. [[字节流拷贝|字节流拷贝]]
 2. [[字符流拷贝|字符流拷贝]]
 
-## BIO，NIO，AIO 三者间的区别
-bio：传统的Java I/O操作，同步且阻塞IO。
-nio：JDK1.4开始支持，同步阻塞或同步非阻塞IO，tomcat7
-aio(nio.2)：JDK7开始支持，异步非阻塞IO，tomcat9
+## NIO，AIO 两者间的区别
+NIO (Non-blocking I/O) 和 AIO (Asynchronous I/O) 都是 Java 中处理 I/O 操作的异步机制,但它们在实现方式和使用场景上有一些区别:
 
-## NIO
-1. 解决c10k，c10m问题
-2. 非阻塞是采用了多路复用机制，实现同步非阻塞
-3. 注册selector，监听其中的事件
-4. 当触发事件后，执行后操作
-5. 监听机制的实现依赖操作系统，具体的方法是epoll_create,epoll_wait,epoll_ctl
-   1. 不同系统下nio的实现是不一样的,包括Sunos linux 和windows
-6. 当并发数不高时与bio性能差异不大
-7. NIO并没有完全屏蔽平台差异
-8. 更高级的IO函数，Zero Copy
+1. **实现机制**:
+    - NIO 使用了基于事件驱动的 I/O 模型,通过 Selector 监听 I/O 事件,当事件发生时触发回调,这种方式称为"同步非阻塞"。
+    - AIO 则基于操作系统提供的异步 I/O 操作,使用 CompletionHandler 接收异步操作的结果,这种方式称为"异步非阻塞"。
 
-## AIO
-与NIO不同，当进行读写操作时，只须直接调用API的read或write方法即可。这两种方法均为异步的，
-对于读操作而言，当有流可读取时，操作系统会将可读的流传入read方法的缓冲区，并通知应用程序；
-对于写操作而言，当操作系统将write方法传递的流写入完毕时，操作系统主动通知应用程序。
+2. **适用场景**:
+    - NIO 适用于需要同时处理多个 I/O 操作的场景,比如网络服务器、文件 I/O 等。它能够高效地管理大量的 I/O 连接。
+    - AIO 更适合于执行少量 I/O 操作的场景,比如文件读写等。它能够充分利用操作系统的异步 I/O 功能,减少线程切换开销。
+
+3. **编程复杂度**:
+    - NIO 相比于传统的阻塞 I/O 操作,需要开发者编写更加复杂的代码来处理非阻塞 I/O 和事件驱动的逻辑。
+    - AIO 的编程复杂度相对较低,开发者只需要实现 CompletionHandler 接口即可。
+
+总的来说,NIO 更适合于处理高并发的 I/O 操作,而 AIO 则适合于执行少量 I/O 操作的场景。在选择使用 NIO 还是 AIO 时,需要结合具体的应用场景和性能需求进行权衡。
 
 ## 这种写法自动关流
 ```
@@ -62,9 +36,6 @@ try (FileOutputStream fileOut = new FileOutputStream("map.bin");
 } catch (IOException e) {
 }
 ```
-
-## 文本的兼容性不好，比如双引号的输出就不是很一致
-1. 使用二进制进行写入
 
 ## 参考资料
 1. google：[gemini](https://gemini.google.com/app)
