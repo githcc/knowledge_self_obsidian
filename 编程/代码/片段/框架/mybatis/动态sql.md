@@ -39,4 +39,16 @@
     </if>
     WHERE id = #{id}
 </update>
+
+<!-- 定义删除方法 -->
+<delete id="deleteUser" parameterType="User">
+    DELETE FROM users
+    WHERE id = #{id}
+</delete>
+
+<!-- 定义删除方法，使用map传参 -->
+<delete id="deleteUser" parameterType="java.util.Map">
+    DELETE FROM users
+    WHERE id = #{id}
+</delete>
 ```
